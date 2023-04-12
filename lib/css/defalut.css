@@ -16,12 +16,13 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font: inherit;
-    font-size: 16px;
-    letter-spacing: -1px;
+    font-size: 18px;
+    letter-spacing: 0;
 	vertical-align: baseline;
     box-sizing: border-box;
-    color: #262626;
-    font-family:'Malgun Gothic', sans-serif;
+    color: #FFF;
+    
+    font-family: 'S-CoreDream','Malgun Gothic', sans-serif;
 }
 a { text-decoration: none; outline: none}
 img { max-width: 100%; }
@@ -32,9 +33,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -77,4 +76,67 @@ button{ position: relative; background: inherit ; border:none; box-shadow:none; 
 textarea { border: unset; resize: none; }
 textarea:focus { outline: none; }
 
-/* //초기화 */
+/* 폰트 */
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-9Black.woff') format('woff');
+    font-weight: 900;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-8Heavy.woff') format('woff');
+    font-weight: 800;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-weight: 700;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: 600;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: 500;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: 400;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 300;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display : swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-CoreDream-1Thin.woff') format('woff');
+    font-weight: 100;
+    font-display : swap;
+}
+
