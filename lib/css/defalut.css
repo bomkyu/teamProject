@@ -22,7 +22,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
     box-sizing: border-box;
     color: #FFF;
-    
+    word-break: keep-all;
     font-family: 'Pretendard','Malgun Gothic', sans-serif;
 }
 p { letter-spacing: -0.5px; line-height: 25px; }
