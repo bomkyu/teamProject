@@ -1,6 +1,13 @@
-/* 엘리먼트 */
-.content_wrap { background-color: #111; }
+/*display*/
+.flex { display: flex; }
+.block { display: block; }
+
+/* layout */
+.content_wrap { background-color: #000; }
 .inner { max-width: 1280px; width: 100%; margin:0 auto }
+
+.f_center { align-items: center; justify-content: center; }
+.m_center { margin:0 auto; }
 
 /* 텍스트 */
 .txt_l { text-align: left; }
@@ -14,15 +21,28 @@
 
 /* 페이지 공통 타이틀 */
 h2.con_tit { font-size: 72px; font-weight: bold; }
-h3.con_tit { font-size: 42px; font-weight: bold; }
+h3.con_tit { font-size: 32px; font-weight: 500; }
 
 /* row(행) */
 .hori { display: flex; } 
+.gap20 { gap: 20px; } /*hori여백값*/
+.gap25 { gap: 25px; } /*hori여백값*/
+
 .space_around { justify-content: space-around; }
+
 .row > * { width: 100%; }
+
 .row2 > * { width: 50%; }
+.gap20.row2 > * { width: calc( 50% - 10px); }
+.gap25.row2 > * { width: calc( 50% - 12.5px); }
+
 .row3 > * { width: 33.3333%; }
-.row4 > * { width: 33.3333%; }
+.gap20.row3 > * { width: calc( 33.3333% - 10px); }
+.gap25.row3 > * { width: calc( 33.3333% - 12.5px); }
+
+.row4 > * { width: 25%; }
+.gap20.row4 > * { width: calc( 25% - 10px); }
+.gap25.row4 > * { width: calc( 25% - 12.5px); }
 
 /* 열 */
 .col { flex-wrap: wrap; }
@@ -33,7 +53,15 @@ h3.con_tit { font-size: 42px; font-weight: bold; }
 .img_wrap .img_con > img { object-fit: cover; object-position: center center; }
 
 /* 백그라운드 컬러 */
+.bg_b { background-color: #000; }
+.bg_g {}
+.bg_w { background-color: #FFF; }
 
+/*max-width*/
+.max_1700 { max-width: 1700px; width: 100%; }
+.max_750 { max-width: 750px; width: 100%; }
+/*height*/
+.h_100vh { height: 100vh; }
 
 /************************************************************************************
 Margin
@@ -85,6 +113,11 @@ Margin
 .mt90 {margin-top:90px !important;}			.mb90 {margin-bottom:90px !important;}
 .mt95 {margin-top:95px !important;}			.mb95 {margin-bottom:95px !important;}
 .mt100 {margin-top:100px !important;}		.mb100 {margin-bottom:100px !important;}
+.mt110 {margin-top:110px !important;}		.mb110 {margin-bottom:110px !important;}
+.mt120 {margin-top:120px !important;}		.mb120 {margin-bottom:120px !important;}
+.mt130 {margin-top:130px !important;}		.mb130 {margin-bottom:130px !important;}
+.mt140 {margin-top:140px !important;}		.mb140 {margin-bottom:140px !important;}
+.mt150 {margin-top:150px !important;}		.mb150 {margin-bottom:150px !important;}
 
 .ml00 {margin-left:0px !important;}			.mr00 {margin-right:0px !important;}
 .ml02 {margin-left:2px !important;}			.mr02 {margin-right:2px !important;}
