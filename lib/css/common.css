@@ -119,10 +119,10 @@ Margin
 .mt140 {margin-top:140px !important;}		.mb140 {margin-bottom:140px !important;}
 .mt150 {margin-top:150px !important;}		.mb150 {margin-bottom:150px !important;}
 
-.ml00 {margin-left:0px !important;}			.mr00 {margin-right:0px !important;}
-.ml02 {margin-left:2px !important;}			.mr02 {margin-right:2px !important;}
-.ml03 {margin-left:3px !important;}			.mr03 {margin-right:3px !important;}
-.ml05 {margin-left:5px !important;}			.mr05 {margin-right:5px !important;}
+.ml00 {margin-left:0px !important;}			    .mr00 {margin-right:0px !important;}
+.ml02 {margin-left:2px !important;}			    .mr02 {margin-right:2px !important;}
+.ml03 {margin-left:3px !important;}			    .mr03 {margin-right:3px !important;}
+.ml05 {margin-left:5px !important;}			    .mr05 {margin-right:5px !important;}
 .ml10 {margin-left:10px !important;}			.mr10 {margin-right:10px !important;}
 .ml15 {margin-left:15px !important;}			.mr15 {margin-right:15px !important;}
 .ml20 {margin-left:20px !important;}			.mr20 {margin-right:20px !important;}
@@ -170,10 +170,10 @@ Padding
 .pd95 {padding:95px !important;}
 .pd100 {padding:100px !important;}
 
-.pt00 {padding-top:0px !important;}			.pb00 {padding-bottom:0px !important;}
-.pt02 {padding-top:2px !important;}			.pb02 {padding-bottom:2px !important;}
-.pt03 {padding-top:3px !important;}			.pb03 {padding-bottom:3px !important;}
-.pt05 {padding-top:5px !important;}			.pb05 {padding-bottom:5px !important;}	
+.pt00 {padding-top:0px !important;}			    .pb00 {padding-bottom:0px !important;}
+.pt02 {padding-top:2px !important;}			    .pb02 {padding-bottom:2px !important;}
+.pt03 {padding-top:3px !important;}			    .pb03 {padding-bottom:3px !important;}
+.pt05 {padding-top:5px !important;}			    .pb05 {padding-bottom:5px !important;}	
 .pt10 {padding-top:10px !important;}			.pb10 {padding-bottom:10px !important;}
 .pt15 {padding-top:15px !important;}			.pb15 {padding-bottom:15px !important;}
 .pt20 {padding-top:20px !important;}			.pb20 {padding-bottom:20px !important;}
@@ -192,10 +192,10 @@ Padding
 .pt85 {padding-top:85px !important;}			.pb85 {padding-bottom:85px !important;}
 .pt90 {padding-top:90px !important;}			.pb90 {padding-bottom:90px !important;}
 .pt95 {padding-top:95px !important;}			.pb95 {padding-bottom:95px !important;}
-.pt100 {padding-top:100px !important;}		.pb100 {padding-bottom:100px !important;}
-.pt150 {padding-top:150px !important;}      .pb150 {padding-bottom:150px !important;}
-.pt200 {padding-top:150px !important;}      .pb200 {padding-bottom:200px !important;}
-.pt250 {padding-top:150px !important;}      .pb250 {padding-bottom:200px !important;}
+.pt100 {padding-top:100px !important;}		    .pb100 {padding-bottom:100px !important;}
+.pt150 {padding-top:150px !important;}          .pb150 {padding-bottom:150px !important;}
+.pt200 {padding-top:150px !important;}          .pb200 {padding-bottom:200px !important;}
+.pt250 {padding-top:150px !important;}          .pb250 {padding-bottom:200px !important;}
 
 .pl00 {padding-left:0px !important;}			.pr00 {padding-right:0px !important;}
 .pl02 {padding-left:2px !important;}			.pr02 {padding-right:2px !important;}
@@ -219,4 +219,4 @@ Padding
 .pl85 {padding-left:85px !important;}			.pr85 {padding-right:85px !important;}
 .pl90 {padding-left:90px !important;}			.pr90 {padding-right:90px !important;}
 .pl95 {padding-left:95px !important;}			.pr95 {padding-right:95px !important;}
-.pl100 {padding-left:100px !important;}		.pr100 {padding-right:100px !important;}
+.pl100 {padding-left:100px !important;}		    .pr100 {padding-right:100px !important;}
