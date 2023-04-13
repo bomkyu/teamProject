@@ -49,8 +49,7 @@ h3.con_tit { font-size: 32px; font-weight: 500; }
 
 /* 이미지 */
 .img_wrap { position: relative; padding-top: 100%; overflow: hidden; }
-.img_wrap .img_con { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
-.img_wrap .img_con > img { object-fit: cover; object-position: center center; }
+.img_wrap .img_con { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-repeat: no-repeat; background-position: center; background-size: cover; }
 
 /* 백그라운드 컬러 */
 .bg_b { background-color: #000; }
@@ -60,6 +59,7 @@ h3.con_tit { font-size: 32px; font-weight: 500; }
 /*max-width*/
 .max_1700 { max-width: 1700px; width: 100%; }
 .max_750 { max-width: 750px; width: 100%; }
+
 /*height*/
 .h_100vh { height: 100vh; }
 
