@@ -24,11 +24,14 @@ h2.con_tit { font-size: 72px; font-weight: bold; }
 h3.con_tit { font-size: 32px; font-weight: 500; }
 
 /* row(행) */
-.hori { display: flex; } 
+.hori { display: flex; }
 .gap20 { gap: 20px; } /*hori여백값*/
 .gap25 { gap: 25px; } /*hori여백값*/
 
 .space_around { justify-content: space-around; }
+
+.hori > * { overflow: hidden; }
+.hori > *:hover img { transition: 1.5s; transform: scale(1.2); }
 
 .row > * { width: 100%; }
 
@@ -49,7 +52,8 @@ h3.con_tit { font-size: 32px; font-weight: 500; }
 
 /* 이미지 */
 .img_wrap { position: relative; padding-top: 100%; overflow: hidden; }
-.img_wrap .img_con { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.img_wrap .img_con { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-repeat: no-repeat; background-position: center; background-size: cover; overflow: hidden; }
+.img_wrap .img_con:hover { transform: scale(1.2); }
 
 /* 백그라운드 컬러 */
 .bg_b { background-color: #000; }
