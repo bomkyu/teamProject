@@ -62,6 +62,22 @@ h3.con_tit { font-size: 32px; font-weight: 500; }
 /*height*/
 .h_100vh { height: 100vh; }
 
+/* header 혜민작업 */
+
+/* footer 태윤작업*/
+footer { font-size: 14px; background-color: #111; }
+.card_style { display: flex; min-height: 400px; flex-direction: column; align-items: center; justify-content: center; }
+
+.circle span { display: inline-block; width: 7px; height: 7px; margin: 0 5px; border-radius: 50%; }
+.circle .c1 { background-color: #fff; }
+.circle .c2 { background-color: #a8c8ea; }
+.circle .c3 { background-color: #7b53a2; }
+.circle .c4 { background-color: #000; }
+
+.front { font-weight: 600; font-size: 24px; }
+.team_pj { font-weight: 500; font-size: 14px; }
+.developer { font-size: 18px; }
+
 /************************************************************************************
 Margin
 *************************************************************************************/
