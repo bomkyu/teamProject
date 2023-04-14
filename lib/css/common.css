@@ -21,7 +21,8 @@
 
 /* 페이지 공통 타이틀 */
 h2.con_tit { font-size: 72px; font-weight: bold; }
-h3.con_tit { font-size: 32px; font-weight: 500; }
+h3.con_tit { font-size: 48px; font-weight: 600; }
+h4.con_tit { font-size: 32px; font-weight: 500; }
 
 /* row(행) */
 .hori { display: flex; }
