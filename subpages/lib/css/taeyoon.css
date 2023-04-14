@@ -1,3 +1,7 @@
+/* 
+{ 1.position 2.display 3.max-width 4. width 5. margin 6.padding 7.flex속성들 8.border 9.background 10.transform 11.텍스트 관련된 속성 }
+*/
 
-.tab {  }
-
+.tab { position: relative; height: 100px; border-radius: 100px; background: #222; }
+.tab li { position: relative; width: 33.33%; height: 100%; font-weight: 600; }
+.tab li:not(:last-child)::after { position: absolute; display: block; content: ''; width: 2px; height: 100px; top: 0; right: 0; background: #000; }
