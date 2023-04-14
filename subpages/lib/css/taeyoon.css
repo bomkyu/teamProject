@@ -2,6 +2,19 @@
 { 1.position 2.display 3.max-width 4. width 5. margin 6.padding 7.flex속성들 8.border 9.background 10.transform 11.텍스트 관련된 속성 }
 */
 
-.tab { position: relative; height: 100px; border-radius: 100px; background: #222; }
-.tab li { position: relative; width: 33.33%; height: 100%; font-weight: 600; }
+.tab { position: relative; height: 100px; }
+.tab li { position: relative; width: 33.33%; height: 100%; background: #222; font-weight: 600; }
+.tab li.active { background: #5a5a5a; }
+.tab li:first-child { border-radius: 100px 0 0 100px; }
+.tab li:last-child { border-radius: 0 100px 100px 0; }
+.tab li:hover { background: #282828; }
+.tab li.active:hover { background: #5a5a5a; }
 .tab li:not(:last-child)::after { position: absolute; display: block; content: ''; width: 2px; height: 100px; top: 0; right: 0; background: #000; }
+
+.card_wrap { width: 58%; height: 430px; margin: 0 auto; border-radius: 15px; background: #222; }
+    .card .card_top .card_img { width: 100%; height: 70px; background: url(../../../lib/images/img_logoDesign.png) no-repeat center center / 100px auto; }
+    .card .card_top .card_title { margin-top: 15px; font-weight: 700; font-size: 18px; }
+    .card .card_bottom { display: flex; margin-top: 75px; flex-direction: column; align-items: center; }
+    .card .card_bottom .card_border { width: 80%; height: 5px; border-radius: 5px; background: #fff; }
+    .card .card_bottom .card_p1 { margin-top: 15px; }
+    .card .card_bottom .p { font-weight: 500; font-size: 14px;}
