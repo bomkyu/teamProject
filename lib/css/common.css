@@ -3,7 +3,7 @@
 .block { display: block; }
 
 /* layout */
-.content_wrap { background-color: #000; }
+.content_wrap { background-color: #000; padding-top:100px; }
 .inner { position: relative; max-width: 1280px; width: 100%; margin:0 auto }
 
 .f_center { align-items: center; justify-content: center; }
@@ -68,20 +68,26 @@ h4.con_tit { font-size: 32px; font-weight: 500; }
 .h_100vh { height: 100vh; }
 
 /* header 혜민작업 */
-header {position:fixed; z-index:9999; top:0; width:100%; background-color: rgba(0,0,0,0.6);transform: translateY(0); transition: 0.5s;}
+header { position:fixed; z-index:9999; top:0; width:100%; background-color: rgba(0,0,0,0.6);transform: translateY(0); transition: 0.5s; }
 header > .inner { position:relative; }
 header.scroll li > a { padding: 0; }
 .main_logo {position:absolute;top:50%; transform: translateY(-50%); left:30px; width:63px; height:40px; background: url(../images/header_logo.png) center center no-repeat; background-size: cover;}
-
+.main_logo a { display: block; width: 100%; height: 100%; }
 .gnb {display:flex; justify-content: end;}
 .gnb > li { position: relative; display: block; padding:0 30px;}
 .gnb > li > a {display:block; line-height:80px; transition: 0.5s; font-size: 1.2em; font-weight: 600; padding:10px 0; }
 .gnb > li:hover > a {background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); -webkit-background-clip: text; color: transparent;}
 
-.gnb > li > ul { position: absolute; top:100px; left: 50%; transform:translateX(-50%); }
+.gnb > li > ul { display: none; position: absolute; top:100px; left: 50%; transform:translateX(-50%); }
 .gnb > li > ul a { display: none; white-space: nowrap; color: #FFF; font-size: 14px; }
+.gnb > li:hover > ul { display: block; }
 .gnb > li:hover > ul a { display: block; }
-header.scroll .gnb > li:hover > ul { top:80px; }
+.gnb > li > ul { display: none; padding: 10px; background-color: rgba(0,0,0,0.6); transition: 0.5s; }
+header.scroll .gnb > li:hover > ul { top:80px;}
+.gnb > li > ul > li { position: relative; }
+.gnb > li > ul > li::after { position: absolute; width: 0; height: 1px; bottom: -3px; left: 0; background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); transition: 0.3s ease-out; content: ""; }
+.gnb > li > ul > li:hover::after { width: 100%; }
+
 /* footer 태윤작업*/
 footer { font-size: 14px; background-color: #111; }
 .card_style { display: flex; min-height: 400px; flex-direction: column; align-items: center; justify-content: center; }
@@ -227,8 +233,8 @@ Padding
 .pt95 {padding-top:95px !important;}			.pb95 {padding-bottom:95px !important;}
 .pt100 {padding-top:100px !important;}		    .pb100 {padding-bottom:100px !important;}
 .pt150 {padding-top:150px !important;}          .pb150 {padding-bottom:150px !important;}
-.pt200 {padding-top:150px !important;}          .pb200 {padding-bottom:200px !important;}
-.pt250 {padding-top:150px !important;}          .pb250 {padding-bottom:200px !important;}
+.pt200 {padding-top:200px !important;}          .pb200 {padding-bottom:200px !important;}
+.pt250 {padding-top:250px !important;}          .pb250 {padding-bottom:250px !important;}
 
 .pl00 {padding-left:0px !important;}			.pr00 {padding-right:0px !important;}
 .pl02 {padding-left:2px !important;}			.pr02 {padding-right:2px !important;}

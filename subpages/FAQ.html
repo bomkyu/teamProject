@@ -26,40 +26,67 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../lib/javascript/common.js"></script> 
     <script src="../lib/javascript/index.js"></script>
+    <script defer src="lib/javascript/hyemin.js"></script>
     <title>FAQ</title>
 </head>
 <body>
     <!-- header 영역입니다. (혜민님) -->
+    
     <header>
         <div class="inner">
             <h1 class="main_logo"></h1>
             <ul class="gnb">
                 <li><a href="#">About</a></li>
-                <li><a href="#">Developer</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                    <a href="#">Developer</a>
+                    <ul>
+                        <li class="mb10 txt_c"><a href="#">SEO BEOM KYU</a></li>
+                        <li class="mb10 txt_c"><a href="#">CHO HYEA MIN</a></li>
+                        <li class="txt_c"><a href="#">LEE TAE YOON</a></li>
+                    </ul>
+                </li>
+                <li><a href="./subpages/FAQ.html">FAQ</a></li>
+                <li><a href="./subpages/contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
+    
     <!-- //header -->
 
     <!-- content_wrap -->
-    <div class="content_wrap">
-        <section class="pt100 pb100">
+    <main class="content_wrap">
+        <section class="faq">
             <div class="inner txt_c">
-                <div class="faq_wrap mt80">
+                <h2 class="pt30 pb30">FAQ</h2>
+                <p class="typing txt_l pb20"></p>
+                <div class="faq_wrap">
+                    <div class="faq_bar flex">
+                        <ul class="bar_left flex">
+                            <li class="color red"></li>
+                            <li class="color yellow"></li>
+                            <li class="color green"></li>
+                            <li class="btn left flex f_center"><img src="lib/images/left_arrow_icon.png" alt="left_arr"></li>
+                            <li class="btn right flex f_center"><img src="lib/images/right_arrow_icon.png" alt="right_arr"></li>
+                            <li class="btn window flex f_center"><img src="lib/images/window_maximize_application_icon.png" alt=""></li>
+                        </ul>
+                        <div class="bar_middle flex">
+                            <span class="earth flex f_center"><img src="lib/images/world_icon.png" alt="earth"></span>
+                            <span>http://google.co.kr</span>
+                            <span class="repeat flex f_center"><img src="lib/images/arrow_refresh_reload_repeat_icon.png" alt=""></span>
+                        </div>
+                        <ul class="bar_right flex">
+                            <li class="btn"></li>
+                            <li class="btn"></li>
+                        </ul>
+                    </div>
                     <div class="faq_content">
-                        <div class="faq_bar">
-
-                        </div>
-                        <div class="faq_border">
-                        </div>
-
+                        
                     </div>
                 </div>
-            </div>            
+            </div>
+
         </section>
-    </div>
+    </main>
   <!-- footer 영역입니다. (태윤님) -->
   <footer>
     <div class="inner">
