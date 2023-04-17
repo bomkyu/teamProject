@@ -1,4 +1,4 @@
-main {margin:100px 0;}
+main {padding:100px 0;}
 .faq_wrap {min-height:600px; border-radius: 10px; background-color: #fff; box-shadow: 4px 8px 16px 6px rgba(204, 204, 204, 0.2);}
 .faq_wrap:hover {cursor:pointer; transform: translateY(-15px);transition: all .3s ease;box-shadow: 8px 8px 16px 6px rgba(204, 204, 204, 0.5);}
 
@@ -38,7 +38,7 @@ main {margin:100px 0;}
 
 .bar_right > li {margin:5px;}
 .faq_content {color:black;}
-.typing {color:#000}
+.typing {font-size:22px;}
 .typing {position:relative;font-size:20px;padding:10px;}
 .typing::after{position:absolute; left:150; content: ""; width:1px; height:20px; background-color: #000; animation: cursor 1s infinite;}
 
