@@ -1,4 +1,45 @@
-section > .inner {height:100vh;} 
-.faq_wrap {background:#fff; width:100%; height:100%;}
-.faq_wrap .faq_bar {height:50px; background: #999;}
+main {margin:100px 0;}
+.faq_wrap {min-height:600px; border-radius: 10px; background-color: #fff; box-shadow: 4px 8px 16px 6px rgba(204, 204, 204, 0.2);}
+.faq_wrap:hover {cursor:pointer; transform: translateY(-15px);transition: all .3s ease;box-shadow: 8px 8px 16px 6px rgba(204, 204, 204, 0.5);}
+
+.faq h2{font-size: 50px; font-weight: bold;}
+
+
+@keyframes cursor{
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;} 
+}
+
+
+
+.faq_bar {position:relative;justify-content: space-between; align-items: center;height:40px;border-radius: 10px 10px 0 0; background:linear-gradient(#fff 10%, #cccccccb 100%);box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);}
+
+.faq_bar > * {align-items: center;}
+.faq_bar ul li, .faq_bar span {color:#000;}
+
+.bar_left > li{margin:5px;}
+.bar_left .color {width:13px; height:13px; border-radius:50%; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7)}
+.bar_left .red{background-color: #ea0b0b;}
+.bar_left .yellow{background-color: rgb(222, 202, 23);}
+.bar_left .green{background-color: #149414;}
+
+.btn{ width: 24px; height: 20px; border:1px solid #888; border-radius: 5px; background-color:#f5f5f5 ;}
+.left > img, .right > img {}
+.right > img {opacity: 0.6;}
+.bar_left .left{margin-right:0;}
+.bar_left .right{margin-left:0;}
+.bar_left .window{width:30px;}
+.bar_left .window img {width:16px; height:16px;opacity: 0.6;}
+
+.bar_middle{position:absolute; left:50%; transform: translateX(-50%); background-color:#fff; border:1px solid #888; border-radius: 5px;}
+.bar_middle .earth, .repeat{width:16px; height:16px;margin:0 10px;}
+
+.bar_right > li {margin:5px;}
+.faq_content {color:black;}
+.typing {color:#000}
+.typing {position:relative;font-size:20px;padding:10px;}
+.typing::after{position:absolute; left:150; content: ""; width:1px; height:20px; background-color: #000; animation: cursor 1s infinite;}
+
 
