@@ -19,11 +19,13 @@
 .sponge .sponge_img { height: 100vh; background: url('../images/img_ty_sponge.jpg') no-repeat center / cover; }
 
 .about_me { position: relative; height: 100vh; background: #000; text-align: center; }
-.about_me .about_text { position: absolute; width: 38%; }
+.about_me .about_aos { height: 100vh; }
+.about_me .about_text { position: absolute; width: 38%; top: 45%; left: 50%; transform: translate(-50%, -50%); }
 .about_me .about_text h4 { font-weight: 500; font-size: 26px; }
 .about_me .about_text h3 { margin-top: 10px; font-weight: 700; font-size: 32px; }
 .about_me .about_text .about_p { margin-top: 20px; }
 .about_me .about_text .about_p p { font-size: 16px; }
+.about_me .about_text .about_p p:nth-of-type(2) { margin-top: 20px; }
 /* developers_taeyoon page end! */
 
 
