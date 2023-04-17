@@ -1,5 +1,5 @@
 let i = 0;
-let txt = 'Ask Your Developer'; 
+let txt = 'Ask Your Developers'; 
 let speed = 100;
 
 function typing() {
