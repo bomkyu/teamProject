@@ -2,7 +2,18 @@
 { 1.position 2.display 3.max-width 4. width 5. margin 6.padding 7.flex속성들 8.border 9.background 10.transform 11.텍스트 관련된 속성 }
 */
 
-.inner_pd { padding: 150px 0; }
+/* developers_taeyoon page start! */
+
+.contents {}
+.contents .introduce { width: 100%; height: 100vh; background: red; }
+.contents .introduce .introduce_img { background: url(''); }
+
+/* developers_taeyoon page end! */
+
+
+
+/* contact page start! */
+.inner_pd { padding: 100px 0; }
 
 .tab { position: relative; height: 100px; box-shadow: 0 0 30px rgb(35,33,34,.25); }
 .tab li { position: relative; width: 33.33%; height: 100%; background: #222; font-weight: 600; cursor: pointer; }
@@ -33,6 +44,7 @@
 .card_back .card .card_mt p { font-weight: 400; font-size: 16px; }
 .card_back .card .card_bottom .card_p1 { margin-top: 25px; }
 .card_back .card .card_bottom .card_p3 { margin-top: 30px; }
-.card_back .card .card_top .img_character1 { width: 50px; height: 50px; margin: 0 auto; border-radius: 50%; background: url('../images/img_character.png') no-repeat 7% 55% / 150%; }
+.card_back .card .card_top .img_character1 { width: 50px; height: 50px; margin: 0 auto; border-radius: 50%; background: url('../images/img_ty_small.png') no-repeat 7% 55% / 150%; }
 .card_back .card .card_top .sub_title { margin-top: 5px; }
 .card_back .card .card_top .card_title { font-size: 32px; }
+/* contact page end! */ 

@@ -1,3 +1,12 @@
+/* developers_taeyoon page start! */
+
+AOS.init();
+
+/* developers_taeyoon page end! */
+
+
+
+/* contact page start! */
 const tabs = document.querySelectorAll('.tab > li');
 const cardFronts = document.querySelectorAll('.card_front');
 const cardBacks = document.querySelectorAll('.card_back');
@@ -24,3 +33,4 @@ tabs.forEach((tab, index) => {
         cardWraps[index].classList.add('active');
     });
 });
+/* contact page end! */
