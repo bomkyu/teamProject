@@ -21,7 +21,7 @@ main {padding:100px 0;}
 .faq_bar_wrap li span {color: #000}
 
 .bar_q {display:flex; align-items: center;}
-.bar_plus {position:absolute; z-index:200; right: 10px; top: 10px; width:20px; height:20px; border-radius: 50%; background-color: #8113EC; color:#fff; font-size:14px;}
+.bar_plus {position:absolute; right: 10px; top: 10px; width:20px; height:20px; border-radius: 50%; background-color: #8113EC; color:#fff; font-size:14px;}
 
 .bar_q_icon{padding-right:10px; font-size:24px; color:#8113EC;}
 
