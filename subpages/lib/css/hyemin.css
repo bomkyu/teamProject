@@ -1,6 +1,6 @@
 main {padding:100px 0;}
-.faq_wrap {position:relative; min-height:600px; margin:0 300px 0 100px; border-radius: 10px; background-color: #8113EC; box-shadow: 4px 8px 16px 6px rgba(204, 204, 204, 0.2);transition: all .5s ease;}
-.faq_wrap:hover {cursor:pointer; box-shadow: 8px 8px 16px 6px rgba(204, 204, 204, 0.5);}
+.faq_wrap {position:relative; min-height:600px; margin:0 300px 0 100px; border-radius: 10px; background-color: #8113EC; box-shadow:  0 0 20px 0 rgba(255,255,255, 0.3);transition: all .5s ease;}
+.faq_wrap:hover {cursor:pointer; box-shadow: 0 0 20px 0 rgba(255,255,255, 0.5); }
 
 @keyframes cursor{
   0% {opacity: 1;}
@@ -14,25 +14,20 @@ main {padding:100px 0;}
 
 .faq_content {border:1px solid red;}
 
-.faq_bar_wrap {position:absolute; right:-100px; top:30px;}
+.faq_bar_wrap {position:absolute;z-index: 10;right:-100px; top:30px;}
 .faq_bar_wrap li {position:relative; padding: 20px 50px 20px 10px; margin:20px 0; width: 500px; text-align:left; background-color: #fff;border-radius: 10px; box-shadow: 4px 8px 16px 6px rgba(204, 204, 204, 0.2);}
+.faq_bar_wrap li::before{margin-right:10px; font-family: "Font Awesome 6 Free"; font-weight:900; font-size: 24px; color: #8113EC;content: "Q";}
+.faq_bar_wrap li::after{position:absolute; right:10px; top:10px; text-align:center; width:20px; height:20px; border-radius: 50%; background-color: #8113EC; font-family: "Font Awesome 6 Free"; font-weight:900; color: #fff;content: "+";}
 
-
-.faq_bar_wrap li span {color: #000}
-
-.bar_q {display:flex; align-items: center;}
-.bar_plus {position:absolute; right: 10px; top: 10px; width:20px; height:20px; border-radius: 50%; background-color: #8113EC; color:#fff; font-size:14px;}
-
-.bar_q_icon{padding-right:10px; font-size:24px; color:#8113EC;}
-
-.bar_plus_icon{margin-left: 2px; color:#fff;}
+.faq_bar_wrap li span {display:inline-block; color: #000}
 
 
 .faq_answer {display:none; position:absolute;z-index:100; width: 500px; height: 426px; border-radius: 10px; background-color: skyblue; color:#000;}
 
 
 
-.faq_text {position:absolute;bottom: 0; left: 50px; font-size: 200px; font-weight: 700; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #fff;  color: transparent;}
+.faq_text {position:absolute;bottom: 0; left: 50px; font-size: 200px; font-weight: 700;
+  color:rgba(255, 255, 255,0.8); /* -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #fff;  color: transparent; */}
 
 
 
