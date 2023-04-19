@@ -71,13 +71,15 @@
 /* keyword end! */
 
 /* all page start! */
-.all_page { display: flex; }
-.all_page li a { display: block; }
-.all_page li .all_img1 { width: 500px; height: 500px; background: url('../images/img_ty_page1.JPG') no-repeat center center / cover; }
-.all_page li .all_img2 { width: 500px; height: 500px; background: url('../images/img_ty_page2.JPG') no-repeat center center / cover; }
-.all_page li .all_img3 { width: 500px; height: 500px; background: url('../images/img_ty_page3.JPG') no-repeat center center / cover; }
-.all_page li .all_img4 { width: 500px; height: 500px; background: url('../images/img_ty_page4.JPG') no-repeat center center / cover; }
-.all_page li .all_img5 { width: 500px; height: 500px; background: url('../images/img_ty_page5.JPG') no-repeat center center / cover; }
+.all_page { display: flex; max-width: 1280px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+.all_page li { position: relative; display: block; width: calc(33.33% - 30px); margin: 15px; border: 3px solid #fff; overflow: hidden; }
+.all_page li a { display: block; padding-bottom: 45%; transition: .3s; }
+.all_page li a:hover { transform: scale(1.05); }
+.all_page li .all_img1 { background: url('../images/img_ty_page1.JPG') no-repeat center center / cover; }
+.all_page li .all_img2 { background: url('../images/img_ty_page2.JPG') no-repeat center center / cover; }
+.all_page li .all_img3 { background: url('../images/img_ty_page3.JPG') no-repeat center center / cover; }
+.all_page li .all_img4 { background: url('../images/img_ty_page4.JPG') no-repeat center center / cover; }
+.all_page li .all_img5 { background: url('../images/img_ty_page5.JPG') no-repeat center center / cover; }
 /* all page end! */
 
 
@@ -96,6 +98,8 @@
     .keyword8 { width: 160px; height: 160px; }
     .keyword9 { width: 130px; height: 130px; }
     .keyword10 { width: 130px; height: 130px; }
+
+    .all_page li { width: calc(50% - 30px); }
 }
 
 @media (max-width: 680px) {
@@ -116,8 +120,9 @@
     .keyword8 { width: 130px; height: 130px; }
     .keyword9 { width: 100px; height: 100px; }
     .keyword10 { width: 100px; height: 100px; }
-
     .keyword .circle_text { font-size: 20px; }
+
+    .all_page li { width: calc(100% - 30px); }
 }
 
 @media (max-width: 550px) {

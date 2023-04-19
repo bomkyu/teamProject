@@ -5,12 +5,8 @@ AOS.init();
 const allPage = document.querySelectorAll('.all_page > li > a');
 allPage.forEach((page, index)=>{
     page.addEventListener('click', (aTag)=>{
-        
-        if(allPage.length > 0){
             aTag.preventDefault();
-            document.querySelector(`#s${index + 1}`).scrollIntoView({ behavior: 'smooth'});
-        }
-
+            document.querySelector(`#s${index + 1}`).scrollIntoView({ behavior: 'smooth', block: 'center'});
     });
 });
 
