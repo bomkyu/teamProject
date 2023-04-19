@@ -2,15 +2,18 @@
 let i = 0;
 let txt = 'Ask Your Developers'; 
 let speed = 100;
-
-function typing() {
-  if (i < txt.length) {
-    document.querySelector('.typing').innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typing, speed);
+let type = document.querySelector('.typing');
+if(type){
+  function typing() {
+    if (i < txt.length) {
+      type.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    }
   }
+  typing();
 }
-typing();
+
 
 //답변 펼치기//
 const faqBar = document.querySelectorAll('.faq_bar_wrap > li');
@@ -35,5 +38,35 @@ faqAnswer.forEach(function(item,index){
     item.classList.remove('active');
   })
 })
+
+//풀페이지 스크롤//
+window.addEventListener('wheel',function(e){
+  e.preventDefault();
+},{passive : false});
+
+let $html = $('html');
+let page = 1;
+let lastPage = $('section').length;
+console.log('dddd',lastPage);
+
+$html.animate({scrollTop:0},10);
+$(window).on("wheel", function(e){
+ 
+	if($html.is(":animated")) return;
+ 
+	if(e.originalEvent.deltaY > 0){
+		if(page== lastPage) return;
+ 
+		page++;
+	}else if(e.originalEvent.deltaY < 0){
+		if(page == 1) return;
+ 
+		page--;
+	}
+	let posTop = (page-1) * $(window).height();
+ 
+	$html.animate({scrollTop : posTop});
+ 
+});
 
 
