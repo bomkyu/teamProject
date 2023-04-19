@@ -14,9 +14,7 @@ typing();
 
 //답변 펼치기//
 const faqBar = document.querySelectorAll('.faq_bar_wrap > li');
-console.log(faqBar);
 const faqAnswer = document.querySelectorAll('.faq_answer_wrap > li');
-console.log(faqAnswer);
 
 
 faqBar.forEach(function(item,index){
@@ -31,4 +29,11 @@ faqBar.forEach(function(item,index){
     }
   })
 })
+
+faqAnswer.forEach(function(item,index){
+  item.addEventListener('click', function(){
+    item.classList.remove('active');
+  })
+})
+
 
