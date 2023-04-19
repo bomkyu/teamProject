@@ -1,15 +1,14 @@
 .faq_wrap {position:relative; min-height:600px; margin:0 300px 0 100px; border-radius: 10px; background-color: #8113EC; box-shadow:  0 0 10px 0 rgba(255,255,255, 0.3);transition: all .5s ease;}
 .faq_wrap:hover {cursor:pointer; box-shadow: 0 0 10px 0 rgba(255,255,255, 0.5); }
 
+.typing {position:relative;font-size:30px;text-shadow: 1px 1px 5px rgba(255,255,255,0.5)}
+.typing::after{position:absolute;content: ""; width:1px; height:30px; background-color: #fff; animation: cursor 1s infinite;}
 @keyframes cursor{
   0% {opacity: 1;}
   40% {opacity: 1;}
   60% {opacity: 0;}
   100% {opacity: 0;} 
 }
-
-.typing {position:relative;font-size:30px;text-shadow: 1px 1px 5px rgba(255,255,255,0.5)}
-.typing::after{position:absolute;content: ""; width:1px; height:30px; background-color: #fff; animation: cursor 1s infinite;}
 
 .faq_content {border:1px solid red;}
 
@@ -20,28 +19,19 @@
 
 
 .faq_answer_wrap {position:absolute; z-index:999; right: -200px;}
-.faq_answer_wrap li {display:block; width: 600px; height: 0; overflow: hidden;transition: all 0.3s ease-in-out; border-radius: 10px; box-shadow: inset 0 0 5px grey; background: #fff;}
+.faq_answer_wrap li {display:block; width: 600px; height: 0; overflow: hidden; transition: all 0.3s ease-in-out; border-radius: 10px; box-shadow: inset 0 0 5px grey; background: #fff;}
 .faq_answer_wrap > li * {color: #000;}
+.faq_answer_wrap > li.active {height: 500px; overflow:auto;}
+.faq_answer_wrap > li::before {margin: 10px;}
 
 .faq_answer_wrap li::-webkit-scrollbar {width: 14px;}
-.faq_answer_wrap li::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 5px #fff;
-  background: linear-gradient(to top,#82b8f1 10%, #b375f1 100%);border-radius: 14px;}
+.faq_answer_wrap li::-webkit-scrollbar-thumb {box-shadow: inset 0 0 5px #fff;background: linear-gradient(to top,#82b8f1 10%, #b375f1 100%);border-radius: 14px;}
 .faq_answer_wrap li::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; background: #f1f1f1; border-radius: 14px;}
-
-  .faq_answer_wrap > li.active {height: 500px; overflow:auto;}
-
-
-  .faq_answer_wrap > li::before {margin: 10px;}
-
-/*   .faq_answer_wrap > li::after{ right:0; top:-30px; text-align:center; width:20px; height:20px; content: "X";} */
 
   .faq_answer_wrap p {display:inline-block; padding-top: 20px;}
   .faq_answer_wrap dl {padding:20px;}
   .faq_answer_wrap dt {padding:20px 0;}
   .faq_answer_wrap dd {margin-left:20px; margin-bottom:20px;}
-
-
 
 
 
