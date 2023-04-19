@@ -1,0 +1,16 @@
+.bg_gray { background-color: #CCC; }
+.sec_1 { }
+.sec_1 .section_inner { height: 100%; background: #CCC url(../images/img_bk_01.png) no-repeat 85% bottom / 380px; }
+
+.tec_list_contain { position:relative; }
+.tec_list_contain .tec_list { display:flex; flex-wrap:wrap; z-index:5; }
+.tec_list_contain .tec_list > li { width:33.3333%; color:#333; text-align:center; }
+
+.tec_list_contain .circle_pg_wrap { position:relative; }
+.tec_list_contain .circle_pg { position:relative; z-index:3; display:inline-block; padding:30%; background: conic-gradient(rgb(255, 255, 255) 0deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%); border-radius:50%; }
+.tec_list_contain .circle_pg::after { position:absolute; padding:48%; top:50%; left:50%; transform:translate(-50%, -50%); border-radius:50%; background:#000; content:"";  }
+
+.tec_list_contain .circle_pg_txt { position:absolute; z-index:5; top:50%; left:50%; transform:translate(-50%, -50%); }
+.tec_list_contain .circle_pg_txt > h3 { font-size:1.25rem; margin-bottom:15px; }
+.tec_list_contain .circle_pg_txt > .persent_area { font-size:0.875rem; }
+.tec_list_contain .circle_pg_txt > .persent_area::after { content: attr(data-percent)'%';}

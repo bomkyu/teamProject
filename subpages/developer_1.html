@@ -25,10 +25,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./lib/images/favicon/favicon-16x16.png">
     <link rel="stylesheet" href="../lib/css/defalut.css">
     <link rel="stylesheet" href="../lib/css/common.css">
+    <link rel="stylesheet" href="./lib/css/beomkyu.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../lib/javascript/common.js"></script> 
-    <script src="../lib/javascript/index.js"></script> 
+    <script defer src="./lib/javascript/beomkyu.js"></script> 
     <title>Developer</title>
 </head>
 <body>
@@ -54,23 +56,106 @@
     <!-- //header -->
 
     <!-- content_wrap -->
-    <div class="content_wrap pt00">
-        <div class="h_100vh">
-            <section class="sec_1 flex f_center h_100vh"  data-aos="slide-up" data-aos-easing="ease-in-out" data-aos-duration="600" style="background-color: #ccc;">
-                <!--TAKE ME WITH YOU-->
-                <div class="inner txt_c"> <!--센터처리 하고싶은 내용은 inner 사용-->
-                    <h2 class="con_tit gradient txt_l"  data-aos="slide-left"  data-aos-duration="700">
+    <div class="content_wrap pt00" >
+        <!-- section 1 -->
+        <section class="sec_1 h_100vh">
+            <div class="section_inner flex f_center" data-aos="slide-down" data-aos-duration="600">
+                <div class="inner txt_c">
+                    <h2 class="con_tit gradient txt_l" data-aos="fade-down" data-aos-duration="500" data-aos-delay="600">
                         BEOM KYU
                     </h2>
-                    <p class="mt25 txt_l" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic" data-aos-duration="600" data-aos-delay="500">
-                        상상한대로,<br>
-                        코드를 작성하는 서범규라고 합니다 :&#41;
-                    </p>
+                    <p class="txt_l mt25" data-aos="fade-down" data-aos-duration="500" data-aos-delay="800" >상상한대로,</p>
+                    <p class="txt_l" data-aos="fade-down" data-aos-duration="500" data-aos-delay="900">코드를 작성하는 서범규라고 합니다 :&#41;</p>
                 </div>
-                <!-- 풀스크린 콘텐츠도 같은 섹션안에 사용가능 -->
-            </section>
-        </div>
+            </div>
+        </section>
+        <!-- //section 1 -->
+
+        <!-- section 2 -->
+        <section class="sec_2 pt100 pb100">
+            <div class="inner txt_c">
+                <h3 class="con_tit gradient normal mb70" data-aos="fade-down" data-aos-duration="500" data-aos-delay="600">
+                   Technique
+                </h3>
+                <!-- tec_list_contain -->
+                <div class="tec_list_contain">
+                    <ul class="tec_list">
+                        <li>
+                            <div class="circle_pg_wrap">
+                                <div class="circle_pg" id="pg_1" data-percent="80" style="background: conic-gradient(rgb(255, 255, 255) 0deg, rgb(255, 255, 255) 80%, rgb(0, 0, 0) 80%, rgb(0, 0, 0) 100%);"></div>
+                                <div class="circle_pg_txt">
+                                    <h3>HTML</h3>
+                                    <p class="persent_area" data-percent="80"></p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="circle_pg_wrap">
+                                <div class="circle_pg" id="pg_2" data-percent="80" style="background: conic-gradient(rgb(255, 255, 255) 0deg, rgb(255, 255, 255) 80%, rgb(0, 0, 0) 80%, rgb(0, 0, 0) 100%);"></div>
+                                <div class="circle_pg_txt">
+                                    <h3>CSS</h3>
+                                    <p class="persent_area" data-percent="80"></p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="circle_pg_wrap">
+                                <div class="circle_pg" id="pg_3" data-percent="45" style="background: conic-gradient(rgb(255, 255, 255) 0deg, rgb(255, 255, 255) 45%, rgb(0, 0, 0) 45%, rgb(0, 0, 0) 100%);"></div>
+                                <div class="circle_pg_txt">
+                                    <h3>JAVASCRIPT</h3>
+                                    <p class="persent_area" data-percent="45"></p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="mt70">
+                            <div class="circle_pg_wrap">
+                                <div class="circle_pg" id="pg_4" data-percent="40" style="background: conic-gradient(rgb(255, 255, 255) 0deg, rgb(255, 255, 255) 40%, rgb(0, 0, 0) 40%, rgb(0, 0, 0) 100%);"></div>
+                                <div class="circle_pg_txt">
+                                    <h3>REACT</h3>
+                                    <p class="persent_area" data-percent="40"></p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="mt70">
+                            <div class="circle_pg_wrap">
+                                <div class="circle_pg" id="pg_5" data-percent="32" style="background: conic-gradient(rgb(255, 255, 255) 0deg, rgb(255, 255, 255) 32%, rgb(0, 0, 0) 32%, rgb(0, 0, 0) 100%);"></div>
+                                <div class="circle_pg_txt">
+                                    <h3>Vue.js</h3>
+                                    <p class="persent_area" data-percent="32"></p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="mt70">
+                            <div class="circle_pg_wrap">
+                                <div class="circle_pg" id="pg_5" data-percent="20" style="background: conic-gradient(rgb(255, 255, 255) 0deg, rgb(255, 255, 255) 20%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 100%);"></div>
+                                <div class="circle_pg_txt">
+                                    <h3>Git</h3>
+                                    <p class="persent_area" data-percent="20"></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //tec_list_contain -->
+            </div>
+        </section>
+        <!-- section 2 -->
+
+        <!-- section 2 -->
+        <section class="sec_3 pt100 pb100 bg_gray">
+            <div class="inner">
+                <h3 class="con_tit normal" data-aos="fade-down" data-aos-duration="500" data-aos-delay="600">
+                    value to pursue
+                </h3>
+            </div>
+        </section>
     </div>
+    <!-- // content_wrap -->
 
     <!-- footer 영역입니다. (태윤님) -->
     <footer>
@@ -91,7 +176,4 @@
     </footer>
     <!-- footer -->
 </body>
-<script>
-    AOS.init();
-</script>
 </html>
