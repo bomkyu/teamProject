@@ -23,8 +23,10 @@
 
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./lib/javascript/common.js"></script> 
-    <script src="./lib/javascript/index.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../lib/javascript/common.js"></script> 
+    <script src="../lib/javascript/index.js"></script> 
+    <script defer src="lib/javascript/hyemin.js"></script> 
     <title>Developer</title>
 </head>
 <body>
@@ -51,19 +53,41 @@
 
     <!-- content_wrap -->
     
-    <section class="section01 h_100vh">
-        <div class="sect01_txt">HYEMIN</div>
+    <section class="section01 h_100vh section">
+        <div class="sect01_txt"data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="200" data-aos-duration="1000">HYEMIN</div>
+        <div class="sect01_img" data-aos="zoom-up" data-aos-easing="ease-in" data-aos-delay="100" data-aos-duration="1000"></div>
     </section>
     <section class="section02 h_100vh">
-        
+        <div class="sect02_wrap flex space_around">
+            <div class="sect02_txt">
+                <h2 class="con_tit">Profile</h2>
+                <ul class="pro_wrap">
+                    <li>MBTI</li>
+                    <li>관심사</li>
+                    <li>????</li>
+                    <li>Skill</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="sect02_img flex">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>  
     </section>
     <section class="section03 h_100vh">
         
     </section>
+    <section class="section04 h_100vh">
+        
+    </section>
+
 
     
 
     <!-- footer 영역입니다. (태윤님) -->
+    <section>
     <footer>
         <div class="inner">
             <div class="card_style">
@@ -80,6 +104,7 @@
             </div>
         </div>
     </footer>
+    </section>
     <!-- footer -->
 </body>
 <script>

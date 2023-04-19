@@ -1,3 +1,5 @@
+header {background-color: transparent;}
+
 .faq_wrap {position:relative; min-height:600px; margin:0 300px 0 100px; border-radius: 10px; background-color: #8113EC; box-shadow:  0 0 10px 0 rgba(255,255,255, 0.3);transition: all .5s ease;}
 .faq_wrap:hover {cursor:pointer; box-shadow: 0 0 10px 0 rgba(255,255,255, 0.5); }
 
@@ -41,15 +43,24 @@
 
 /* section01 */
 
-.section01 {background:rgb(191, 213, 236) url(../images/img_hm_2.png) no-repeat;
-background-position: 75% 80%;
-background-size: 350px;}
-.sect01_txt {position:absolute;top:50%; left:15%; font-size:100px; font-weight:700; color:#fff;}
+.section01 {background-color:rgb(191, 213, 236)}
+.sect01_txt {position:absolute;z-index:10;top:40%; left:20%; font-size:100px; font-weight:700; color:#fff;}
+.sect01_img {background: url('../images/img_hm_2.png') no-repeat;
+  width:100%; height:100%;
+  background-position: 75% 90%;
+  background-size: 350px; ;}
 
 
 /*section02*/
-.section02 {background-color: #cecece;}
+.section02 {background-color: #000;}
+.section02 .sect02_wrap{padding:300px 0;}
+.sect02_img { height:500px;border:1px solid #fff;}
+.sect02_img span {display:block; height:200px; border:1px solid red;}
+.sect02_img span:nth-child(1){background: url(../images/img_hm_left.png) center center no-repeat; background-size: contain;}
 
 /*section03*/
-.section03 {background-color: #746f6f;}
+.section03 {background-color: lightyellow;}
+
+/*section04*/
+.section04 {background-color: lightpink;}
 
