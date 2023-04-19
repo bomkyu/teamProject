@@ -14,21 +14,26 @@ typing();
 
 //답변 펼치기//
 const faqBar = document.querySelectorAll('.faq_bar_wrap > li');
-console.log(faqBar);
 const faqAnswer = document.querySelectorAll('.faq_answer_wrap > li');
-console.log(faqAnswer);
 
 
 faqBar.forEach(function(item,index){
   item.addEventListener('click',function(){
-    if(faqAnswer[index].classList.contains('open')){
-      faqAnswer[index].classList.remove('open');
+    if(faqAnswer[index].classList.contains('active')){
+      faqAnswer[index].classList.remove('active');
     }else{
       faqAnswer.forEach(function(answer){
-        answer.classList.remove('open');
+        answer.classList.remove('active');
       })
-      faqAnswer[index].classList.add('open');
+      faqAnswer[index].classList.add('active');
     }
   })
 })
+
+faqAnswer.forEach(function(item,index){
+  item.addEventListener('click', function(){
+    item.classList.remove('active');
+  })
+})
+
 
