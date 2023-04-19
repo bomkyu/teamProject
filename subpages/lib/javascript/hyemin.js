@@ -21,13 +21,13 @@ console.log(faqAnswer);
 
 faqBar.forEach(function(item,index){
   item.addEventListener('click',function(){
-    if(faqAnswer[index].classList.contains('open')){
-      faqAnswer[index].classList.remove('open');
+    if(faqAnswer[index].classList.contains('active')){
+      faqAnswer[index].classList.remove('active');
     }else{
       faqAnswer.forEach(function(answer){
-        answer.classList.remove('open');
+        answer.classList.remove('active');
       })
-      faqAnswer[index].classList.add('open');
+      faqAnswer[index].classList.add('active');
     }
   })
 })
