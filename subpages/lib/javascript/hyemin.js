@@ -40,7 +40,7 @@ faqAnswer.forEach(function(item,index){
 })
 
 //풀페이지 스크롤//
-window.addEventListener('wheel',function(e){
+/* window.addEventListener('wheel',function(e){
   e.preventDefault();
 },{passive : false});
 
@@ -67,6 +67,6 @@ $(window).on("wheel", function(e){
  
 	$html.animate({scrollTop : posTop});
  
-});
+}); */
 
 

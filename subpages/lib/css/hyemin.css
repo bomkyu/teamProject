@@ -57,6 +57,8 @@ header {background-color: transparent;}
 .sect02_img { height:500px;border:1px solid #fff;}
 .sect02_img span {display:block; height:200px; border:1px solid red;}
 .sect02_img span:nth-child(1){background: url(../images/img_hm_left.png) center center no-repeat; background-size: contain;}
+.sect02_img span:nth-child(1){background: url(../images/img_hm_left.png) center center no-repeat; background-size: contain;}
+.sect02_img span:nth-child(1){background: url(../images/img_hm_left.png) center center no-repeat; background-size: contain;}
 
 /*section03*/
 .section03 {background-color: lightyellow;}
