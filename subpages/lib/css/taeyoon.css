@@ -46,16 +46,16 @@
 .keyword { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 50%; animation: keyword_animation 5s infinite ease-in-out; }
 .keyword .circle_text { font-size: 26px; text-align: center; }
 
-.keyword1 { width: 220px; height: 220px; left: 5%;; bottom: 64%; background-image: radial-gradient(circle, #b5d6ff ,#000 80%); }
-.keyword2 { width: 130px; height: 130px; right: 40%; bottom: 65%; background-image: radial-gradient(circle, #d3d3d3, #000 80%); }
-.keyword3 { width: 160px; height: 160px; right: 18%; bottom: 74%; background-image: radial-gradient(circle, #ffb5b5, #000 80%); }
-.keyword4 { width: 130px; height: 130px; left: 0%; bottom: 40%; background-image: radial-gradient(circle, #d3d3d3, #000 80%); }
-.keyword5 { width: 220px; height: 220px; left: 21%; bottom: 29%; background-image: radial-gradient(circle, #b5d6ff ,#000 80%); }
-.keyword6 { width: 130px; height: 130px; right: 22%; bottom: 37%; background-image: radial-gradient(circle, #d3d3d3, #000 80%); }
-.keyword7 { width: 190px; height: 190px; right: 0%; bottom: 48%; background-image: radial-gradient(circle, #b5fff8, #000 80%); }
-.keyword8 { width: 190px; height: 190px; left: 5%; bottom: 3%; background-image: radial-gradient(circle, #b5fff8, #000 80%); }
-.keyword9 { width: 160px; height: 160px; right: 37%; bottom: 8%; background-image: radial-gradient(circle, #ffb5b5, #000 80%); }
-.keyword10 { width: 160px; height: 160px; right: 11%; bottom: 5%; background-image: radial-gradient(circle, #ffb5b5, #000 80%); }
+.keyword1 { width: 220px; height: 220px; left: 5%;; bottom: 64%; background-image: radial-gradient(circle, #b5d6ff ,#000 70%); }
+.keyword2 { width: 130px; height: 130px; right: 40%; bottom: 65%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
+.keyword3 { width: 160px; height: 160px; right: 18%; bottom: 74%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
+.keyword4 { width: 130px; height: 130px; left: 0%; bottom: 40%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
+.keyword5 { width: 220px; height: 220px; left: 21%; bottom: 29%; background-image: radial-gradient(circle, #b5d6ff ,#000 70%); }
+.keyword6 { width: 130px; height: 130px; right: 22%; bottom: 37%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
+.keyword7 { width: 190px; height: 190px; right: 0%; bottom: 48%; background-image: radial-gradient(circle, #b5fff8, #000 70%); }
+.keyword8 { width: 190px; height: 190px; left: 5%; bottom: 3%; background-image: radial-gradient(circle, #b5fff8, #000 70%); }
+.keyword9 { width: 160px; height: 160px; right: 37%; bottom: 8%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
+.keyword10 { width: 160px; height: 160px; right: 11%; bottom: 5%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
 
 @keyframes keyword_animation {
     0% {
@@ -71,7 +71,7 @@
 /* keyword end! */
 
 /* all page start! */
-.all_page { display: flex; max-width: 1280px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+.all_page { display: flex; max-width: 1280px; margin: 0 auto; padding-bottom: 100px; flex-wrap: wrap; justify-content: center; }
 .all_page li { position: relative; display: block; width: calc(33.33% - 30px); margin: 15px; border: 3px solid #fff; overflow: hidden; }
 .all_page li a { display: block; padding-bottom: 45%; transition: .3s; }
 .all_page li a:hover { transform: scale(1.05); }
@@ -140,7 +140,7 @@
     .keyword9 { width: 80px; height: 80px; }
     .keyword10 { width: 80px; height: 80px; }
 
-    .keyword .circle_text { font-size: 16px; }
+    .keyword .circle_text { font-size: 14px; }
 }
     /* media query end! */
 /* developers_taeyoon page end! */
