@@ -48,16 +48,27 @@
 
 /*section02*/
 .section02 {background-color: #fff;}
-.sect02_wrap{position:relative; height:100%; background: url(../images/Untitled-1.png) 20% 15%/30% no-repeat;}
-.sect02_txt{position:absolute; right:20%; top:10%;}
-.sect02_txt h3 {color:#000;padding:200px; display: inline-block; }
-.sect02_img_wrap {position: absolute; bottom: 10%; left: 15%;}
-.sect02_img_wrap img{height:400px;}
+.sect02_wrap{position:relative; height:100%;}
 
+.sect02_txt{position:absolute; right:30%; top: 30%;}
+.sect02_txt h3 {color:#000;display: inline-block; }
+
+.sect02_bg {position:absolute; top: 5%; left: 8%;}
+.sect02_bg.scale {animation: scale 2s ease-in-out;}
+@keyframes scale{
+  0% {transform:scale(0.2); opacity:0}
+  50% {transform:scale(1.2); opacity:0.7}
+  100% {transform:scale(1.0); opacity:1}
+}
+
+.sect02_cha_wrap {position: absolute; bottom: 15%; left: 10%;}
+.sect02_cha_wrap img{height:400px;}
 
 
 /*section03*/
 .section03 {background-color: #222;}
+.section03 ul li {flex:1;}
+
 
 /*section04*/
 .section04 {background-color: lightpink;}
