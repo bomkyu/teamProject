@@ -1,7 +1,8 @@
-main {padding:100px 0;}
-.faq_wrap {position:relative; min-height:600px; margin:0 300px 0 100px; border-radius: 10px; background-color: #8113EC; box-shadow: 4px 8px 16px 6px rgba(204, 204, 204, 0.2);transition: all .5s ease;}
-.faq_wrap:hover {cursor:pointer; box-shadow: 8px 8px 16px 6px rgba(204, 204, 204, 0.5);}
+.faq_wrap {position:relative; min-height:600px; margin:0 300px 0 100px; border-radius: 10px; background-color: #8113EC; box-shadow:  0 0 10px 0 rgba(255,255,255, 0.3);transition: all .5s ease;}
+.faq_wrap:hover {cursor:pointer; box-shadow: 0 0 10px 0 rgba(255,255,255, 0.5); }
 
+.typing {position:relative;font-size:30px;text-shadow: 1px 1px 5px rgba(255,255,255,0.5)}
+.typing::after{position:absolute;content: ""; width:1px; height:30px; background-color: #fff; animation: cursor 1s infinite;}
 @keyframes cursor{
   0% {opacity: 1;}
   40% {opacity: 1;}
@@ -9,30 +10,59 @@ main {padding:100px 0;}
   100% {opacity: 0;} 
 }
 
-.typing {position:relative;font-size:30px;text-shadow: 1px 1px 5px rgba(255,255,255,0.5)}
-.typing::after{position:absolute;content: ""; width:1px; height:30px; background-color: #fff; animation: cursor 1s infinite;}
 
-.faq_content {border:1px solid red;}
-
-.faq_bar_wrap {position:absolute; right:-100px; top:30px;}
-.faq_bar_wrap li {position:relative; padding: 20px 50px 20px 10px; margin:20px 0; width: 500px; text-align:left; background-color: #fff;border-radius: 10px; box-shadow: 4px 8px 16px 6px rgba(204, 204, 204, 0.2);}
+.faq_bar_wrap {position:absolute;z-index: 10;right:-200px; top:30px;}
+.faq_bar_wrap > li {position:relative; padding: 20px 50px 20px 10px; margin:20px 0; width: 600px; text-align:left;border-radius: 10px;  box-shadow:  0 0 10px 0 rgba(255,255,255, 0.3);color:#000 ;box-shadow: inset 0 0 5px grey; background: #fff;}
+.faq_bar_wrap > li::before,.faq_answer_wrap>li::before {margin-right: 10px; font-family: "Font Awesome 6 Free"; font-weight:900; font-size: 24px; color: #8113EC;content: "Q";}
+.faq_bar_wrap > li::after{position:absolute; right:10px; top:10px; text-align:center; width:20px; height:20px; border-radius: 50%; background-color: #8113EC; font-family: "Font Awesome 6 Free"; font-weight:900; color: #fff;content: "+";}
 
 
-.faq_bar_wrap li span {color: #000}
+.faq_answer_wrap {position:absolute; z-index:999; right: -200px;}
+.faq_answer_wrap li {display:block; width: 600px; height: 0; overflow: hidden; transition: all 0.3s ease-in-out; border-radius: 10px; box-shadow: inset 0 0 5px grey; background: #fff;}
+.faq_answer_wrap > li * {color: #000;}
+.faq_answer_wrap > li.active {height: 500px; overflow:auto;}
+.faq_answer_wrap > li::before {margin: 10px;}
 
-.bar_q {display:flex; align-items: center;}
-.bar_plus {position:absolute; right: 10px; top: 10px; width:20px; height:20px; border-radius: 50%; background-color: #8113EC; color:#fff; font-size:14px;}
+.faq_answer_wrap li::-webkit-scrollbar {width: 14px;}
+.faq_answer_wrap li::-webkit-scrollbar-thumb {box-shadow: inset 0 0 5px #fff;background: linear-gradient(to top,#82b8f1 10%, #b375f1 100%);border-radius: 14px;}
+.faq_answer_wrap li::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; background: #f1f1f1; border-radius: 14px;}
 
-.bar_q_icon{padding-right:10px; font-size:24px; color:#8113EC;}
-
-.bar_plus_icon{margin-left: 2px; color:#fff;}
-
-
-.faq_answer {display:none; position:absolute;z-index:100; width: 500px; height: 426px; border-radius: 10px; background-color: skyblue; color:#000;}
-
+  .faq_answer_wrap p {display:inline-block; padding-top: 20px;}
+  .faq_answer_wrap dl {padding:20px;}
+  .faq_answer_wrap dt {padding:20px 0;}
+  .faq_answer_wrap dd {margin-left:20px; margin-bottom:20px;}
 
 
-.faq_text {position:absolute;bottom: 0; left: 50px; font-size: 200px; font-weight: 700; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #fff;  color: transparent;}
+
+.faq_text {position:absolute; bottom: 0; left: 50px; font-size: 200px; font-weight: 700;
+  color:rgba(255, 255, 255,0.8); /* -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #fff;  color: transparent; */}
 
 
+/* section01 */
+
+.section01 {background-color:rgb(209, 222, 236)}
+.sect01_txt {position:absolute; z-index:10;top:50%; left:15%;}
+.sect01_txt h2{}
+.sect01_img {background: url('../images/img_hm_2.png') no-repeat;
+  width:100%; height:100%;
+  background-position: 75% 90%;
+  background-size: 350px; ;}
+
+
+/*section02*/
+.section02 {background-color: #fff;}
+.section02 h2 {color:#000;padding:200px; display: inline-block; }
+.sect02_bg{width:100%}
+.sect02_bg img {opacity: 0.5;}
+
+.section02 .sect02_wrap{height:100%; background: url(../images/gradaition.png) 10% no-repeat; background-size: contain;}
+.sect02_img{width:100%;}
+
+
+
+/*section03*/
+.section03 {background-color: black;}
+
+/*section04*/
+.section04 {background-color: lightpink;}
 

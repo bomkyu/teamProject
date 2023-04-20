@@ -2,6 +2,16 @@
 
 AOS.init();
 
+const allPage = document.querySelectorAll('.all_page > li > a');
+allPage.forEach((page, index)=>{
+    page.addEventListener('click', (aTag)=>{
+            aTag.preventDefault();
+            document.querySelector(`#s${index + 1}`).scrollIntoView({ behavior: 'smooth', block: 'center'});
+    });
+});
+
+console.log('클릭클릭', allPage.length);
+
 /* developers_taeyoon page end! */
 
 
