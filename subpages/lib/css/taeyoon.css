@@ -179,8 +179,8 @@
 .card_back .card .card_mt p { font-weight: 400; font-size: 16px; }
 .card_back .card .card_bottom .card_p1 { margin-top: 25px; }
 .card_back .card .card_bottom .card_p3 { margin-top: 30px; }
-.card_back .card .card_top .img_character1 { width: 50px; height: 50px; margin: 0 auto; border-radius: 50%; background: #555 url('../images/img_bk_small.png') no-repeat center 1px / 80% }
-.card_back .card .card_top .img_character2 { width: 50px; height: 50px; margin: 0 auto; border-radius: 50%; background: url('../images/img_hm_small.png') no-repeat 50% 28% / 150% }
+.card_back .card .card_top .img_character1 { width: 50px; height: 50px; margin: 0 auto; border-radius: 50%; background: #555 url('../images/img_bk_01.png') no-repeat 38% -2% / 200% }
+.card_back .card .card_top .img_character2 { width: 50px; height: 50px; margin: 0 auto; border-radius: 50%; background: url('../images/hm_profile.jpg') no-repeat 50% 28% / 150% }
 .card_back .card .card_top .img_character3 { width: 50px; height: 50px; margin: 0 auto; border-radius: 50%; background: url('../images/img_ty_small.png') no-repeat 7% 55% / 150%; }
 .card_back .card .card_top .sub_title { margin-top: 5px; }
 .card_back .card .card_top .card_title { font-size: 32px; }

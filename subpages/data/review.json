@@ -1,0 +1,39 @@
+{
+    "data": [
+        { 
+            "id":1,
+            "profile" : "review_profile1.png",
+            "nickname":"Joseon_Hacker",
+            "coment":"프로젝트 설명이 자세해서 좋네요🤩",
+            "date" : "2023년 01월 31일"
+        },
+        { 
+            "id":2,
+            "profile" : "review_profile2.png",
+            "nickname":"Tech_Ninja",
+            "coment":"협업 프로그램을 이용한건 아주 칭찬!",
+            "date" : "2023년 02월 07일"
+        },
+        { 
+            "id":3,
+            "profile" : "review_profile3.png",
+            "nickname":"Code_Wizard",
+            "coment":"디자인이 엄청 깔끔하네요 굿드",
+            "date" : "2023년 02월 16일"
+        },
+        { 
+            "id":4,
+            "profile" : "review_profile4.png",
+            "nickname":"Dev_Mastermind",
+            "coment":"developer를 보면 개개인의 디자인에 성격이 들어가 있는 것 같아요",
+            "date" : "2023년 03월 26일"
+        },
+        { 
+            "id":5,
+            "profile" : "review_profile5.png",
+            "nickname":"Cyber_Hero",
+            "coment":"모바일에서도 잘 보이는 responsive design으로 구성되어 있어서 좋네요",
+            "date" : "2023년 04월 20일"
+        }
+    ]
+}
