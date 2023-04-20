@@ -14,3 +14,16 @@
 .tec_list_contain .circle_pg_txt > h3 { font-size:1.25rem; margin-bottom:15px; }
 .tec_list_contain .circle_pg_txt > .persent_area { font-size:0.875rem; }
 .tec_list_contain .circle_pg_txt > .persent_area::after { content: attr(data-percent)'%';}
+
+
+/*buy page*/
+.buy_list .buy_inner { display: flex; max-width: 300px; min-height: 450px; margin:0 auto; padding: 20px; flex-direction: column; justify-content: center; align-items: center;  background: #222; border-radius: 25px; }
+.buy_list > li { cursor: pointer; }
+.buy_list .face_wrap .face_thumb { text-align: center; padding:15px 0; }
+.buy_list .face_wrap .face_thumb > img { width: 100px; }
+
+.buy_list .name { font-size: 26px; font-weight: 300; }
+.buy_list .keyword { font-size: 16px; font-weight: 300; margin:10px 0 20px 0; }
+.buy_list .introduce { font-size: 16px; background-color: #333; padding: 20px; border-radius: 20px; box-shadow: 0px 0px 10px 0px #555; }
+
+
