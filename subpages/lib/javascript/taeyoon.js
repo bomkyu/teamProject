@@ -24,6 +24,25 @@ review.addEventListener('click', ()=>{
     review.classList.toggle('active');
 });
 
+
+const nameInput = document.querySelector('.review_name');
+
+nameInput.addEventListener('input', function() {
+    if (/[^0-9a-zA-Z_]/g.test(this.value)) { // test()는 정규표현식을 검사하는 메소드이다, 정규 표현식 : /[^0-9a-zA-Z_]/
+        alert('닉네임은 영문, 숫자, 언더바 이외의 문자는 입력할 수 없습니다.');
+        this.value = this.value.replace(/[^0-9a-zA-Z_]/g, ''); // 영문, 숫자, 언더바 이외의 문자열 제거
+    };
+});
+
+
+
+const textareaAll = document.querySelector('.review_text');
+
+textareaAll.addEventListener('input', ()=>{
+    textareaAll.style.height = 'auto';
+    textareaAll.style.height = `${textareaAll.scrollHeight}px`;
+});
+
 /* review end! */
 
 

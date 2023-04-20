@@ -1,3 +1,35 @@
+/* { 1.position 2.display 3.max-width 4. width 5. margin 6.padding 7.flex속성들 8.border 9.background 10.transform 11.텍스트 관련된 속성 } */
+
+/* review start! */
+.review_space { width: 300px; margin: 0 auto; border-radius: 10px; background: #222; cursor: pointer; }
+.review_space::after { display: inline-block; content: ''; width: 30px; height: 30px; margin-left: 10px; border-radius: 50%; background: #a8c8ea url('../images/img_arrow.png') no-repeat center 45% / 20px; font-weight: 900; text-align: center; transition: transform .3s; }
+.review_space:hover { background: #282828; }
+.review_space.active { background: #5A5A5A; }
+.review_space.active::after { transform: rotate(180deg); }
+
+.review_wrap { max-width: 680px; margin: 0 auto; }
+.review_wrap .review { border-radius: 10px; background: #222; }
+.review_wrap .review .review_mg { display: flex; width: 80%; margin: 0 auto; flex-direction: column; align-items: flex-start; justify-content: center; }
+.review_wrap .review .review_mg .review_top { display: flex; width: 100%; margin: 50px 0 20px; align-items: center; }
+.review_wrap .review .review_mg .review_top .review_name { position: relative; width: 60%; height: 39px; padding: 10px; box-sizing: border-box; border-radius: 5px; box-shadow: 0 0 10px 3px #555; font: 16px 'Pretendard', "Malgun Gothic", sans-serif; }
+
+.review_wrap .review .review_mg .review_bt { position: relative; display: flex; width: 100%; margin-bottom: 50px; }
+.review_wrap .review .review_mg .review_bt::after { position: absolute; content: ''; width: 1px; height: 100%; background: #999; right: 75px; top: 50%; transform: translateY(-50%); }
+.review_wrap .review .review_mg .review_bt .review_text { width: 100%; height: 58px; padding: 10px 88px 10px 10px; box-sizing: border-box; border-radius: 5px; box-shadow: 0 0 10px 3px #555; font: 16px 'Pretendard', "Malgun Gothic", sans-serif; }
+.review_wrap .review .review_mg .review_bt .review_add { position: absolute; display: flex; width: 50px; height: 75%; align-items: center; justify-content: center; border-radius: 5px; background: #333; top: 50%; right: 2%; transform: translateY(-50%); cursor: pointer; font-size: 14px; }
+.review_wrap .review .review_mg .review_bt .review_add:hover { background: #222; }
+
+.review_wrap .review .review_img { width: 50px; height: 50px; margin-right: 20px; border-radius: 50%; background: url('../images/img_noProfile.png') no-repeat center / 52px; }
+.review_wrap .review textarea::placeholder { text-indent: 3px; font-size: 16px; font-family: 'Pretendard','Malgun Gothic', sans-serif; }
+
+
+
+.wkatl {height: 1000px; }
+/* review end! */
+
+
+
+
 /* developers_taeyoon page start! */
 .contents { width: 100%; height: 100vh; }
 .contents_hpx { width: 100%; height: auto; }
@@ -139,32 +171,6 @@
 }
     /* media query end! */
 /* developers_taeyoon page end! */
-
-
-
-
-/* { 1.position 2.display 3.max-width 4. width 5. margin 6.padding 7.flex속성들 8.border 9.background 10.transform 11.텍스트 관련된 속성 } */
-/* review start! */
-.review_space { width: 300px; margin: 0 auto; border-radius: 10px; background: #222; cursor: pointer; }
-.review_space::after { display: inline-block; content: ''; width: 30px; height: 30px; margin-left: 10px; border-radius: 50%; background: #a8c8ea url(../images/img_arrow.png) no-repeat center 45% / 20px; font-weight: 900; text-align: center; transition: transform .3s; }
-.review_space:hover { background: #282828; }
-.review_space.active { background: #5A5A5A; }
-.review_space.active::after { transform: rotate(180deg); }
-
-.review_wrap { max-width: 680px; margin: 0 auto; }
-.review_wrap .review { border-radius: 10px; background: #222; }
-.review_wrap .review .review_mg { display: flex; width: 80%; margin: 0 auto; flex-direction: column; align-items: flex-start; justify-content: center; }
-.review_wrap .review .review_mg .review_name { width: 50%; height: auto; border-radius: 5px; box-shadow: 0 0 10px 3px #555; }
-.review_wrap .review .review_mg .review_text { width: 100%; height: 100px; margin-bottom: 50px; border-radius: 5px; line-height: 20px; }
-.review_wrap .review .review_mg > div { display: flex; width: 100%; margin: 50px 0 20px; align-items: center; }
-.review_wrap .review textarea::placeholder { font-family: 'Pretendard','Malgun Gothic', sans-serif; font-size: 16px; }
-.review_wrap .review .review_img { width: 50px; height: 50px; margin-right: 20px; border-radius: 50%; background: blue; }
-
-textarea::-webkit-scrollbar { width: 4px; height: 4px; }
-textarea::-webkit-scrollbar-track { border-radius: 0 10px 10px 0; background: #777; }
-textarea::-webkit-scrollbar-thumb { border-radius: 5px; background-color: #000; }
-/* review end! */
-
 
 
 

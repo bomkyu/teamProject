@@ -31,21 +31,23 @@
 <body>
     <div class="content_wrap">
         <div class="inner">
-            <h3 class="con_tit review_space pt20 pb20 mb50 txt_c">Review</h3>
+            <h3 class="con_tit review_space pt10 pb10 mb50 txt_c">Review</h3>
             <div class="review_wrap">
                 <div class="review">
                     <div class="review_mg">
-                        <div>
+                        <div class="review_top">
                             <div class="review_img"></div>
-                            <textarea class="review_name" placeholder="닉네임을 적어주세요!"></textarea>
+                            <textarea class="review_name" maxlength="20" placeholder="닉네임을 입력해주세요." onfocus="this.placeholder = ''" onblur="this.placeholder = '닉네임을 입력해주세요.'"></textarea>
                         </div>
-                        <textarea class="review_text" placeholder="프로젝트에 관련된 리뷰를 작성해주세요!"></textarea>
-                    </div>
-                    <div class="review_add">
-
+                        <div class="review_bt">
+                            <textarea class="review_text" placeholder="프로젝트에 관련된 리뷰를 작성해주세요." onfocus="this.placeholder = ''" onblur="this.placeholder = '프로젝트에 관련된 리뷰를 작성해주세요.'"></textarea>
+                            <div class="review_add">등록</div>
+                        </div>
                     </div>
                 </div>
                 <div class="review_content"></div>
+
+                <div class="wkatl"></div>
             </div>
         </div>
     </div>
