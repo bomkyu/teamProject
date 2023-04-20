@@ -16,6 +16,19 @@ console.log('클릭클릭', allPage.length);
 
 
 
+
+/* review start! */
+const review = document.querySelector('.review_space');
+
+review.addEventListener('click', ()=>{
+    review.classList.toggle('active');
+});
+
+/* review end! */
+
+
+
+
 /* contact page start! */
 const tabs = document.querySelectorAll('.tab > li');
 const cardFronts = document.querySelectorAll('.card_front');
