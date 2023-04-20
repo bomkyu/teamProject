@@ -39,6 +39,19 @@ faqAnswer.forEach(function(item,index){
   })
 })
 
+//section02 스크롤시 애니메이션 작동//
+const scrollSect = document.querySelector('.scroll');
+const scrollImg = document.querySelector('.sect02_bg');
+
+window.addEventListener('scroll',function(){
+  if(this.window.scrollY > scrollSect.offsetTop){
+    scrollImg.classList.add('scale');
+  } else {
+    scrollImg.classList.remove('scale');
+  }
+})
+
+
 //풀페이지 스크롤//
 /* window.addEventListener('wheel',function(e){
   e.preventDefault();
