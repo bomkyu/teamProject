@@ -71,6 +71,7 @@ AOS.init();
 			
 			if(select_person == null){
 				window.localStorage.setItem('select_person', objString);
+				
 			}else{
 				select_person_arr = Object.values(select_person)
 
