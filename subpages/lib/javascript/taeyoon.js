@@ -17,7 +17,7 @@ allPage.forEach((page, index)=>{
 
 /* review start! */
 const review = document.querySelector('.review_space');
-const reviewWrap = document.querySelector('.review_wrap');
+const jsonSel = document.querySelector('.json_sel');
 const reviewAdd = document.querySelector('.review_add');
 const reviewName = document.querySelector('.review_name');
 const reviewText = document.querySelector('.review_text');
@@ -52,18 +52,20 @@ if(reviewText){
 
 function createReview(){
     const newDiv = document.createElement('div');
-    newDiv.classList.add('review', 'review_sel');
     newDiv.innerHTML = `
-        <div class="review_content">
-            <div class="profile" style="background-image: url('./data/')"></div>
-            <div class="reviwe_box">
-                <div class="nickname">${reviewName.value}</div>
-                <div class="coment">${reviewText.value}</div>
-                <div class="date">${new Date().toLocaleDateString()}</div>
+        <div class="review review_sel">
+            <div class="review_content">
+                <div class="profile" style="background-image: url('./data/')"></div>
+                <div class="reviwe_box">
+                    <div class="nickname">${reviewName.value}</div>
+                    <div class="coment">${reviewText.value}</div>
+                    <div class="date">${new Date().toLocaleDateString()}</div>
+                </div>
             </div>
         </div>
     `;
-    reviewWrap.prepend(newDiv);
+
+    jsonSel.prepend(newDiv);
 };
 
 reviewAdd.addEventListener('click', createReview);
