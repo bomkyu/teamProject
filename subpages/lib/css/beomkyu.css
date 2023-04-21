@@ -1,5 +1,4 @@
 .bg_gray { background-color: #CCC; }
-.sec_1 { }
 .sec_1 .section_inner { height: 100%; background: #CCC url(../images/img_bk_01.png) no-repeat 85% bottom / 380px; }
 
 .tec_list_contain { position:relative; }
@@ -17,11 +16,16 @@
 
 
 /*buy page*/
-.buy_list .buy_inner { display: flex; max-width: 300px; min-height: 450px; margin:0 auto; padding: 20px; flex-direction: column; justify-content: center; align-items: center;  background: #222; border-radius: 25px; }
-.buy_list > li { cursor: pointer; }
-.buy_list .face_wrap .face_thumb { text-align: center; padding:15px 0; }
-.buy_list .face_wrap .face_thumb > img { width: 100px; }
+.buy_list > li { position: relative; top:0; cursor: pointer; transition: 0.3s; }
+.buy_list > li.active { top: -20px; }
+.buy_list .buy_inner { position: relative; display: flex; max-width: 300px; min-height: 450px; margin:0 auto; padding: 20px; flex-direction: column; justify-content: center; align-items: center;  background: #222; border-radius: 25px; overflow: hidden; }
+.buy_list > li .buy_inner > .cover { position: absolute; visibility: hidden; top:0; right: 0; bottom: 0; left: 0; background-color: #11111194; } 
+.buy_list > li.active .buy_inner > .cover { visibility: visible; }
+.buy_list > li .buy_inner > .cover > span { position: absolute; width: 100px; height: 100px; top:50%; left: 50%; border-radius: 50%; background: #000 url(../images/ic_buy_chk.svg) center no-repeat; transform: translate(-50%, -50%) scale(0); transition: transform 0.3s; }
+.buy_list > li.active .buy_inner > .cover > span { transform: translate(-50%, -50%) scale(1); }
 
+.buy_list .face_wrap { margin-bottom: 20px; }
+.buy_list .face_wrap .face_thumb { width: 100px; height: 100px; background-color: #333; border-radius: 50%; text-align: center; }
 .buy_list .name { font-size: 26px; font-weight: 300; }
 .buy_list .keyword { font-size: 16px; font-weight: 300; margin:10px 0 20px 0; }
 .buy_list .introduce { font-size: 16px; background-color: #333; padding: 20px; border-radius: 20px; box-shadow: 0px 0px 10px 0px #555; }
