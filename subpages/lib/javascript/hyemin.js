@@ -39,9 +39,11 @@ faqAnswer.forEach(function(item,index){
   })
 })
 
-//section02 스크롤시 애니메이션 작동//
+//section02,03 스크롤시 애니메이션 작동//
 const scrollSect = document.querySelector('.scroll');
 const scrollImg = document.querySelector('.sect02_bg');
+const scrollSect2 = document.querySelector('.scroll2');
+const skillBar = document.querySelectorAll('.bar_container');
 
 window.addEventListener('scroll',function(){
   if(this.window.scrollY > scrollSect.offsetTop){
@@ -51,18 +53,27 @@ window.addEventListener('scroll',function(){
   }
 })
 
-//section03 클릭 시 skill 나타남//
-const skillImg = document.querySelectorAll('.sect03_wrap>ul>li');
-console.log(skillImg)
-const skillBar = document.querySelectorAll('.bar_container');
-console.log(skillBar)
-
-skillImg.forEach(function(item){
-  item.addEventListener('mouseover', function(){
+window.addEventListener('scroll',function(){
+  if(this.window.scrollY > scrollSect2.offsetTop){
     skillBar.forEach(function(item){
       item.classList.add('on');
     })
-  })
+  } else {
+    skillBar.forEach(function(item){
+      item.classList.remove('on');
+    })
+  }
+})
+//section04 스크롤시 클라스 추가
+const scrollsect3 = document.querySelector('.scroll3');
+const line = document.querySelector('.sect04_txt span');
+
+window.addEventListener('scroll',function(){
+  if(this.window.scrollY > scrollsect3.offsetTop){
+  line.classList.add('line');
+  } else {
+    line.classList.remove('line');
+  }
 })
 
 
