@@ -51,6 +51,22 @@ window.addEventListener('scroll',function(){
   }
 })
 
+//section03 클릭 시 skill 나타남//
+const skillImg = document.querySelectorAll('.sect03_wrap>ul>li');
+console.log(skillImg)
+const skillBar = document.querySelectorAll('.bar_container');
+console.log(skillBar)
+
+skillImg.forEach(function(item){
+  item.addEventListener('mouseover', function(){
+    skillBar.forEach(function(item){
+      item.classList.add('on');
+    })
+  })
+})
+
+
+
 
 //풀페이지 스크롤//
 /* window.addEventListener('wheel',function(e){
