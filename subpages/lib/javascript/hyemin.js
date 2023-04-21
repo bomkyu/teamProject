@@ -71,8 +71,6 @@ const line = document.querySelector('.sect04_txt span');
 window.addEventListener('scroll',function(){
   if(this.window.scrollY > scrollsect3.offsetTop){
   line.classList.add('line');
-  } else {
-    line.classList.remove('line');
   }
 })
 
