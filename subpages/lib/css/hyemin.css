@@ -50,8 +50,10 @@
 .section02 {background-color: #fff;}
 .sect02_wrap{position:relative; height:100%;}
 
-.sect02_txt{position:absolute; right:30%; top: 30%;}
-.sect02_txt h3 {color:#000;display: inline-block; }
+.sect02_txt{position: absolute; right: 15%; top: 30%; width: 600px;padding: 50px 0;}
+.sect02_txt h3 {display: inline-block; color:#000; }
+.sect02_txt .intro_content{ color:#000;}
+.intro_content p {color:#000; font-weight: bold; font-size: 22px;}
 
 .sect02_bg {position:absolute; top: 5%; left: 8%;}
 .sect02_bg.scale {animation: scale 2s ease-in-out;}
@@ -68,12 +70,39 @@
 /*section03*/
 .section03 {background-color: #000;}
 .section03 li {flex:1;}
-.sect03_img { margin:auto; width:150px; height:150px; transition:0.3s;}
-.sect03_img:hover {transform:scale(1.2); box-shadow: 0 0 10px 0 rgba(63, 82, 248, 0.3); cursor:pointer}
+.sect03_img { margin:auto; width:150px; height:150px;transition:0.3s;}
+.sect03_img:hover {transform:scale(1.2) translateY(-5px); box-shadow: 0 0 10px 0 rgba(63, 82, 248, 0.3); cursor:pointer}
 .sect03_img img{margin-top:50%; transform: translateY(-50%);}
 .sect03_bar {padding:30px 0 100px 0}
+.bar_container {margin:50px auto; width:180px; opacity:0;transition:3s;}
+.bar_container p {padding-bottom: 20px; font-size: 20px;}
+.progress {padding:3px; border-radius: 20px; background-color:#333;}
+.progress_bar {height:10px; box-shadow: inset 0 0 5px #fff;background: linear-gradient(to right,#69adf7 10%, #a65bf1 100%); border-radius: 10px; }
+.progress_bar.bar01{width: 80%;}
+.progress_bar.bar02{width: 80%;}
+.progress_bar.bar03{width: 60%;}
+.progress_bar.bar04{width: 70%;}
+.progress_bar.bar05{width: 80%;}
+
+.bar_num {padding:10px 0; font-size: 16px;}
+
+.bar_container.on {opacity:1;}
+.bar_container.on .progress{animation: progressAnimation 3s ease-in-out;}
+@keyframes progressAnimation {
+  0% {width:5%; opacity: 0;}
+  100% {width:100%; opacity: 1;}
+}
 
 
 /*section04*/
-.section04 {background-color: lightpink;}
+.section04 {background-color: #fff;}
+.sect04_txt {}
+.sect04_txt p{color:#000}
+.sect04_txt p:nth-child(1){font-size:50px; font-weight: 700;}
+.sect04_txt p:nth-child(2){font-size:24px;line-height: 1.5;}
+.sect04_txt span{position: relative; color:#000; font-size:24px; font-weight: 600; }
+
+.sect04_txt span.line::after{width:333px; transition:2s}
+  .sect04_txt span::after{position: absolute; bottom: -20%;left: 0;content: "";width:0;height: 14px;background-color: rgba(160, 80, 240, 0.7);border-radius: 10px;}
+
 
