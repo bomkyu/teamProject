@@ -11,28 +11,28 @@
             "id":2,
             "profile" : "review_profile2.png",
             "nickname":"Tech_Ninja",
-            "coment":"협업 프로그램을 이용한건 아주 칭찬!",
+            "coment":"3명의 인원이 깃헙 프로그램을 이용해서 공통 코드를 만들고 제작한 거는 아주 칭찬합니다! 취직 잘 하시길 바랄게요~",
             "date" : "2023년 02월 07일"
         },
         { 
             "id":3,
             "profile" : "review_profile3.png",
             "nickname":"CodeWizard",
-            "coment":"디자인이 엄청 깔끔하네요 굿드",
+            "coment":"디자인이 엄청 깔끔하네요 굿뜨",
             "date" : "2023년 02월 16일"
         },
         { 
             "id":4,
             "profile" : "review_profile4.png",
             "nickname":"Dev_Mastermind",
-            "coment":"developer를 보면 개개인의 디자인에 성격이 들어가 있는 것 같아요",
+            "coment":"developer를 보면 개개인의 디자인에 성격이 들어가 있는듯?",
             "date" : "2023년 03월 26일"
         },
         { 
             "id":5,
             "profile" : "review_profile5.png",
             "nickname":"CyberHero",
-            "coment":"모바일에서도 잘 보이는 responsive design으로 구성되어 있어서 좋네요",
+            "coment":"반응형이 잘 되어 있네요",
             "date" : "2023년 04월 20일"
         }
     ]

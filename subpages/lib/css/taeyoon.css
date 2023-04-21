@@ -22,9 +22,14 @@
 .review_wrap .review .review_img { width: 50px; height: 50px; margin-right: 20px; border-radius: 50%; background: url('../images/img_noProfile.png') no-repeat center / 52px; }
 .review_wrap .review textarea::placeholder { text-indent: 3px; font-size: 16px; font-family: 'Pretendard','Malgun Gothic', sans-serif; }
 
+.review_wrap .review_content { display: flex; width: 80%; margin: 20px auto 0; align-items: center; }
+.review_wrap .review_content .profile { width: 50px; height: 50px; border-radius: 50%; background: url('../../data/review_profile1.png') no-repeat center / 50px; }
+.review_wrap .review_content .reviwe_box { display: flex; width: 90%; padding: 5% 0% 5% 5%; flex-direction: column; justify-content: center; }
+.review_wrap .review_content .reviwe_box .nickname { font-size: 18px; font-weight: 600; }
+.review_wrap .review_content .reviwe_box .coment { font-size: 16px; padding-top: 10px; color: #e5e5e5; }
+.review_wrap .review_content .reviwe_box .date { font-size: 14px; font-weight: 300; padding-top: 10px; color: #a9a9a9;}
 
-
-.wkatl {height: 1000px; }
+.wkatl {height: 1000px; background: #000; }
 /* review end! */
 
 
