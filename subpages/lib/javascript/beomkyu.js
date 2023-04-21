@@ -9,6 +9,7 @@ AOS.init();
 		let select_person = JSON.parse(select_person_string);
 
 		const person_arr = Object.values(person_parse);
+		let select_person_arr;
 		person_arr.forEach(key => {
 			let buy_el_li = document.createElement('li');
 			buy_el_li.setAttribute('data-id',`${key.id}`);
@@ -18,11 +19,11 @@ AOS.init();
 									<div class="buy_inner">
 										<div class="face_wrap">
 											<div class="face_thumb">
-												<img src="./lib/images/ic_.png">
+
 											</div>
 										</div>
 										<h2 class="name txt_c">${key.name}</h2>
-										<p class="keyword txt_c">‘${key.keyword}</p>
+										<p class="keyword txt_c">‘${key.keyword}’</p>
 										<p class="introduce txt_l">
 											${key.introduce}
 										</p>
@@ -56,7 +57,7 @@ AOS.init();
 				}
 			});	
 		});
-
+		
 		buy_btn.addEventListener('click', ()=> {
 			if(buy_select.length == 0 ){
 				alert('선택해주세요');
@@ -71,7 +72,8 @@ AOS.init();
 			if(select_person == null){
 				window.localStorage.setItem('select_person', objString);
 			}else{
-				const select_person_arr = Object.values(select_person);
+				select_person_arr = Object.values(select_person)
+
 				console.log(select_person_arr);
 				select_person_arr.push(...buy_select);
 				
@@ -79,7 +81,6 @@ AOS.init();
 				window.localStorage.setItem('select_person', new_select_person);
 				buy_select.length = 0;
 			}
-
 			window.localStorage.setItem('person', JSON.stringify(person_arr));
 			
 		});

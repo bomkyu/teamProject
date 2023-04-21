@@ -21,13 +21,20 @@
 .buy_list .buy_inner { position: relative; display: flex; max-width: 300px; min-height: 450px; margin:0 auto; padding: 20px; flex-direction: column; justify-content: center; align-items: center;  background: #222; border-radius: 25px; overflow: hidden; }
 .buy_list > li .buy_inner > .cover { position: absolute; visibility: hidden; top:0; right: 0; bottom: 0; left: 0; background-color: #11111194; } 
 .buy_list > li.active .buy_inner > .cover { visibility: visible; }
-.buy_list > li .buy_inner > .cover > span { position: absolute; width: 100px; height: 100px; top:50%; left: 50%; border-radius: 50%; background: #000 url(../images/ic_buy_chk.svg) center no-repeat; transform: translate(-50%, -50%) scale(0); transition: transform 0.3s; }
+.buy_list > li .buy_inner > .cover > span { position: absolute; width: 100px; height: 100px; top:50%; left: 50%; border-radius: 50%; background: #444 url(../images/ic_buy_chk.svg) center no-repeat; transform: translate(-50%, -50%) scale(0); transition: transform 0.3s; }
 .buy_list > li.active .buy_inner > .cover > span { transform: translate(-50%, -50%) scale(1); }
 
 .buy_list .face_wrap { margin-bottom: 20px; }
 .buy_list .face_wrap .face_thumb { width: 100px; height: 100px; background-color: #333; border-radius: 50%; text-align: center; }
-.buy_list .name { font-size: 26px; font-weight: 300; }
+.buy_list li:nth-of-type(1) .face_wrap .face_thumb { border-radius: 50%; background: #555 url(../images/img_bk_01.png) no-repeat 38% -2% / 200%; }
+.buy_list li:nth-of-type(2) .face_wrap .face_thumb { border-radius: 50%; background: url(../images/hm_profile.jpg) no-repeat 50% 28% / 150%; }
+.buy_list li:nth-of-type(3) .face_wrap .face_thumb { border-radius: 50%; background: url(../images/img_ty_small.png) no-repeat 7% 55% / 150% }
+
+.buy_list .name { font-size: 26px; font-weight: 400; }
 .buy_list .keyword { font-size: 16px; font-weight: 300; margin:10px 0 20px 0; }
 .buy_list .introduce { font-size: 16px; background-color: #333; padding: 20px; border-radius: 20px; box-shadow: 0px 0px 10px 0px #555; }
 
+.buy_btn_wrap { margin-top: 40px; text-align: center; }
+.buy_btn_wrap .buy_btn { display: inline-block; max-width: 200px; width: 100%; padding: 15px 10px; background-color: #333; font-size: 20px; border-radius: 50px; cursor: pointer; transition: 0.3s; }
+.buy_btn_wrap .buy_btn:hover { background-color: #7B53A2; }
 
