@@ -1,4 +1,4 @@
-//타이핑 효과//
+//FAQ 타이핑 효과//
 let i = 0;
 let txt = 'Ask Your Developers'; 
 let speed = 100;
@@ -15,7 +15,7 @@ if(type){
 }
 
 
-//답변 펼치기//
+//FAQ 답변 펼치기//
 const faqBar = document.querySelectorAll('.faq_bar_wrap > li');
 const faqAnswer = document.querySelectorAll('.faq_answer_wrap > li');
 
@@ -39,7 +39,7 @@ faqAnswer.forEach(function(item,index){
   })
 })
 
-//section02,03 스크롤시 애니메이션 작동//
+//section02,03 스크롤 시 애니메이션 작동//
 const scrollSect = document.querySelector('.scroll');
 const scrollImg = document.querySelector('.sect02_bg');
 const scrollSect2 = document.querySelector('.scroll2');
@@ -64,7 +64,7 @@ window.addEventListener('scroll',function(){
     })
   }
 })
-//section04 스크롤시 클라스 추가
+//section04 스크롤 시 클라스 추가
 const scrollsect3 = document.querySelector('.scroll3');
 const line = document.querySelector('.sect04_txt span');
 
@@ -78,37 +78,13 @@ window.addEventListener('scroll',function(){
   }
 })
 
+//section04 클릭 시 클라스 추가
+const clickBtn = document.querySelector('.sect04_btn');
+const bubbleImg = document.querySelector('.img_contact');
+clickBtn.addEventListener('click',()=>{
+  bubbleImg.classList.add('on')
+})
 
 
-
-//풀페이지 스크롤//
-/* window.addEventListener('wheel',function(e){
-  e.preventDefault();
-},{passive : false});
-
-let $html = $('html');
-let page = 1;
-let lastPage = $('section').length;
-console.log('dddd',lastPage);
-
-$html.animate({scrollTop:0},10);
-$(window).on("wheel", function(e){
- 
-	if($html.is(":animated")) return;
- 
-	if(e.originalEvent.deltaY > 0){
-		if(page== lastPage) return;
- 
-		page++;
-	}else if(e.originalEvent.deltaY < 0){
-		if(page == 1) return;
- 
-		page--;
-	}
-	let posTop = (page-1) * $(window).height();
- 
-	$html.animate({scrollTop : posTop});
- 
-}); */
 
 
