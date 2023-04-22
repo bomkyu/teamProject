@@ -60,8 +60,9 @@ AOS.init();
 		
 		buy_btn.addEventListener('click', ()=> {
 			if(buy_select.length == 0 ){
-				alert('선택해주세요');
+				alert('개발자를 선택해 주세요');
 			}
+			
 			buy_select.forEach(element => {
 				element.status = 'true';
 				const idx = person_arr.findIndex(obj => obj.id === element.id);
