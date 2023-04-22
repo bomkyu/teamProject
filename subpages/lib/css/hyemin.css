@@ -116,6 +116,13 @@
 .sect04_btn:hover::after{width:100%; z-index:-1;}
 .sect04_btn:hover::before{color:#fff;}
 
+.sect04_img {position: relative; }
+.img_contact span{position:absolute; display:block; width:100px; height:100px; padding-top: 22px; text-align: center; background: url(../images/img_bubble.png) center/contain no-repeat;}
+  .email{left: 0%;top: 17%;}
+  .git{top: 25%;left: 32%;}
+  .insta{top: 5%;right: 32%;}
+
+
 .img_cha {text-align: right;}
 .img_cha > img {width:60%;}
 
