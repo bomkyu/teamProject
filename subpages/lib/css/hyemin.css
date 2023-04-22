@@ -96,16 +96,30 @@
 
 /*section04*/
 .section04 {background-color: #fff;}
-.sect04_txt {border-bottom:1px solid #000;}
-.sect04_txt p{color:#000}
+.section04 .inner {justify-content: space-between; column-gap: 100px;}
+.sect04_txt {position:relative;}
+.sect04_txt p{color:#000; font-size:20px;}
 .sect04_txt p:nth-child(1){font-size:50px; font-weight: 700;}
-.sect04_txt p:nth-child(2){font-size:24px;line-height: 1.5;}
+.sect04_txt p:nth-child(2){line-height: 1.5;}
+.sect04_txt p:nth-child(3){line-height: 1.5;}
+.sect04_txt p:nth-child(4){font-weight: 500;}
 .sect04_txt span{position: relative; color:#000; font-size:24px; font-weight: 600; }
 
-.sect04_txt span.line::after{width:333px; transition:2s}
-  .sect04_txt span::after{position: absolute; bottom: -20%;left: 0;content: "";width:0;height: 14px;background-color: rgba(160, 80, 240, 0.7);border-radius: 10px;}
-.sect04_port {}
-.sect04_port h3{color:#000;}
-.port_wrap > li > a{color:#000;}
+.sect04_txt span.line::after{width:366px; transition:2s}
+  .sect04_txt span::after{position: absolute; bottom: -20%;left: 0;content: "";width:0;height: 14px;background-color: rgba(160, 80, 240, 0.7);}
+
+.sect04_btn{position:absolute; z-index:1; right: -120px; bottom:100px; display:inline-block; padding:10px 100px 10px 20px; border:1px solid black; font-size:20px;}
+.sect04_btn::after{position:absolute; top:0; left:0; width:0; height:100%;content:""; background-color: rgb(160, 80, 240); transition:all 0.6s linear;}
+.sect04_btn::before{position:absolute; right: 20px; top: 10px;text-align:center; font-family: "Font Awesome 6 Free"; font-weight:700; color: #000;content: "\f178";}
+
+.sect04_btn:hover {color:#fff; cursor:pointer}
+.sect04_btn:hover::after{width:100%; z-index:-1;}
+.sect04_btn:hover::before{color:#fff;}
+
+.img_cha {text-align: right;}
+.img_cha > img {width:60%;}
+
+
+
 
 
