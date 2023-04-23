@@ -15,6 +15,38 @@ allPage.forEach((page, index)=>{
 
 
 
+/* contact page start! */
+const tabs = document.querySelectorAll('.tab > li');
+const cardFronts = document.querySelectorAll('.card_front');
+const cardBacks = document.querySelectorAll('.card_back');
+const cardWraps = document.querySelectorAll('.card_wrap');
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        tabs.forEach((tab) => {
+            tab.classList.remove('active');
+        });
+        cardFronts.forEach((cardFront) => {
+            cardFront.classList.remove('active');
+        });
+        cardBacks.forEach((cardBack) => {
+            cardBack.classList.remove('active');
+        });
+        cardWraps.forEach((cardWrap) => {
+            cardWrap.classList.remove('active');
+        });
+
+        tab.classList.add('active');
+        cardFronts[index].classList.add('active');
+        cardBacks[index].classList.add('active');
+        cardWraps[index].classList.add('active');
+    });
+});
+/* contact page end! */
+
+
+
+
 /* review start! */
 const review = document.querySelector('.review_space');
 const jsonSel = document.querySelector('.json_sel');
@@ -48,8 +80,6 @@ if(reviewText){
 }
 
 
-
-
 function createReview(){
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
@@ -68,7 +98,10 @@ function createReview(){
     jsonSel.prepend(newDiv);
 };
 
-reviewAdd.addEventListener('click', createReview);
+
+if(reviewAdd){
+    reviewAdd.addEventListener('click', createReview);
+}
 
 
 /*
@@ -82,35 +115,3 @@ reviewAdd.addEventListener('click', createReview);
 
 
 /* review end! */
-
-
-
-
-/* contact page start! */
-const tabs = document.querySelectorAll('.tab > li');
-const cardFronts = document.querySelectorAll('.card_front');
-const cardBacks = document.querySelectorAll('.card_back');
-const cardWraps = document.querySelectorAll('.card_wrap');
-
-tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        tabs.forEach((tab) => {
-            tab.classList.remove('active');
-        });
-        cardFronts.forEach((cardFront) => {
-            cardFront.classList.remove('active');
-        });
-        cardBacks.forEach((cardBack) => {
-            cardBack.classList.remove('active');
-        });
-        cardWraps.forEach((cardWrap) => {
-            cardWrap.classList.remove('active');
-        });
-
-        tab.classList.add('active');
-        cardFronts[index].classList.add('active');
-        cardBacks[index].classList.add('active');
-        cardWraps[index].classList.add('active');
-    });
-});
-/* contact page end! */
