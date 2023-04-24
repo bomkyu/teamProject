@@ -7,7 +7,7 @@
 .review_space.active { background: #5A5A5A; }
 .review_space.active::after { transform: rotate(180deg); }
 
-.review_wrap { max-width: 680px; margin: 0 auto; }
+.review_wrap { position: relative; max-width: 680px; margin: 0 auto; }
 .review_wrap .review { border-radius: 10px; background: #222; }
 .review_wrap .review .review_mg { display: flex; width: 80%; margin: 0 auto; flex-direction: column; align-items: flex-start; justify-content: center; }
 .review_wrap .review .review_mg .review_top { display: flex; width: 100%; margin: 50px 0 20px; align-items: center; }
@@ -22,13 +22,15 @@
 .review_wrap .review .review_img { width: 50px; height: 50px; margin-right: 20px; border-radius: 50%; background: url('../images/img_noProfile0.png') no-repeat center / 52px; }
 .review_wrap .review textarea::placeholder { text-indent: 3px; font-size: 16px; font-family: 'Pretendard','Malgun Gothic', sans-serif; }
 
+.review_wrap .review_sel { position: relative; }
 .review_wrap .review_content { display: flex; width: 80%; margin: 20px auto 0; align-items: center; }
 .review_wrap .review_content .profile { width: 50px; height: 50px; border-radius: 50%; background: url('../../data/review_profile1.png') no-repeat center / 50px; }
 .review_wrap .review_content .reviwe_box { display: flex; width: 90%; padding: 5% 0% 5% 5%; flex-direction: column; justify-content: center; }
 .review_wrap .review_content .reviwe_box .nickname { font-size: 18px; font-weight: 600; }
 .review_wrap .review_content .reviwe_box .coment { font-size: 16px; padding-top: 10px; color: #e5e5e5; }
-.review_wrap .review_content .reviwe_box .date { font-size: 14px; font-weight: 300; padding-top: 10px; color: #a9a9a9;}
-
+.review_wrap .review_content .reviwe_box .date .date_p { font-size: 14px; font-weight: 300; padding-top: 10px; color: #a9a9a9;}
+.review_wrap .review_content .reviwe_box .date .remove_btn { position: absolute; top: 20px; right: 20px; width: 25px; height: 25px; background: url('../images/img_review_remove.png') no-repeat -5px -5px / 70px; cursor: pointer; transition: transform .3s; }
+.review_wrap .review_content .reviwe_box .date .remove_btn:hover { transform: scale(1.1); background: url('../images/img_review_remove.png') no-repeat -40px -5px / 70px; }
 .wkatl {height: 1000px; background: #000; }
 /* review end! */
 

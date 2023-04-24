@@ -12,7 +12,9 @@ fetch('./data/review.json')
                     <div class="reviwe_box">
                         <div class="nickname">${nickname}</div>
                         <div class="coment">${coment}</div>
-                        <div class="date">${date}</div>
+                        <div class="date">
+                            <div class="date_p">${date}</div>
+                        </div>
                     </div>
                 </div>
             `;
