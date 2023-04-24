@@ -190,5 +190,5 @@ if(reviewAdd && jsonSel){
     reviewAdd.addEventListener('click', createReview);
 }
 
-createReview();
+//createReview();
 /* review end! */
