@@ -59,25 +59,29 @@ AOS.init();
 		});
 		
 		buy_btn.addEventListener('click', ()=> {
+			
 			const buy_list = buy_el.querySelectorAll('li');
-			const statusLengths = Array.from(buy_list).map(buy_list => buy_list.dataset.status.length);
-
+			const statusLengths = Array.from(buy_list).filter(buy_list => buy_list.dataset.status === 'true').map(buy_list => buy_list.dataset.status.length);
+			console.log(statusLengths);
 			if(buy_list.length == statusLengths.length){
+				
 				alert('모든 개발자가 선택되었습니다.');
 				return;
 			}
 
 			if(buy_select.length == 0 ){
 				alert('개발자를 선택해 주세요');
+				return;
 			}
 			
 			buy_select.forEach(element => {
 				element.status = 'true';
 				const idx = person_arr.findIndex(obj => obj.id === element.id);
 				person_arr[idx].status = 'true';
+				buy_list[idx].setAttribute('data-status', 'true');
 			});
+
 			const objString = JSON.stringify(buy_select);
-			
 			if(select_person == null){
 				window.localStorage.setItem('select_person', objString);
 				
@@ -89,10 +93,11 @@ AOS.init();
 				
 				const new_select_person = JSON.stringify(select_person_arr);
 				window.localStorage.setItem('select_person', new_select_person);
-				buy_select.length = 0;
+				//buy_select.length = 0;
 			}
 			window.localStorage.setItem('person', JSON.stringify(person_arr));
-			
+
+			buy_select.length = 0;
 		});
 	}
 
