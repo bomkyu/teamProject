@@ -62,7 +62,7 @@ AOS.init();
 			
 			const buy_list = buy_el.querySelectorAll('li');
 			const statusLengths = Array.from(buy_list).filter(buy_list => buy_list.dataset.status === 'true').map(buy_list => buy_list.dataset.status.length);
-			console.log(statusLengths);
+			//console.log(statusLengths);
 			if(buy_list.length == statusLengths.length){
 				
 				alert('모든 개발자가 선택되었습니다.');
@@ -88,7 +88,7 @@ AOS.init();
 			}else{
 				select_person_arr = Object.values(select_person)
 
-				console.log(select_person_arr);
+				//console.log(select_person_arr);
 				select_person_arr.push(...buy_select);
 				
 				const new_select_person = JSON.stringify(select_person_arr);
