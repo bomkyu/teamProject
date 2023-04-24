@@ -82,8 +82,8 @@ if(reviewText){
 
 function createReview(){
     const newDiv = document.createElement('div');
+    newDiv.classList.add('review', 'review_sel');
     newDiv.innerHTML = `
-        <div class="review review_sel">
             <div class="review_content">
                 <div class="profile" style="background-image: url('./data/')"></div>
                 <div class="reviwe_box">
@@ -92,7 +92,6 @@ function createReview(){
                     <div class="date">${new Date().toLocaleDateString()}</div>
                 </div>
             </div>
-        </div>
     `;
 
     jsonSel.prepend(newDiv);
