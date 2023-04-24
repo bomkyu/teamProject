@@ -59,6 +59,14 @@ AOS.init();
 		});
 		
 		buy_btn.addEventListener('click', ()=> {
+			const buy_list = buy_el.querySelectorAll('li');
+			const statusLengths = Array.from(buy_list).map(buy_list => buy_list.dataset.status.length);
+
+			if(buy_list.length == statusLengths.length){
+				alert('모든 개발자가 선택되었습니다.');
+				return;
+			}
+
 			if(buy_select.length == 0 ){
 				alert('개발자를 선택해 주세요');
 			}
