@@ -80,7 +80,10 @@ AOS.init();
 				person_arr[idx].status = 'true';
 				buy_list[idx].setAttribute('data-status', 'true');
 			});
-
+			
+			let select_person_string = window.localStorage.getItem('select_person');
+			let select_person = JSON.parse(select_person_string);
+			
 			const objString = JSON.stringify(buy_select);
 			if(select_person == null){
 				window.localStorage.setItem('select_person', objString);
