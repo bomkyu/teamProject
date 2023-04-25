@@ -1,7 +1,5 @@
 AOS.init();
 let get_storage = { //객체로 스토리지 관리.
-	'dev' : window.localStorage.getItem('dev'),
-	'selected_dev' : window.localStorage.getItem('dev_selected'),
 	'get_parse_data' : function() { //받아오는 데이터 로직
 		
 		let dev = this.dev = JSON.parse(window.localStorage.getItem('dev'));
