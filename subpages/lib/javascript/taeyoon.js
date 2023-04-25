@@ -76,10 +76,11 @@ function Validation(){
     } else if(reviewText.value.length < 5){
         alert('리뷰 내용을 5글자 이상으로 작성해주세요.');
     } else {
-
+        const profileRandom = Math.floor(Math.random() * 8);
         const reviewObj = {
             nickname: reviewName.value,
-            comment: reviewText.value
+            comment: reviewText.value,
+            profile: profileRandom
         };
 
         reviewItem.push(reviewObj);
@@ -98,8 +99,8 @@ function renderReview(){
 
         reviewItem.forEach(item => {
 
-            const profileRandom = Math.floor(Math.random() * 8);
-
+            //const profileRandom = Math.floor(Math.random() * 8);
+            //profileRandom = item.profile;
             const newDiv = document.createElement('div');
             newDiv.classList.add('review', 'review_sel');
 
@@ -116,10 +117,10 @@ function renderReview(){
             });
 
             const timeString = `${ampm} ${hour12.toString()}시 ${minute.toString().padStart(2, '0')}분`;
-
+            
             newDiv.innerHTML = `
                 <div class="review_content">
-                    <div class="profile" style="background-image: url('./lib/images/img_noProfile${profileRandom}.png')"></div>
+                    <div class="profile" style="background-image: url('./lib/images/img_noProfile${item.profile}.png')"></div>
                     <div class="reviwe_box">
                         <div class="nickname">${item.nickname}</div>
                         <div class="coment">${item.comment}</div>
