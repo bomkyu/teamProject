@@ -1,25 +1,41 @@
 AOS.init();
-	let buy_el = document.querySelector('.buy_list');
-	let buy_btn = document.querySelector('.buy_btn');
+let get_storage = { //객체로 스토리지 관리.
+	'dev' : window.localStorage.getItem('dev'),
+	'selected_dev' : window.localStorage.getItem('dev_selected'),
+	'get_parse_data' : function() { //받아오는 데이터 로직
+		
+		let dev = this.dev = JSON.parse(window.localStorage.getItem('dev'));
+		let selected_dev = this.selected_dev = JSON.parse(window.localStorage.getItem('dev_selected'));
 
-	if(buy_el){
-		let person_string = window.localStorage.getItem('person');
-		let select_person_string = window.localStorage.getItem('select_person');
-		let person_parse = JSON.parse(person_string);
-		let select_person = JSON.parse(select_person_string);
+		return { dev, selected_dev }
+	},
+	'set_parse_data' : function(name,data) { //추가하는 데이터 로직
+		let json_string = JSON.stringify(data);
+		window.localStorage.setItem(name, json_string);
+	}
+}
 
-		const person_arr = Object.values(person_parse);
-		let select_person_arr;
-		person_arr.forEach(key => {
-			let buy_el_li = document.createElement('li');
-			buy_el_li.setAttribute('data-id',`${key.id}`);
-			buy_el_li.setAttribute('data-status',`${key.status}`);
+//로컬스토리지에서 get,set 함수 사용하는 변수들
+let { dev: get_dev, selected_dev: get_selected_dev } = get_storage.get_parse_data();
+const dev_arr = Object.values(get_dev);
+
+let buy_ul = document.querySelector('.buy_list');
+let buy_btn = document.querySelector('.buy_btn');
+
+let selected_dev_arr = new Array();
+
+if(buy_ul){
+	let create_list = () => {
+		dev_arr.forEach(key => {
+			let create_li = document.createElement('li');
+			create_li.setAttribute('data-id',`${key.id}`);
+			create_li.setAttribute('data-status',`${key.status}`);
 			
-			buy_el_li.innerHTML = `
+			create_li.innerHTML = `
 									<div class="buy_inner">
 										<div class="face_wrap">
 											<div class="face_thumb">
-
+	
 											</div>
 										</div>
 										<h2 class="name txt_c">${key.name}</h2>
@@ -31,16 +47,15 @@ AOS.init();
 											<span></span>
 										</div>
 									</div>
-								  `
-			buy_el.appendChild(buy_el_li);
+								`	
+			buy_ul.appendChild(create_li);
 		});
 
-		let buy_el_child = Array.from(buy_el.children);
-		let buy_select = new Array();
-		buy_el_child.forEach((el, index)=>{
+		Array.from(buy_ul.children).forEach((el)=>{
 			if(el.dataset.status === 'true'){
 				el.classList.add('active');
 			}
+
 			el.addEventListener('click', (event) => {
 				let select_id = el.getAttribute('data-id');
 				if(el.dataset.status === 'true'){
@@ -51,58 +66,58 @@ AOS.init();
 				el.classList.toggle('active');
 
 				if(el.classList.contains('active')){
-					buy_select.push(person_arr[select_id]);
+					selected_dev_arr.push(dev_arr[select_id]); //selected_dev_arr 배열에 값을 집어넣음.
 				}else{
-					buy_select = buy_select.filter(obj => obj.id !== select_id);
+					selected_dev_arr = selected_dev_arr.filter(obj => obj.id !== select_id); //id값으로 배열의 요소를 지움.
 				}
 			});	
 		});
-		
-		buy_btn.addEventListener('click', ()=> {
-			
-			const buy_list = buy_el.querySelectorAll('li');
-			const statusLengths = Array.from(buy_list).filter(buy_list => buy_list.dataset.status === 'true').map(buy_list => buy_list.dataset.status.length);
-			//console.log(statusLengths);
-			if(buy_list.length == statusLengths.length){
-				
-				alert('모든 개발자가 선택되었습니다.');
-				return;
-			}
-
-			if(buy_select.length == 0 ){
-				alert('개발자를 선택해 주세요');
-				return;
-			}
-			
-			buy_select.forEach(element => {
-				element.status = 'true';
-				const idx = person_arr.findIndex(obj => obj.id === element.id);
-				person_arr[idx].status = 'true';
-				buy_list[idx].setAttribute('data-status', 'true');
-			});
-			
-			let select_person_string = window.localStorage.getItem('select_person');
-			let select_person = JSON.parse(select_person_string);
-			
-			const objString = JSON.stringify(buy_select);
-			if(select_person == null){
-				window.localStorage.setItem('select_person', objString);
-				
-			}else{
-				select_person_arr = Object.values(select_person)
-
-				//console.log(select_person_arr);
-				select_person_arr.push(...buy_select);
-				
-				const new_select_person = JSON.stringify(select_person_arr);
-				window.localStorage.setItem('select_person', new_select_person);
-				//buy_select.length = 0;
-			}
-			window.localStorage.setItem('person', JSON.stringify(person_arr));
-
-			buy_select.length = 0;
-		});
 	}
+
+	create_list();
+	
+	//예외처리
+	function exception_handler(el) {
+		
+		const statusLengths = Array.from(el)
+				.filter(el => el.dataset.status === 'true')
+				.map(el => el.dataset.status.length);
+
+		if(el.length == statusLengths.length){
+			alert('모든 개발자가 선택되었습니다.');
+			return;
+		}
+
+		if(selected_dev_arr.length == 0 ){
+			alert('개발자를 선택해 주세요');
+			return;
+		}
+	}
+
+	buy_btn.addEventListener('click', ()=> {
+		const buy_list = buy_ul.querySelectorAll('li');
+		exception_handler(buy_list); //예외처리
+
+		//data-value인 data-status를 true로 바꿔줌(element)
+		selected_dev_arr.forEach(element => {
+			element.status = 'true';
+			const idx = dev_arr.findIndex(obj => obj.id === element.id);
+			dev_arr[idx].status = 'true';
+			buy_list[idx].setAttribute('data-status', 'true');
+		});
+		
+		//로컬스토리지 dev_selected에 값 넣는 부분
+		if(get_selected_dev == null){
+			get_storage.set_parse_data('dev_selected',selected_dev_arr);
+		}else{
+			const new_selected_dev_arr = get_selected_dev;
+			 new_selected_dev_arr.push(...selected_dev_arr)
+			get_storage.set_parse_data('dev_selected',new_selected_dev_arr);
+		}
+		get_storage.set_parse_data('dev',dev_arr);
+		//selected_dev_arr.length = 0;
+	});
+}
 
     const targets = document.querySelectorAll('section');
 	const progress = document.querySelector(".sec_2");
