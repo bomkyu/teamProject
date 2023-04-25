@@ -194,5 +194,5 @@ if(reviewAdd){
     reviewAdd.addEventListener('click', Validation);
 }
 
-renderReview();
+//createReview();
 /* review end! */
