@@ -1,114 +1,3 @@
-/*display*/
-.flex { display: flex; }
-.block { display: block; }
-
-/* layout */
-.content_wrap { background-color: #000; padding:100px 0 300px 0; }
-.inner { position: relative; max-width: 1280px; width: 100%; margin:0 auto }
-
-.f_center { align-items: center; justify-content: center; }
-.m_center { margin:0 auto; }
-
-/* 텍스트 */
-.txt_l { text-align: left; }
-.txt_c { text-align: center; }
-.txt_r { text-align: right; }
-
-.light {font-weight: 300 !important;}
-.normal {font-weight: 400 !important;}
-.medium {font-weight: 500 !important;}
-.bold {font-weight: 700 !important;}
-
-/* 페이지 공통 타이틀 */
-h2.con_tit { font-size: 72px; font-weight: bold; }
-h3.con_tit { font-size: 48px; font-weight: 600; }
-h4.con_tit { font-size: 32px; font-weight: 500; }
-
-/* row(행) */
-.hori { display: flex; }
-.gap20 { gap: 20px; } /*hori여백값*/
-.gap25 { gap: 25px; } /*hori여백값*/
-.gap45 { gap: 45px; } /*hori여백값*/
-
-.space_around { justify-content: space-around; }
-
-.hori > * { overflow: hidden; }
-.hori > *:hover img { transition: 1.5s; transform: scale(1.2); }
-.hori.not_scale > *:hover img { transform: scale(1); }
-
-.row > * { width: 100%; }
-
-.row2 > * { width: 50%; }
-.gap20.row2 > * { width: calc( 50% - 10px); }
-.gap25.row2 > * { width: calc( 50% - 12.5px); }
-.gap45.row2 > * { width: calc( 50% - 12.5px); }
-
-.row3 > * { width: 33.3333%; }
-.gap20.row3 > * { width: calc( 33.3333% - 10px); }
-.gap25.row3 > * { width: calc( 33.3333% - 12.5px); }
-.gap45.row3 > * { width: calc( 33.3333%- 12.5px); }
-
-.row4 > * { width: 25%; }
-.gap20.row4 > * { width: calc( 25% - 10px); }
-.gap25.row4 > * { width: calc( 25% - 12.5px); }
-.gap45.row4 > * { width: calc( 25% - 12.5px); }
-
-/* 열 */
-.col { flex-wrap: wrap; }
-
-/* 이미지 */
-.img_wrap { position: relative; padding-top: 100%; overflow: hidden; }
-.img_wrap.ratio_2_1 { padding-top: 50%; }
-.img_wrap .img_con { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-repeat: no-repeat; background-position: center; background-size: cover; overflow: hidden; }
-.img_wrap .img_con:hover { transform: scale(1.2); }
-
-/* 백그라운드 컬러 */
-.bg_b { background-color: #000; }
-.bg_w { background-color: #FFF; }
-
-/*max-width*/
-.max_1700 { max-width: 1700px; width: 100%; }
-.max_750 { max-width: 750px; width: 100%; }
-
-/*height*/
-.h_100vh { height: 100vh; }
-
-/* header 혜민작업 */
-header { position:fixed; z-index:9999; top:0; width:100%; background-color: rgba(0,0,0,0.6);transform: translateY(0); transition: 0.5s; }
-header > .inner { position:relative; }
-header.scroll li > a { padding: 0; }
-.main_logo {position:absolute;top:50%; transform: translateY(-50%); left:30px; width:63px; height:40px; background: url(../images/header_logo.png) center center no-repeat; background-size: cover;}
-.main_logo a { display: block; width: 100%; height: 100%; }
-.gnb {display:flex; justify-content: end;}
-.gnb > li { position: relative; display: block; padding:0 30px;}
-.gnb > li > a {display:block; line-height:80px; transition: 0.5s; font-size: 1.2em; font-weight: 600; padding:10px 0; }
-.gnb > li:hover > a {background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); -webkit-background-clip: text; color: transparent;}
-
-.gnb > li > ul { display: none; position: absolute; top:100px; left: 50%; transform:translateX(-50%); }
-.gnb > li > ul a { display: none; white-space: nowrap; color: #FFF; font-size: 14px; }
-.gnb > li:hover > ul { display: block; }
-.gnb > li:hover > ul a { display: block; }
-.gnb > li > ul { display: none; padding: 10px; background-color: rgba(0,0,0,0.6); transition: 0.5s; }
-header.scroll .gnb > li:hover > ul { top:80px;}
-.gnb > li > ul > li { position: relative; }
-.gnb > li > ul > li::after { position: absolute; width: 0; height: 1px; bottom: -3px; left: 0; background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); transition: 0.3s ease-out; content: ""; }
-.gnb > li > ul > li:hover::after { width: 100%; }
-
-/* footer 태윤작업*/
-footer { font-size: 14px; background-color: #111; }
-.card_style { display: flex; min-height: 400px; flex-direction: column; align-items: center; justify-content: center; }
-
-.circle span { display: inline-block; width: 7px; height: 7px; margin: 0 5px; border-radius: 50%; }
-.circle .c1 { background-color: #fff; }
-.circle .c2 { background-color: #a8c8ea; }
-.circle .c3 { background-color: #7b53a2; }
-.circle .c4 { background-color: #000; }
-
-.front { font-weight: 600; font-size: 24px; }
-.team_pj { font-weight: 500; font-size: 14px; }
-.developer { font-size: 18px; }
-
-@media all and (min-width: 1280px) {
 /************************************************************************************
 Margin
 *************************************************************************************/
@@ -267,88 +156,118 @@ Padding
 .pl95 {padding-left:95px !important;}			.pr95 {padding-right:95px !important;}
 .pl100 {padding-left:100px !important;}		    .pr100 {padding-right:100px !important;}
 
-}
+/*display*/
+.flex { display: flex; }
+.block { display: block; }
 
-@media all and (min-width: 360px) and (max-width:1279px) {
-/************************************************************************************
-Margin
-*************************************************************************************/
-.mg00 {margin:0px !important;}
-.mg02 {margin:2px !important;}
-.mg03 {margin:3px !important;}
-.mg05 {margin:5px !important;}
-.mg10 {margin:10px !important;}
-.mg15 {margin:15px !important;}
-.mg20 {margin:20px !important;}
-.mg25 {margin:25px !important;}
-.mg30 {margin:30px !important;}
-.mg35 {margin:35px !important;}
-.mg40 {margin:40px !important;}
-.mg45 {margin:45px !important;}
-.mg50 {margin:45px !important;}
-.mg55 {margin:45px !important;}
-.mg60 {margin:45px !important;}
-.mg65 {margin:45px !important;}
-.mg70 {margin:45px !important;}
-.mg75 {margin:75px !important;}
-.mg80 {margin:80px !important;}
-.mg85 {margin:85px !important;}
-.mg90 {margin:90px !important;}
-.mg95 {margin:95px !important;}
-.mg100 {margin:100px !important;}
+/* layout */
+.content_wrap { background-color: #000; padding:100px 0 300px 0; }
+.inner { position: relative; max-width: 1280px; width: 100%; margin:0 auto }
 
-.mt00 {margin-top:0px !important;}			.mb00 {margin-bottom:0px !important;}
-.mt02 {margin-top:2px !important;}			.mb02 {margin-bottom:2px !important;}
-.mt03 {margin-top:3px !important;}			.mb03 {margin-bottom:3px !important;}
-.mt05 {margin-top:5px !important;}			.mb05 {margin-bottom:5px !important;}
-.mt10 {margin-top:10px !important;}			.mb10 {margin-bottom:10px !important;}
-.mt15 {margin-top:15px !important;}			.mb15 {margin-bottom:15px !important;}
-.mt20 {margin-top:20px !important;}			.mb20 {margin-bottom:20px !important;}
-.mt25 {margin-top:25px !important;}			.mb25 {margin-bottom:25px !important;}
-.mt30 {margin-top:30px !important;}			.mb30 {margin-bottom:30px !important;}
-.mt35 {margin-top:35px !important;}			.mb35 {margin-bottom:35px !important;}
-.mt40 {margin-top:40px !important;}			.mb40 {margin-bottom:40px !important;}
-.mt45 {margin-top:45px !important;}			.mb45 {margin-bottom:45px !important;}
-.mt50 {margin-top:50px !important;}			.mb50 {margin-bottom:50px !important;}
-.mt55 {margin-top:55px !important;}			.mb55 {margin-bottom:55px !important;}
-.mt60 {margin-top:60px !important;}			.mb60 {margin-bottom:60px !important;}
-.mt65 {margin-top:65px !important;}			.mb65 {margin-bottom:65px !important;}
-.mt70 {margin-top:70px !important;}			.mb70 {margin-bottom:70px !important;}
-.mt75 {margin-top:75px !important;}			.mb75 {margin-bottom:75px !important;}
-.mt80 {margin-top:80px !important;}			.mb80 {margin-bottom:80px !important;}
-.mt85 {margin-top:85px !important;}			.mb85 {margin-bottom:85px !important;}
-.mt90 {margin-top:90px !important;}			.mb90 {margin-bottom:90px !important;}
-.mt95 {margin-top:95px !important;}			.mb95 {margin-bottom:95px !important;}
-.mt100 {margin-top:100px !important;}		.mb100 {margin-bottom:100px !important;}
-.mt110 {margin-top:110px !important;}		.mb110 {margin-bottom:110px !important;}
-.mt120 {margin-top:120px !important;}		.mb120 {margin-bottom:120px !important;}
-.mt130 {margin-top:130px !important;}		.mb130 {margin-bottom:130px !important;}
-.mt140 {margin-top:140px !important;}		.mb140 {margin-bottom:140px !important;}
-.mt150 {margin-top:150px !important;}		.mb150 {margin-bottom:150px !important;}
+.f_center { align-items: center; justify-content: center; }
+.m_center { margin:0 auto; }
 
-.ml00 {margin-left:0px !important;}			    .mr00 {margin-right:0px !important;}
-.ml02 {margin-left:2px !important;}			    .mr02 {margin-right:2px !important;}
-.ml03 {margin-left:3px !important;}			    .mr03 {margin-right:3px !important;}
-.ml05 {margin-left:5px !important;}			    .mr05 {margin-right:5px !important;}
-.ml10 {margin-left:10px !important;}			.mr10 {margin-right:10px !important;}
-.ml15 {margin-left:15px !important;}			.mr15 {margin-right:15px !important;}
-.ml20 {margin-left:20px !important;}			.mr20 {margin-right:20px !important;}
-.ml25 {margin-left:25px !important;}			.mr25 {margin-right:25px !important;}
-.ml30 {margin-left:30px !important;}			.mr30 {margin-right:30px !important;}
-.ml35 {margin-left:35px !important;}			.mr35 {margin-right:35px !important;}
-.ml40 {margin-left:40px !important;}			.mr40 {margin-right:40px !important;}
-.ml45 {margin-left:45px !important;}			.mr45 {margin-right:45px !important;}
-.ml50 {margin-left:50px !important;}			.mr50 {margin-right:50px !important;}
-.ml55 {margin-left:55px !important;}			.mr55 {margin-right:55px !important;}
-.ml60 {margin-left:60px !important;}			.mr60 {margin-right:60px !important;}
-.ml65 {margin-left:65px !important;}			.mr65 {margin-right:65px !important;}
-.ml70 {margin-left:70px !important;}			.mr70 {margin-right:70px !important;}
-.ml75 {margin-left:75px !important;}			.mr75 {margin-right:75px !important;}
-.ml80 {margin-left:80px !important;}			.mr80 {margin-right:80px !important;}
-.ml85 {margin-left:85px !important;}			.mr85 {margin-right:85px !important;}
-.ml90 {margin-left:90px !important;}			.mr90 {margin-right:90px !important;}
-.ml95 {margin-left:95px !important;}			.mr95 {margin-right:95px !important;}
-.ml100 {margin-left:100px !important;}			.mr100 {margin-right:100px !important;}
+/* 텍스트 */
+.txt_l { text-align: left; }
+.txt_c { text-align: center; }
+.txt_r { text-align: right; }
+
+.light {font-weight: 300 !important;}
+.normal {font-weight: 400 !important;}
+.medium {font-weight: 500 !important;}
+.bold {font-weight: 700 !important;}
+
+/* 페이지 공통 타이틀 */
+h2.con_tit { font-size: 72px; font-weight: bold; }
+h3.con_tit { font-size: 48px; font-weight: 600; }
+h4.con_tit { font-size: 32px; font-weight: 500; }
+
+/* row(행) */
+.hori { display: flex; }
+.gap20 { gap: 20px; } /*hori여백값*/
+.gap25 { gap: 25px; } /*hori여백값*/
+.gap45 { gap: 45px; } /*hori여백값*/
+
+.space_around { justify-content: space-around; }
+
+.hori > * { overflow: hidden; }
+.hori > *:hover img { transition: 1.5s; transform: scale(1.2); }
+.hori.not_scale > *:hover img { transform: scale(1); }
+
+.row > * { width: 100%; }
+
+.row2 > * { width: 50%; }
+.gap20.row2 > * { width: calc( 50% - 10px); }
+.gap25.row2 > * { width: calc( 50% - 12.5px); }
+.gap45.row2 > * { width: calc( 50% - 12.5px); }
+
+.row3 > * { width: 33.3333%; }
+.gap20.row3 > * { width: calc( 33.3333% - 10px); }
+.gap25.row3 > * { width: calc( 33.3333% - 12.5px); }
+.gap45.row3 > * { width: calc( 33.3333%- 12.5px); }
+
+.row4 > * { width: 25%; }
+.gap20.row4 > * { width: calc( 25% - 10px); }
+.gap25.row4 > * { width: calc( 25% - 12.5px); }
+.gap45.row4 > * { width: calc( 25% - 12.5px); }
+
+/* 열 */
+.col { flex-wrap: wrap; }
+
+/* 이미지 */
+.img_wrap { position: relative; padding-top: 100%; overflow: hidden; }
+.img_wrap.ratio_2_1 { padding-top: 50%; }
+.img_wrap .img_con { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-repeat: no-repeat; background-position: center; background-size: cover; overflow: hidden; }
+.img_wrap .img_con:hover { transform: scale(1.2); }
+
+/* 백그라운드 컬러 */
+.bg_b { background-color: #000; }
+.bg_w { background-color: #FFF; }
+
+/*max-width*/
+.max_1700 { max-width: 1700px; width: 100%; }
+.max_750 { max-width: 750px; width: 100%; }
+
+/*height*/
+.h_100vh { height: 100vh; }
+
+/* header 혜민작업 */
+header { position:fixed; z-index:9999; top:0; width:100%; background-color: rgba(0,0,0,0.6);transform: translateY(0); transition: 0.5s; }
+header > .inner { position:relative; }
+header.scroll li > a { padding: 0; }
+.main_logo {position:absolute;top:50%; transform: translateY(-50%); left:30px; width:63px; height:40px; background: url(../images/header_logo.png) center center no-repeat; background-size: cover;}
+.main_logo a { display: block; width: 100%; height: 100%; }
+.gnb {display:flex; justify-content: end;}
+.gnb > li { position: relative; display: block; padding:0 30px;}
+.gnb > li > a {display:block; line-height:80px; transition: 0.5s; font-size: 1.2em; font-weight: 600; padding:10px 0; }
+.gnb > li:hover > a {background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); -webkit-background-clip: text; color: transparent;}
+
+.gnb > li > ul { display: none; position: absolute; top:100px; left: 50%; transform:translateX(-50%); }
+.gnb > li > ul a { display: none; white-space: nowrap; color: #FFF; font-size: 14px; }
+.gnb > li:hover > ul { display: block; }
+.gnb > li:hover > ul a { display: block; }
+.gnb > li > ul { display: none; padding: 10px; background-color: rgba(0,0,0,0.6); transition: 0.5s; }
+header.scroll .gnb > li:hover > ul { top:80px;}
+.gnb > li > ul > li { position: relative; }
+.gnb > li > ul > li::after { position: absolute; width: 0; height: 1px; bottom: -3px; left: 0; background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); transition: 0.3s ease-out; content: ""; }
+.gnb > li > ul > li:hover::after { width: 100%; }
+
+/* footer 태윤작업*/
+footer { font-size: 14px; background-color: #111; }
+.card_style { display: flex; min-height: 400px; flex-direction: column; align-items: center; justify-content: center; }
+
+.circle span { display: inline-block; width: 7px; height: 7px; margin: 0 5px; border-radius: 50%; }
+.circle .c1 { background-color: #fff; }
+.circle .c2 { background-color: #a8c8ea; }
+.circle .c3 { background-color: #7b53a2; }
+.circle .c4 { background-color: #000; }
+
+.front { font-weight: 600; font-size: 24px; }
+.team_pj { font-weight: 500; font-size: 14px; }
+.developer { font-size: 18px; }
+
+@media all and (min-width: 1280px) {
+
 
 }
 
