@@ -54,8 +54,6 @@ const reviewAdd = document.querySelector('.review_add');
 const reviewName = document.querySelector('.review_name');
 const reviewText = document.querySelector('.review_text');
 
-
-
 let reviewItem = JSON.parse(localStorage.getItem('reviewItem')) || [];
 
 const save = () => {
@@ -63,11 +61,8 @@ const save = () => {
 }
 
 
-function createReview(){
+function Validation(){
 
-    const newDiv = document.createElement('div');
-    newDiv.classList.add('review', 'review_sel');
-    
     if(reviewName.value.trim() === '' && reviewText.value.trim() === '') {
         alert('닉네임과 리뷰 내용을 작성해주세요.');
     } else if(reviewName.value.length < 5 && reviewText.value.length < 5){
@@ -92,7 +87,14 @@ function createReview(){
 
         reviewName.value = '';
         reviewText.value = '';
+
+        renderReview();
     }
+
+}
+
+
+function renderReview(){
 
         reviewItem.forEach(item => {
 
@@ -168,7 +170,8 @@ if(reviewName){
     reviewName.addEventListener('keypress', event => {
         if (event.key === "Enter") {
             event.preventDefault();
-            createReview();
+
+            Validation();
             reviewAdd.focus();
         }
     });
@@ -179,16 +182,17 @@ if(reviewText){
     reviewText.addEventListener('keypress', event => {
         if (event.key === "Enter") {
             event.preventDefault();
-            createReview();
+
+            Validation();
             reviewAdd.focus();
         }
     });
 }
 
 
-if(reviewAdd && jsonSel){
-    reviewAdd.addEventListener('click', createReview);
+if(reviewAdd){
+    reviewAdd.addEventListener('click', Validation);
 }
 
-createReview();
+renderReview();
 /* review end! */
