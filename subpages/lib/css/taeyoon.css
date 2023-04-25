@@ -7,7 +7,8 @@
 .review_space.active { background: #5A5A5A; }
 .review_space.active::after { transform: rotate(180deg); }
 
-.review_wrap { position: relative; max-width: 680px; margin: 0 auto; }
+.review_wrap { position: relative; display: none; max-width: 680px; margin: 0 auto; }
+.review_wrap.active { display: block; }
 .review_wrap .review { border-radius: 10px; background: #222; }
 .review_wrap .review .review_mg { display: flex; width: 80%; margin: 0 auto; flex-direction: column; align-items: flex-start; justify-content: center; }
 .review_wrap .review .review_mg .review_top { display: flex; width: 100%; margin: 50px 0 20px; align-items: center; }
@@ -31,7 +32,6 @@
 .review_wrap .review_content .reviwe_box .date .date_p { font-size: 14px; font-weight: 300; padding-top: 10px; color: #a9a9a9;}
 .review_wrap .review_content .reviwe_box .date .remove_btn { position: absolute; top: 20px; right: 20px; width: 25px; height: 25px; background: url('../images/img_review_remove.png') no-repeat -5px -5px / 70px; cursor: pointer; transition: transform .3s; }
 .review_wrap .review_content .reviwe_box .date .remove_btn:hover { transform: scale(1.1); background: url('../images/img_review_remove.png') no-repeat -40px -5px / 70px; }
-.wkatl {height: 1000px; background: #000; }
 /* review end! */
 
 

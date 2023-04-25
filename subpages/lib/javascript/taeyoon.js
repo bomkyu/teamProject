@@ -53,6 +53,7 @@ const jsonSel = document.querySelector('.json_sel');
 const reviewAdd = document.querySelector('.review_add');
 const reviewName = document.querySelector('.review_name');
 const reviewText = document.querySelector('.review_text');
+const reviewWrap = document.querySelector('.review_wrap');
 
 let reviewItem = JSON.parse(localStorage.getItem('reviewItem')) || [];
 
@@ -99,8 +100,6 @@ function renderReview(){
 
         reviewItem.forEach(item => {
 
-            //const profileRandom = Math.floor(Math.random() * 8);
-            //profileRandom = item.profile;
             const newDiv = document.createElement('div');
             newDiv.classList.add('review', 'review_sel');
 
@@ -147,6 +146,7 @@ function renderReview(){
 if(review){
     review.addEventListener('click', ()=>{
         review.classList.toggle('active');
+        reviewWrap.classList.toggle('active');
     });
 }
 
@@ -171,7 +171,6 @@ if(reviewName){
     reviewName.addEventListener('keypress', event => {
         if (event.key === "Enter") {
             event.preventDefault();
-
             Validation();
             reviewAdd.focus();
         }
@@ -183,7 +182,6 @@ if(reviewText){
     reviewText.addEventListener('keypress', event => {
         if (event.key === "Enter") {
             event.preventDefault();
-
             Validation();
             reviewAdd.focus();
         }
