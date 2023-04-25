@@ -76,20 +76,20 @@
 /* about_me end! */
 
 /* keyword start! */
-.keyword_container { position: relative; height: 500px; max-width: 1024px; margin: 0 auto; }
-.keyword { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 50%; animation: keyword_animation 5s infinite ease-in-out; }
-.keyword .circle_text { font-size: 26px; text-align: center; }
+.keyword_container .keyword_container { position: relative; height: 500px; max-width: 1024px; margin: 0 auto; }
+.keyword_container .keyword { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 50%; animation: keyword_animation 5s infinite ease-in-out; }
+.keyword_container .keyword .circle_text { font-size: 26px; text-align: center; }
 
-.keyword1 { width: 220px; height: 220px; left: 5%;; bottom: 64%; background-image: radial-gradient(circle, #b5d6ff ,#000 70%); }
-.keyword2 { width: 130px; height: 130px; right: 40%; bottom: 65%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
-.keyword3 { width: 160px; height: 160px; right: 18%; bottom: 74%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
-.keyword4 { width: 130px; height: 130px; left: 0%; bottom: 40%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
-.keyword5 { width: 220px; height: 220px; left: 21%; bottom: 29%; background-image: radial-gradient(circle, #b5d6ff ,#000 70%); }
-.keyword6 { width: 130px; height: 130px; right: 22%; bottom: 37%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
-.keyword7 { width: 190px; height: 190px; right: 0%; bottom: 48%; background-image: radial-gradient(circle, #b5fff8, #000 70%); }
-.keyword8 { width: 190px; height: 190px; left: 5%; bottom: 3%; background-image: radial-gradient(circle, #b5fff8, #000 70%); }
-.keyword9 { width: 160px; height: 160px; right: 37%; bottom: 8%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
-.keyword10 { width: 160px; height: 160px; right: 11%; bottom: 5%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
+.keyword_container .keyword1 { width: 220px; height: 220px; left: 5%;; bottom: 64%; background-image: radial-gradient(circle, #b5d6ff ,#000 70%); }
+.keyword_container .keyword2 { width: 130px; height: 130px; right: 40%; bottom: 65%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
+.keyword_container .keyword3 { width: 160px; height: 160px; right: 18%; bottom: 74%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
+.keyword_container .keyword4 { width: 130px; height: 130px; left: 0%; bottom: 40%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
+.keyword_container .keyword5 { width: 220px; height: 220px; left: 21%; bottom: 29%; background-image: radial-gradient(circle, #b5d6ff ,#000 70%); }
+.keyword_container .keyword6 { width: 130px; height: 130px; right: 22%; bottom: 37%; background-image: radial-gradient(circle, #d3d3d3, #000 70%); }
+.keyword_container .keyword7 { width: 190px; height: 190px; right: 0%; bottom: 48%; background-image: radial-gradient(circle, #b5fff8, #000 70%); }
+.keyword_container .keyword8 { width: 190px; height: 190px; left: 5%; bottom: 3%; background-image: radial-gradient(circle, #b5fff8, #000 70%); }
+.keyword_container .keyword9 { width: 160px; height: 160px; right: 37%; bottom: 8%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
+.keyword_container .keyword10 { width: 160px; height: 160px; right: 11%; bottom: 5%; background-image: radial-gradient(circle, #ffb5b5, #000 70%); }
 
 @keyframes keyword_animation {
     0% {
@@ -223,7 +223,7 @@
     .keyword9 { width: 80px; height: 80px; }
     .keyword10 { width: 80px; height: 80px; }
 
-    .keyword .circle_text { font-size: 14px; }
+    .keyword_container .keyword .circle_text { font-size: 14px; }
 }
 
 @media (max-width: 480px) {
