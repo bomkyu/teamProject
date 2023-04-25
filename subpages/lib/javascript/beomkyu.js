@@ -1,11 +1,7 @@
 AOS.init();
 let get_storage = { //객체로 스토리지 관리.
-	'get_parse_data' : function() { //받아오는 데이터 로직
-		
-		let dev = this.dev = JSON.parse(window.localStorage.getItem('dev'));
-		let selected_dev = this.selected_dev = JSON.parse(window.localStorage.getItem('dev_selected'));
-
-		return { dev, selected_dev }
+	'get_parse_data' : function(name) { //받아오는 데이터 로직
+		return  JSON.parse(window.localStorage.getItem(name));
 	},
 	'set_parse_data' : function(name,data) { //추가하는 데이터 로직
 		let json_string = JSON.stringify(data);
@@ -14,8 +10,7 @@ let get_storage = { //객체로 스토리지 관리.
 }
 
 //로컬스토리지에서 get,set 함수 사용하는 변수들
-let { dev: get_dev, selected_dev: get_selected_dev } = get_storage.get_parse_data();
-const dev_arr = Object.values(get_dev);
+const dev_arr = Object.values(get_storage.get_parse_data('dev'));
 
 let buy_ul = document.querySelector('.buy_list');
 let buy_btn = document.querySelector('.buy_btn');
@@ -103,17 +98,18 @@ if(buy_ul){
 			dev_arr[idx].status = 'true';
 			buy_list[idx].setAttribute('data-status', 'true');
 		});
-		
+
 		//로컬스토리지 dev_selected에 값 넣는 부분
-		if(get_selected_dev == null){
+		if(get_storage.get_parse_data('dev_selected') == null){
 			get_storage.set_parse_data('dev_selected',selected_dev_arr);
+
 		}else{
-			const new_selected_dev_arr = get_selected_dev;
-			 new_selected_dev_arr.push(...selected_dev_arr)
+			const new_selected_dev_arr = Object.values(get_storage.get_parse_data('dev_selected'));
+			new_selected_dev_arr.push(...selected_dev_arr)
 			get_storage.set_parse_data('dev_selected',new_selected_dev_arr);
 		}
 		get_storage.set_parse_data('dev',dev_arr);
-		//selected_dev_arr.length = 0;
+		selected_dev_arr.length = 0;
 	});
 }
 
