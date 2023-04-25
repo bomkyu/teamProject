@@ -70,13 +70,13 @@ if(buy_ul){
 	create_list();
 	
 	//예외처리
-	function exception_handler(el) {
+	function exception_handler(buy_list) {
 		
-		const statusLengths = Array.from(el)
-				.filter(el => el.dataset.status === 'true')
-				.map(el => el.dataset.status.length);
+		const statusLengths = Array.from(buy_list)
+				.filter(buy_list => buy_list.dataset.status === 'true')
+				.map(buy_list => buy_list.dataset.status.length);
 
-		if(el.length == statusLengths.length){
+		if(buy_list.length == statusLengths.length){
 			alert('모든 개발자가 선택되었습니다.');
 			return;
 		}
@@ -109,7 +109,7 @@ if(buy_ul){
 			get_storage.set_parse_data('dev_selected',new_selected_dev_arr);
 		}
 		get_storage.set_parse_data('dev',dev_arr);
-		selected_dev_arr.length = 0;
+		selected_dev_arr = [];
 	});
 }
 
