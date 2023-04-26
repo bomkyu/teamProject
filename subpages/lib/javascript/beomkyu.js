@@ -18,7 +18,6 @@ let buy_btn = document.querySelector('.buy_btn');
 let selected_dev_arr = new Array();
 
 if(buy_ul){
-
 	//리스트 생성 함수
 	let create_list = () => {
 		dev_arr.forEach(key => {
