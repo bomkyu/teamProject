@@ -171,8 +171,8 @@ header.mobile{display:none;}
 
 .gnb_open {position: fixed; background: #000; z-index: 100000; top: 0; left: 0; right: 0;
   min-width: 320px; height: 100%;
-/*   transform: translateX(-100%);
-  transition: 0.3s; */
+  transform: translateX(-100%);
+  transition: 0.3s;
 }
 .gnb_open.active {
   transform: translateX(0);
