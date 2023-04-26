@@ -79,25 +79,27 @@ window.addEventListener('scroll',function(){
 //section04 클릭 시 클라스 추가
 const clickBtn = document.querySelector('.sect04_btn');
 const bubbleImg = document.querySelector('.img_contact');
-clickBtn.addEventListener('click',()=>{
+
+if(clickBtn)
+{clickBtn.addEventListener('click',()=>{
   bubbleImg.classList.add('on')
-})
+})}
 
 
 //header 모바일 메뉴 오픈
 const gnbBtn = document.querySelector(".gnb_btn");
 const gnbMenu = document.querySelector(".gnb_open");
 const gnbClose = document.querySelector(".gnb_btn_close");
-const body = document.querySelector('body');
 
-gnbBtn.addEventListener("click", function () {
-  gnbMenu.classList.add("active");
-  body.style.overflow = 'hidden';
-});
-gnbClose.addEventListener("click", function () {
-  gnbMenu.classList.remove("active");
-  body.style.overflow = 'auto';
-});
+if(gnbBtn){
+  gnbBtn.addEventListener('click',()=>{
+    gnbMenu.classList.add('active')
+  });
+  gnbClose.addEventListener('click', ()=>{
+    gnbMenu.classList.remove('active')
+  })
+}
+
 
 
 
