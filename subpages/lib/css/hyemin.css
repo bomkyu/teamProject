@@ -1,3 +1,4 @@
+/**** FAQ ****/
 .faq_wrap {position:relative; min-height:600px; margin:0 300px 0 100px; border-radius: 10px; background-color: #8113EC; box-shadow:  0 0 10px 0 rgba(255,255,255, 0.3);transition: all .5s ease;}
 .faq_wrap:hover {cursor:pointer; box-shadow: 0 0 10px 0 rgba(255,255,255, 0.5); }
 
@@ -37,9 +38,8 @@
 .faq_text {position:absolute; bottom: 0; left: 50px; font-size: 200px;
   color:rgba(255, 255, 255,0.8); /* -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #fff;  color: transparent; */}
 
-
+/**** developer ****/
 /* section01 */
-
 .section01 {background-color:rgb(209, 222, 236)}
 .sect01_txt {position:absolute; z-index:10;top:50%; left:15%;}
 .sect01_txt h2{}
@@ -64,8 +64,6 @@
 
 .sect02_cha_wrap {position: absolute; bottom: 100px; left: 200px; column-gap: 20px; max-width:600px; width:100%; transition: 0.3s;}
 .sect02_cha_wrap img {}
-
-
 
 /*section03*/
 .section03 {background-color: #000;}
@@ -95,7 +93,6 @@
   0% {width:5%; opacity: 0;}
   100% {width:100%; opacity: 1;}
 }
-
 
 /*section04*/
 .section04 {background-color: #fff;}
@@ -130,16 +127,57 @@
     100% {transform: translateY(0);}
 }
 
-
 .img_cha {text-align: right;}
 .img_cha > img {max-width:500px; width:100%;}
 
-/* 미디어쿼리 */
+/* header 혜민작업 */
+/* header { position:fixed; z-index:9999; top:0; width:100%; background-color: rgba(0,0,0,0.6);transform: translateY(0); transition: 0.5s; }
+header > .inner { position:relative; }
+header.scroll li > a { padding: 0; }
+.main_logo {position:absolute;top:50%; transform: translateY(-50%); left:30px; width:63px; height:40px; background: url(../images/header_logo.png) center center no-repeat; background-size: cover;}
+.main_logo a { display: block; width: 100%; height: 100%; }
+.gnb {display:flex; justify-content: end;}
+.gnb > li { position: relative; display: block; padding:0 30px;}
+.gnb > li > a {display:block; line-height:80px; transition: 0.5s; font-size: 1.2em; font-weight: 600; padding:10px 0; }
+.gnb > li:hover > a {background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); -webkit-background-clip: text; color: transparent;}
+
+.gnb > li > ul { display: none; position: absolute; top:100px; left: 50%; transform:translateX(-50%); }
+.gnb > li > ul a { display: none; white-space: nowrap; color: #FFF; font-size: 14px; }
+.gnb > li:hover > ul { display: block; }
+.gnb > li:hover > ul a { display: block; }
+.gnb > li > ul { display: none; padding: 10px; background-color: rgba(0,0,0,0.6); transition: 0.5s; }
+header.scroll .gnb > li:hover > ul { top:80px;}
+.gnb > li > ul > li { position: relative; }
+.gnb > li > ul > li::after { position: absolute; width: 0; height: 1px; bottom: -3px; left: 0; background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); transition: 0.3s ease-out; content: ""; }
+.gnb > li > ul > li:hover::after { width: 100%; } */
+
+/*** header 1280px 반응형 ****/
+header.media_1280{display:none;}
+header.media_1280 .gnb > li {padding:0 15px;}
+
+/*** header 모바일용 ***/
+header.mobile{display:none;}
+header.mobile {padding:20px;}
+.mobile_inner {justify-content: space-between;}
+.mobile_inner > * {display:inline-block;}
+header.mobile .main_logo_mobile {width:63px; height:40px; background: url(../images/header_logo.png) center center no-repeat; background-size: cover;}
+header.mobile .gnb_btn {position:relative; width:40px; height:40px}
+
+.gnb_btn span, .gnb_btn span:before, .gnb_btn span:after {position:absolute; background-color: #fff; width:100%; height:3px;}
+
+.gnb_btn span {top:calc(50% - 1.5px);}
+.gnb_btn span:before{ content: ""; top:-10px;}
+.gnb_btn span:after{ content: ""; top:10px;}
+
+
+/* 반응형 */
 @media (max-width:1680px){
   .sect02_cha_wrap{bottom:0;}
 }
 
 @media (max-width:1280px){
+  header.pc {display:none;}
+  header.media_1280{display:block;}
   .section02 {height:100%;}
   .sect02_inner > * {position: unset; margin:auto;}  
 }
@@ -149,6 +187,11 @@
   .sect03_img {max-width:100px; height:100px;}
   .section04 .inner {display:inline-block;}
   .sect04_btn{position:unset; margin-top: 50px;} 
+}
+
+@media (max-width:480px){
+  header.media_1280{display:none;}
+  header.mobile{display:block;}
 }
 
 
