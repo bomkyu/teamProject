@@ -72,9 +72,7 @@ window.addEventListener('scroll',function(){
   if(this.window.scrollY > scrollsect3.offsetTop){
   line.classList.add('line');
   }else {
-    skillBar.forEach(function(item){
-      item.classList.remove('line');
-    })
+    line.classList.remove('line');
   }
 })
 
