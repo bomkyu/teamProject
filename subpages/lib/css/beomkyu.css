@@ -32,8 +32,31 @@
 .buy_list li:nth-of-type(3) .face_wrap .face_thumb { border-radius: 50%; background: url(../images/img_ty_small.png) no-repeat 7% 55% / 150% }
 
 .buy_list .name { font-size: 26px; font-weight: 400; }
-.buy_list .keyword { font-size: 16px; font-weight: 300; margin:10px 0 20px 0; }
-.buy_list .introduce { font-size: 16px; background-color: #333; padding: 20px; border-radius: 20px; box-shadow: 0px 0px 10px 0px #555; }
+.buy_list .keyword { margin:10px 0 20px 0; font-size: 16px; font-weight: 300;  }
+.buy_list .introduce { max-height: 215px; background-color: #333; padding: 20px; overflow-y: auto ; border-radius: 20px; box-shadow: 0px 0px 10px 0px #555; font-size: 16px; }
+
+
+/* 스크롤바 기본 스타일링 */
+.buy_list .introduce::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* 스크롤바 레일 스타일링 */
+  .buy_list .introduce::-webkit-scrollbar-track {
+    background-color: #f1f1f100;
+  }
+  
+  /* 스크롤바 썸네일 스타일링 */
+  .buy_list .introduce::-webkit-scrollbar-thumb {
+    background-color: #88888800;
+    border-radius: 10px;
+    border: 2px solid #444;
+  }
+  
+  /* 마우스 호버시 스크롤바 썸네일 스타일링 */
+  .buy_list .introduce::-webkit-scrollbar-thumb:hover {
+    
+  }
 
 .buy_btn_wrap { margin-top: 40px; text-align: center; }
 .buy_btn_wrap .buy_btn { display: inline-block; max-width: 200px; width: 100%; padding: 15px 10px; background-color: #333; font-size: 20px; border-radius: 50px; cursor: pointer; transition: 0.3s; }
@@ -45,11 +68,16 @@
 }
 
 @media all and (max-width:768px){
+    /*dev*/
     .tec_list_contain .tec_list > li { width:calc(50% - 27px); color:#333; text-align:center; }
 }
 
 @media all and (max-width:480px){
+    /* dev */
     .sec_1 .section_inner { background: #CCC url(../images/img_bk_01.png) no-repeat 85% bottom / 200px; }
     .sec_1 .section_inner > .inner { position: relative; top:-120px; }
+    
+    /* buy */
+    .buy_list .name { font-size:22px; }
 }
 
