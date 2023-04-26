@@ -141,23 +141,18 @@
 
 @media (max-width:1280px){
   .section02 {height:100%;}
-  .sect02_inner{position:unset;}
-  .sect02_bg {position: unset; margin:auto;}
-  .sect02_txt {position: unset; margin:auto;}
-  .sect02_cha_wrap {position: unset; margin:auto;}
-  
+  .sect02_inner > * {position: unset; margin:auto;}  
 }
 
 @media (max-width:768px){
+  .sect03_wrap ul {flex-wrap: wrap;}
+  .sect03_wrap li{flex:33.333%;}
   .section04 .inner {display:inline-block;}
   .sect04_btn{position:unset; margin-top: 50px;} 
-  .sect04_img {padding-top:0;}
-  .sect03_wrap ul {display:flex; flex-wrap: wrap;}
-  .sect03_wrap li{flex:33.333%;}
 }
 
 @media (max-width:480px){
-  .sect03_img {max-width:100px; width:100%; height:100px; transition:0.3s;}
+
 }
 
 
