@@ -18,6 +18,8 @@ let buy_btn = document.querySelector('.buy_btn');
 let selected_dev_arr = new Array();
 
 if(buy_ul){
+
+	//리스트 생성 함수
 	let create_list = () => {
 		dev_arr.forEach(key => {
 			let create_li = document.createElement('li');
@@ -44,6 +46,13 @@ if(buy_ul){
 			buy_ul.appendChild(create_li);
 		});
 
+		event_handler();
+	}
+
+	create_list();
+
+	// 아이템들의 이벤트 생성 핸들러
+	function event_handler(){
 		Array.from(buy_ul.children).forEach((el)=>{
 			if(el.dataset.status === 'true'){
 				el.classList.add('active');
@@ -66,8 +75,6 @@ if(buy_ul){
 			});	
 		});
 	}
-
-	create_list();
 	
 	//예외처리
 	function exception_handler(buy_list) {
@@ -89,6 +96,7 @@ if(buy_ul){
 
 	buy_btn.addEventListener('click', ()=> {
 		const buy_list = buy_ul.querySelectorAll('li');
+
 		exception_handler(buy_list); //예외처리
 
 		//data-value인 data-status를 true로 바꿔줌(element)
