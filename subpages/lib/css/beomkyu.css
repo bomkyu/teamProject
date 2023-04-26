@@ -37,24 +37,24 @@
 
 
 /* 스크롤바 기본 스타일링 */
-::-webkit-scrollbar {
+.buy_list .introduce::-webkit-scrollbar {
     width: 10px;
   }
   
   /* 스크롤바 레일 스타일링 */
-  ::-webkit-scrollbar-track {
+  .buy_list .introduce::-webkit-scrollbar-track {
     background-color: #f1f1f100;
   }
   
   /* 스크롤바 썸네일 스타일링 */
-  ::-webkit-scrollbar-thumb {
+  .buy_list .introduce::-webkit-scrollbar-thumb {
     background-color: #88888800;
     border-radius: 10px;
     border: 2px solid #444;
   }
   
   /* 마우스 호버시 스크롤바 썸네일 스타일링 */
-  ::-webkit-scrollbar-thumb:hover {
+  .buy_list .introduce::-webkit-scrollbar-thumb:hover {
     
   }
 
