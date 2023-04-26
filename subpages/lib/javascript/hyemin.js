@@ -84,5 +84,20 @@ clickBtn.addEventListener('click',()=>{
 })
 
 
+//header 모바일 메뉴 오픈
+const gnbBtn = document.querySelector(".gnb_btn");
+const gnbMenu = document.querySelector(".gnb_open");
+const gnbClose = document.querySelector(".gnb_btn_close");
+const body = document.querySelector('body');
+
+gnbBtn.addEventListener("click", function () {
+  gnbMenu.classList.add("active");
+  body.style.overflow = 'hidden';
+});
+gnbClose.addEventListener("click", function () {
+  gnbMenu.classList.remove("active");
+  body.style.overflow = 'auto';
+});
+
 
 
