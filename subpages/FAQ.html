@@ -31,28 +31,59 @@
 </head>
 <body>
     <!-- header 영역입니다. (혜민님) -->
-    
-    <header>
+    <header class="pc">
         <div class="inner">
-            <h1 class="main_logo"><a href="../index.html"></a></h1>
+            <h1 class="main_logo"><a href="/"></a></h1>
             <ul class="gnb">
-                <li><a href="../index.html">About</a></li>
+                <li><a href="/">About</a></li>
                 <li>
-                    <a href="./developer_1.html">Developer</a>
+                    <a href="./subpages/developer_1.html">Developer</a>
                     <ul>
-                        <li class="mb10 txt_c"><a href="./developer_1.html">SEO BEOM KYU</a></li>
-                        <li class="mb10 txt_c"><a href="./developer_2.html">CHO HYE MIN</a></li>
-                        <li class="txt_c"><a href="./developer_3.html">LEE TAE YOON</a></li>
+                        <li class="mb20 txt_c"><a href="./subpages/developer_1.html">SEO BEOM KYU</a></li>
+                        <li class="mb20 txt_c"><a href="./subpages/developer_2.html">CHO HYE MIN</a></li>
+                        <li class="txt_c"><a href="./subpages/developer_3.html">LEE TAE YOON</a></li>
                     </ul>
                 </li>
-                <li><a href="./buy.html">Buy</a></li>
-                <li><a href="./FAQ.html">FAQ</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./subpages/buy.html">Buy</a></li>
+                <li><a href="./subpages/FAQ.html">FAQ</a></li>
+                <li><a href="./subpages/contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
-    
+    <!-- //모바일용 header 마크업 (768px부터 적용)-->
+    <header class="mobile pd20">
+        <div class="mobile_inner flex">
+            <h1 class="main_logo_mobile"><a href="#"></a></h1>
+            <div class="gnb_btn">
+                <span></span>
+            </div>
+        </div>
+        <div class="gnb_open">
+            <div class="gnb_open_inner pd20">
+                <div class="mobile_inner flex">
+                    <h1 class="main_logo_mobile"><a href="../../index.html"></a></h1>
+                    <div class="gnb_btn">
+                        <span></span>
+                    </div>
+                </div>
+                <ul class="gnb_open_menu">
+                    <li><a href="./index.html">About</a></li>
+                    <li><a href="./subpages/developer_1.html">Developer</a>
+                        <ul class="gnb_sub pd20">
+                            <li><a href="./subpages/developer_1.html">SEO BEOM KYU</a></li>
+                            <li><a href="./subpages/developer_2.html">CHO HYE MIN</a></li>
+                            <li><a href="./subpages/developer_3.html">LEE TAE YOON</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./subpages/buy.html">Buy</a></li>
+                    <li><a href="./subpages/FAQ.html">FAQ</a></li>
+                    <li><a href="./subpages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <!-- //header -->
+
     <!-- content_wrap -->
     <div class="content_wrap pb100">
         <section class="faq">
@@ -66,64 +97,63 @@
                             <li>프로젝트를 진행하면서 어려웠던 점이 있나요?</li>
                             <li>어려웠던 점을 어떻게 극복하였나요?</li>
                             <li>프로젝트를 진행하면서 느낀 점을 말해주세요.</li>
+                            <ul class="faq_answer_wrap">
+                                <li>
+                                    <p>팀 프로젝트로 이 사이트를 만들게 된 이유는 무엇인가요?</p>
+                                    <dl>
+                                        <dt>범규</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.LorLorem Ipsum is simply dummy text of thetype specimen book.em Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>혜민</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem IpLorem Ipsum is simply dummy text of thetype specimen book.sum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>태윤</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem IpLorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.sum is simply dummy text of thetype specimen book.</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <p>프로젝트를 진행하면서 팀워크는 어땠나요?</p>
+                                    <dl>
+                                        <dt>범규</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>혜민</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>태윤</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <p>프로젝트를 진행하면서 어려웠던 점이 있나요?</p>
+                                    <dl>
+                                        <dt>범규</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book</dd>
+                                        <dt>혜민</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen bookLorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>태윤</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Lorem Ipsum is simply dummy text of thetype specimen bookLorem Ipsum is simply dummy text of thetype specimen bookLorem Ipsum is simply dummy text of thetype specimen bookIpsum is simply dummy text of thetype specimen book.</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <p>어려웠던 점을 어떻게 극복하였나요?</p>
+                                    <dl>
+                                        <dt>범규</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>혜민</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>태윤</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                    </dl>
+                                </li>
+                                <li>   <p>프로젝트를 진행하면서 느낀 점을 말해주세요.</p>
+                                    <dl>
+                                        <dt>범규</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>혜민</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                        <dt>태윤</dt>
+                                        <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
+                                    </dl>
+                                </li>
+                            </ul>
                     </ul>
-                    <ul class="faq_answer_wrap">
-                        <li>
-                            <p>팀 프로젝트로 이 사이트를 만들게 된 이유는 무엇인가요?</p>
-                            <dl>
-                                <dt>범규</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.LorLorem Ipsum is simply dummy text of thetype specimen book.em Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>혜민</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem IpLorem Ipsum is simply dummy text of thetype specimen book.sum is simply dummy text of thetype specimen book.</dd>
-                                <dt>태윤</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem IpLorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.sum is simply dummy text of thetype specimen book.</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <p>프로젝트를 진행하면서 팀워크는 어땠나요?</p>
-                            <dl>
-                                <dt>범규</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>혜민</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>태윤</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <p>프로젝트를 진행하면서 어려웠던 점이 있나요?</p>
-                            <dl>
-                                <dt>범규</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book</dd>
-                                <dt>혜민</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen bookLorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>태윤</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Lorem Ipsum is simply dummy text of thetype specimen bookLorem Ipsum is simply dummy text of thetype specimen bookLorem Ipsum is simply dummy text of thetype specimen bookIpsum is simply dummy text of thetype specimen book.</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <p>어려웠던 점을 어떻게 극복하였나요?</p>
-                            <dl>
-                                <dt>범규</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>혜민</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>태윤</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                            </dl>
-                        </li>
-                        <li>   <p>프로젝트를 진행하면서 느낀 점을 말해주세요.</p>
-                            <dl>
-                                <dt>범규</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>혜민</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                                <dt>태윤</dt>
-                                <dd>Lorem Ipsum is simply dummy text of thetype specimen book.Lorem Ipsum is simply dummy text of thetype specimen book.</dd>
-                            </dl>
-                        </li>
-                    </ul>
-
                     <div class="faq_text bold" data-aos="fade-up-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000" >
                         FAQ
                     </div>
