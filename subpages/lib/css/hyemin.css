@@ -136,11 +136,12 @@
 .modal {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 400px; min-height: 600px; background-color: #fff; border-radius: 10px; }
 .modal * {color:#000}
 .modal > h3 {font-size:22px;}
-.modal > ul {}
-.modal > ul > li {padding:10px 0;}
-.modal > ul > a {}
 
-
+.modal .modal_img {}
+.modal .modal_img_wrap > li {width:100px; height:100px; border-radius: 50%; border: 1px solid #000; background-image: url('../images/hm_profile.jpg'); background-size: 100%; background-position: center; background-repeat: no-repeat;}
+  
+.modal .modal_info > li {padding:10px 0;}
+.modal .modal_info > li span:nth-child(2) {color:#8113EC;}
 
 
 

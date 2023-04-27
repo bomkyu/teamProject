@@ -121,8 +121,21 @@ if(buy_ul){
 	});
 
 	function modal(){
-		console.log(`selected_dev_arr ${selected_dev_arr}`);
-		selected_dev_arr = [];
+		//selected_dev_arr 에 로컬 스토리지에서 받아와 객체 상태, 키값 넣어주면 밸류 얻어짐
+		//배열이 여러개 담겼으니까 forEach로 돌려줌
+		console.log('selected_dev_arr',selected_dev_arr);
+		
+		selected_dev_arr.forEach(function(el){
+			const name = document.getElementById('name');
+			const keyword = document.getElementById('keyword');
+			name.innerText = `${el.name}`;
+			keyword.innerText = `${el.keyword}`;
+			//console.log('el.name',el.name);
+			//console.log('el.keyword',el.keyword);  //selected_dev_arr배열에서 원하는 key값의 value 추출
+		})
+
+
+		selected_dev_arr = []; //배열 초기화
 	}
 }
 
