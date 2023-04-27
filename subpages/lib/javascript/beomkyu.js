@@ -116,8 +116,14 @@ if(buy_ul){
 			get_storage.set_parse_data('dev_selected',new_selected_dev_arr);
 		}
 		get_storage.set_parse_data('dev',dev_arr);
-		selected_dev_arr = [];
+		
+		modal();
 	});
+
+	function modal(){
+		console.log(`selected_dev_arr ${selected_dev_arr}`);
+		selected_dev_arr = [];
+	}
 }
 
     const targets = document.querySelectorAll('section');
