@@ -2,8 +2,8 @@ fetch('./data/review.json')
     .then(response => response.json())
     .then(review => {
         const reviewWrap = document.querySelector('.review_wrap');
-        review.data.forEach(review => { // "data" 배열에 접근
-            const { profile, nickname, coment, date } = review;
+        review.data.forEach(redata => { // "data" 배열에 접근
+            const { profile, nickname, coment, date } = redata;
             const newDiv = document.createElement('div');
             newDiv.classList.add('review', 'review_sel');
             newDiv.innerHTML = `
