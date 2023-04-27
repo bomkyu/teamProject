@@ -86,19 +86,7 @@ if(clickBtn)
 })}
 
 
-//header 모바일 메뉴 오픈
-const gnbBtn = document.querySelector(".gnb_btn");
-const gnbMenu = document.querySelector(".gnb_open");
-const gnbClose = document.querySelector(".gnb_btn_close");
 
-if(gnbBtn){
-  gnbBtn.addEventListener('click',()=>{
-    gnbMenu.classList.add('active')
-  });
-  gnbClose.addEventListener('click', ()=>{
-    gnbMenu.classList.remove('active')
-  })
-}
 
 
 
