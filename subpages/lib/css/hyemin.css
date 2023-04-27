@@ -131,6 +131,20 @@
 .img_cha {text-align: right;}
 .img_cha > img {max-width:500px; width:100%;}
 
+
+/*** buy 영수증 모달 작업 ***/
+.modal {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 400px; min-height: 600px; background-color: #fff; border-radius: 10px; }
+.modal * {color:#000}
+.modal > h3 {font-size:22px;}
+.modal > ul {}
+.modal > ul > li {padding:10px 0;}
+.modal > ul > a {}
+
+
+
+
+
+
 /* 반응형 */
 @media (max-width:1680px){
   .sect02_cha_wrap{bottom:0;}
