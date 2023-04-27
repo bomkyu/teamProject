@@ -16,8 +16,8 @@ if(type){
 
 
 //FAQ 답변 펼치기//
-const faqBar = document.querySelectorAll('.faq_bar_wrap > li');
-const faqAnswer = document.querySelectorAll('.faq_answer_wrap > li');
+const faqBar = document.querySelectorAll('.faq_bar > li');
+const faqAnswer = document.querySelectorAll('.faq_answer > li');
 
 
 faqBar.forEach(function(item,index){
