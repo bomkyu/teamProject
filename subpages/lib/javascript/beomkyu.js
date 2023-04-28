@@ -120,22 +120,27 @@ if(buy_ul){
 		modal();
 	});
 
-	function modal(){
-		//selected_dev_arr 에 로컬 스토리지에서 받아와 객체 상태, 키값 넣어주면 밸류 얻어짐
-		//배열이 여러개 담겼으니까 forEach로 돌려줌
-		console.log('selected_dev_arr',selected_dev_arr);
+	function modal(){		
+		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
+		let modalName = selected_dev_arr.map(el => el.name);
+		let modalKeyword = selected_dev_arr.map(el=> el.keyword);
 		
-		selected_dev_arr.forEach(function(el){
-			const name = document.getElementById('name');
-			const keyword = document.getElementById('keyword');
-			name.innerText = `${el.name}`;
-			keyword.innerText = `${el.keyword}`;
-			//console.log('el.name',el.name);
-			//console.log('el.keyword',el.keyword);  //selected_dev_arr배열에서 원하는 key값의 value 추출
-		})
+		let today = new Date();
+		let year = today.getFullYear();
+		let month = today.getMonth()+1;
+		let date = today.getDate();
+		let hours = today.getHours();
+		let minutes = today.getMinutes();
+		let seconds = today.getSeconds();
 
-
+		document.getElementById('ordernumber').innerText = `${modalNumber}`;
+		document.getElementById('date').innerText = `${year}/${month}/${date} ${hours}:${minutes}:${seconds}`;
+		document.getElementById('name').innerText = `${modalName}`;
+		document.getElementById('keyword').innerText = `${modalKeyword}`;
+		
 		selected_dev_arr = []; //배열 초기화
+		//주문번호, 거래일시 초기화 필요		
+
 	}
 }
 
