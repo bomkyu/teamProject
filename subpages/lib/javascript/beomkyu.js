@@ -122,6 +122,7 @@ if(buy_ul){
 
 	function modal(){		
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
+		let modalId = selected_dev_arr.map(el => el.id);
 		let modalName = selected_dev_arr.map(el => el.name);
 		let modalKeyword = selected_dev_arr.map(el=> el.keyword);
 		
@@ -139,7 +140,36 @@ if(buy_ul){
 		document.getElementById('keyword').innerText = `${modalKeyword}`;
 		
 		selected_dev_arr = []; //배열 초기화
-		//주문번호, 거래일시 초기화 필요		
+		//주문번호, 거래일시 초기화 필요
+		
+			
+		//이미지 li 생성하는 함수
+		function createModalImg(){
+			const modalImgWrap = document.querySelector('.modal_img_wrap'); //li가 들어갈 ul
+			
+			let create_li_img = document.createElement('li');
+			create_li_img.setAttribute('id',modalId); //생성한 li의 아이디값을 modalId 와 동일하게 넣어줌
+			console.log('ㅇㅇㅇ',create_li_img.id); 
+			const newImg = create_li_img.querySelector('img'); //생성한 li의 img 가져옴
+
+			create_li_img.innerHTML = `
+										<div>
+											<img src="./lib/images/hm_profile.jpg" alt="hyemin" class="hm">
+										</div>
+									`
+			modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
+
+			//newImg.setAttribute('src','./lib/images/hm_profile.jpg'); //img의 src재설정
+			//newImg.classList.add('hm');
+
+		}
+		createModalImg();
+	/*	if(modalImgLi.id == modalId) {
+			createModalImg();
+			
+		} else {
+			
+		} */
 
 	}
 }
