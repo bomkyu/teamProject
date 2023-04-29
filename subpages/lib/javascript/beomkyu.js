@@ -124,6 +124,7 @@ if(buy_ul){
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
 		let modalId = selected_dev_arr.map(el => el.id);
 		let modalName = selected_dev_arr.map(el => el.name);
+		let modalImg = selected_dev_arr.map(el=> el.image_url);
 		let modalKeyword = selected_dev_arr.map(el=> el.keyword);
 		
 		let today = new Date();
@@ -149,12 +150,11 @@ if(buy_ul){
 			
 			let create_li_img = document.createElement('li');
 			create_li_img.setAttribute('id',modalId); //생성한 li의 아이디값을 modalId 와 동일하게 넣어줌
-			console.log('ㅇㅇㅇ',create_li_img.id); 
 			const newImg = create_li_img.querySelector('img'); //생성한 li의 img 가져옴
 
 			create_li_img.innerHTML = `
 										<div>
-											<img src="./lib/images/hm_profile.jpg" alt="hyemin" class="hm">
+											<img src="./lib/images/${modalImg}" alt="${modalName}" class="hm">
 										</div>
 									`
 			modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
