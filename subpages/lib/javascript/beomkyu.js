@@ -98,10 +98,10 @@ if(buy_ul){
 			modalClose.addEventListener('click', function(){
 				modalPop.style.display = 'none';
 			})
-			modal();
+
+		modal();
 		}
 	}
-	console.log('selected_dev_arr',selected_dev_arr);
 	buy_btn.addEventListener('click', ()=> {
 		const buy_list = buy_ul.querySelectorAll('li');
 
@@ -127,6 +127,7 @@ if(buy_ul){
 		get_storage.set_parse_data('dev',dev_arr);
 		
 	});
+
 	//영수증 content 생성하는 함수
 	function modal(){	
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
@@ -147,13 +148,12 @@ if(buy_ul){
 		document.getElementById('date').innerHTML = `${year}/${month}/${date} ${hours}:${minutes}:${seconds}`;
 		document.getElementById('name').innerHTML = `${modalName}`;
 		document.getElementById('keyword').innerHTML = `${modalKeyword}`;
-		
 			
 		//이미지 li 생성하는 함수
 		function createModalImg(){
 			const modalImgWrap = document.querySelector('.modal_img_wrap');
 			
-			for(let i = 0; i<modalImg.length; i++){
+			for(let i = 0; i<selected_dev_arr.length; i++){
 				let create_li_img = document.createElement('li');
 				create_li_img.innerHTML = `
 											<div>
@@ -163,9 +163,10 @@ if(buy_ul){
 				modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
 			}	
 		}
+		
 		createModalImg();
+		
 		selected_dev_arr = []; //배열 초기화
-		//주문번호, 거래일시 초기화 필요
 	}
 }
 
