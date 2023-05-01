@@ -90,9 +90,18 @@ if(buy_ul){
 		if(selected_dev_arr.length == 0 ){
 			alert('개발자를 선택해 주세요');
 			return;
+		} else {
+			const modalPop = document.querySelector('.modal');
+			const modalClose = document.querySelector('.modal_btn');
+			
+			modalPop.style.display = 'block';
+			modalClose.addEventListener('click', function(){
+				modalPop.style.display = 'none';
+			})
+			modal();
 		}
 	}
-
+	console.log('selected_dev_arr',selected_dev_arr);
 	buy_btn.addEventListener('click', ()=> {
 		const buy_list = buy_ul.querySelectorAll('li');
 
@@ -117,10 +126,9 @@ if(buy_ul){
 		}
 		get_storage.set_parse_data('dev',dev_arr);
 		
-		modal();
 	});
-
-	function modal(){		
+	//영수증 content 생성하는 함수
+	function modal(){	
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
 		let modalId = selected_dev_arr.map(el => el.id);
 		let modalName = selected_dev_arr.map(el => el.name);
@@ -140,14 +148,11 @@ if(buy_ul){
 		document.getElementById('name').innerHTML = `${modalName}`;
 		document.getElementById('keyword').innerHTML = `${modalKeyword}`;
 		
-		selected_dev_arr = []; //배열 초기화
-		//주문번호, 거래일시 초기화 필요
-		
 			
 		//이미지 li 생성하는 함수
 		function createModalImg(){
 			const modalImgWrap = document.querySelector('.modal_img_wrap');
-
+			
 			for(let i = 0; i<modalImg.length; i++){
 				let create_li_img = document.createElement('li');
 				create_li_img.innerHTML = `
@@ -157,9 +162,10 @@ if(buy_ul){
 										`
 				modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
 			}	
-
 		}
 		createModalImg();
+		selected_dev_arr = []; //배열 초기화
+		//주문번호, 거래일시 초기화 필요
 	}
 }
 
