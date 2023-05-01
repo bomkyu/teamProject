@@ -135,10 +135,10 @@ if(buy_ul){
 		let minutes = today.getMinutes();
 		let seconds = today.getSeconds();
 
-		document.getElementById('ordernumber').innerText = `${modalNumber}`;
-		document.getElementById('date').innerText = `${year}/${month}/${date} ${hours}:${minutes}:${seconds}`;
-		document.getElementById('name').innerText = `${modalName}`;
-		document.getElementById('keyword').innerText = `${modalKeyword}`;
+		document.getElementById('ordernumber').innerHTML = `${modalNumber}`;
+		document.getElementById('date').innerHTML = `${year}/${month}/${date} ${hours}:${minutes}:${seconds}`;
+		document.getElementById('name').innerHTML = `${modalName}`;
+		document.getElementById('keyword').innerHTML = `${modalKeyword}`;
 		
 		selected_dev_arr = []; //배열 초기화
 		//주문번호, 거래일시 초기화 필요
@@ -146,31 +146,20 @@ if(buy_ul){
 			
 		//이미지 li 생성하는 함수
 		function createModalImg(){
-			const modalImgWrap = document.querySelector('.modal_img_wrap'); //li가 들어갈 ul
-			
-			let create_li_img = document.createElement('li');
-			create_li_img.setAttribute('id',modalId); //생성한 li의 아이디값을 modalId 와 동일하게 넣어줌
-			const newImg = create_li_img.querySelector('img'); //생성한 li의 img 가져옴
+			const modalImgWrap = document.querySelector('.modal_img_wrap');
 
-			create_li_img.innerHTML = `
-										<div>
-											<img src="./lib/images/${modalImg}" alt="${modalName}" class="img_${modalId}">
-										</div>
-									`
-			modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
-
-			//newImg.setAttribute('src','./lib/images/hm_profile.jpg'); //img의 src재설정
-			//newImg.classList.add('hm');
+			for(let i = 0; i<modalImg.length; i++){
+				let create_li_img = document.createElement('li');
+				create_li_img.innerHTML = `
+											<div>
+												<img src="./lib/images/${modalImg[i]}" alt="${modalName[i]}" class="img_${modalId[i]}">
+											</div>
+										`
+				modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
+			}	
 
 		}
 		createModalImg();
-	/*	if(modalImgLi.id == modalId) {
-			createModalImg();
-			
-		} else {
-			
-		} */
-
 	}
 }
 
