@@ -15,7 +15,7 @@
 .faq_bar_wrap {position:absolute;z-index: 10; right:0; bottom:60px;}
 .faq_bar_wrap .faq_bar > li {position:relative; display:flex; align-items: center; padding:20px 40px 20px 20px; margin:20px 0; max-width: 600px; text-align:left;border-radius: 10px;  box-shadow:  0 0 10px 0 rgba(255,255,255, 0.3) ;box-shadow: inset 0 0 5px grey; background: #fff;}
 .faq_bar_wrap .faq_bar p {color:#000;}
-.faq_bar_wrap .faq_bar > li::before,.faq_answer p::before {margin-right: 10px; font-family: "Font Awesome 6 Free"; font-weight:900; font-size: 24px; color: #8113EC;content: "Q";}
+.faq_bar_wrap .faq_bar > li::before,.faq_answer >li > p::before {margin-right: 10px; font-family: "Font Awesome 6 Free"; font-weight:900; font-size: 24px; color: #8113EC;content: "Q";}
 .faq_bar_wrap .faq_bar > li::after{position:absolute; right:10px; top:10px; text-align:center; width:20px; height:20px; border-radius: 50%; background-color: #8113EC; font-family: "Font Awesome 6 Free"; font-weight:900; color: #fff;content: "+";}
 
 
@@ -29,10 +29,19 @@
 .faq_answer li::-webkit-scrollbar-thumb {box-shadow: inset 0 0 5px #fff;background: linear-gradient(to top,#82b8f1 10%, #b375f1 100%);border-radius: 14px;}
 .faq_answer li::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; background: #f1f1f1; border-radius: 14px;}
 
-  .faq_answer p {display:flex; align-items: center; padding: 20px;}
+
+  .faq_answer > li > p {display:flex; align-items: center; padding: 20px;}
   .faq_answer dl {padding:20px;}
-  .faq_answer dt {padding-bottom: 10px;}
+  .faq_answer dt {display:flex; padding-bottom: 10px;}
+  .faq_answer dt > p {display: flex; align-items: center; margin-left: 10px;color: #8113EC;}
   .faq_answer dd {margin-left:20px; margin-bottom:20px;}
+
+  .faq_answer dt > div { position: relative; width: 40px; height: 40px; border-radius:50%; overflow: hidden;}
+
+  .faq_answer dt > div > img {position: absolute;}
+  .faq_answer .img_0 {top: 56%;left: 8%; transform: scale(1.5); background: #555;}
+  .faq_answer .img_1 {top: 0;left: 0;transform: scale(1.2);}
+  .faq_answer .img_2 {top: 4%;left: 13%; transform: scale(1.3);}
 
 
 
