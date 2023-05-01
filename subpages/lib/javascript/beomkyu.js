@@ -154,7 +154,7 @@ if(buy_ul){
 
 			create_li_img.innerHTML = `
 										<div>
-											<img src="./lib/images/${modalImg}" alt="${modalName}" class="hm">
+											<img src="./lib/images/${modalImg}" alt="${modalName}" class="img_${modalId}">
 										</div>
 									`
 			modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
