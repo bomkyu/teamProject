@@ -113,11 +113,13 @@ if(buy_ul){
 		//로컬스토리지 dev_selected에 값 넣는 부분
 		if(get_storage.get_parse_data('dev_selected') == null){
 			get_storage.set_parse_data('dev_selected',selected_dev_arr);
+			console.log('selected_dev_arr', selected_dev_arr);
 
 		}else{
 			const new_selected_dev_arr = Object.values(get_storage.get_parse_data('dev_selected'));
 			new_selected_dev_arr.push(...selected_dev_arr)
 			get_storage.set_parse_data('dev_selected',new_selected_dev_arr);
+			console.log('selected_dev_arr', selected_dev_arr);
 		}
 		get_storage.set_parse_data('dev',dev_arr);
 
@@ -125,15 +127,6 @@ if(buy_ul){
 	
 	});
 
-	/* let get_storage = { //객체로 스토리지 관리.
-		'get_parse_data' : function(name) { //받아오는 데이터 로직
-			return  JSON.parse(window.localStorage.getItem(name));
-		},
-		'set_parse_data' : function(name,data) { //추가하는 데이터 로직
-			let json_string = JSON.stringify(data);
-			window.localStorage.setItem(name, json_string);
-		}
-	} */
 	order_btn.addEventListener('click', ()=> {
 		const orderList = document.querySelector('.order_list');
 		orderList.style.display = 'block';
@@ -145,11 +138,15 @@ if(buy_ul){
 		let orderId = selectedItem.map(el => el.id);
 		let orderName = selectedItem.map(el => el.name);
 		let orderKeyword = selectedItem.map(el => el.keyword); 
+		let orderDate = selectedItem.map(el => el.orderDate);
+		let orderNumber = selectedItem.map(el => el.orderNumber); 
+		let uniqueOrderNumber = [...new Set(orderNumber)];
+		let uniqueOrderDate = [...new Set(orderDate)];
 
 		document.getElementById('name_order').innerHTML = `${orderName}`;
 		document.getElementById('keyword_order').innerHTML = `${orderKeyword}`;
-		//document.getElementById('ordernumber_order').innerHTML = `${}`; //modal에서 생성한 modalNumber 가져와야함
-		//document.getElementById('date_order').innerHTML = `${}`;
+		document.getElementById('date_order').innerHTML = `${uniqueOrderDate}`;
+		document.getElementById('ordernumber_order').innerHTML = `${uniqueOrderNumber}`; //modal에서 생성한 modalNumber 가져와야함
 
 		//order_list 이미지 li 생성
 		const orderImgWrap = document.querySelector('.order_img_wrap'); //li 넣을 ul
@@ -171,7 +168,6 @@ if(buy_ul){
 				el.remove();
 			});
 		})
-		selectedItem = []; //초기화
 	})
 			
 		
@@ -183,9 +179,6 @@ if(buy_ul){
 		modalPop.style.display = 'block';
 		
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
-		console.log('modalNumber',modalNumber);
-		
-
 		//obj.bomkyu.orderNumber = modalNumber; //modalNumber를 obj의 orderNumber에 대입
 
 		let modalId = selected_dev_arr.map(el => el.id);
@@ -201,14 +194,20 @@ if(buy_ul){
 		let minutes = today.getMinutes();
 		let seconds = today.getSeconds();
 
+		const new_selected_dev_arr = selected_dev_arr.map(function(element) {
+			if (element.hasOwnProperty('orderDate') && element.hasOwnProperty('orderNumber')) {
+				element.orderDate = `${year}/${month}/${date} ${hours}:${minutes}:${seconds}`; // 수정할 값으로 변경
+				element.orderNumber = `${modalNumber}`; // 수정할 값으로 변경
+			}
+			return element;
+			});
+		
+		selected_dev_arr = new_selected_dev_arr;
+
 		document.getElementById('ordernumber').innerHTML = `${modalNumber}`;
 		document.getElementById('date').innerHTML = `${year}/${month}/${date} ${hours}:${minutes}:${seconds}`;
 		document.getElementById('name').innerHTML = `${modalName}`;
 		document.getElementById('keyword').innerHTML = `${modalKeyword}`;
-			
-		//로컬스토리지 키값중 orderNumber에 modalNumber 값 저장
-		
-
 
 		//이미지 li 생성하는 함수
 		const modalImgWrap = document.querySelector('.modal_img_wrap');
