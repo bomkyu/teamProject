@@ -113,13 +113,13 @@ if(buy_ul){
 		//로컬스토리지 dev_selected에 값 넣는 부분
 		if(get_storage.get_parse_data('dev_selected') == null){
 			get_storage.set_parse_data('dev_selected',selected_dev_arr);
-			console.log('selected_dev_arr', selected_dev_arr);
+			//console.log('selected_dev_arr', selected_dev_arr);
 
 		}else{
 			const new_selected_dev_arr = Object.values(get_storage.get_parse_data('dev_selected'));
 			new_selected_dev_arr.push(...selected_dev_arr)
 			get_storage.set_parse_data('dev_selected',new_selected_dev_arr);
-			console.log('selected_dev_arr', selected_dev_arr);
+			//console.log('selected_dev_arr', selected_dev_arr);
 		}
 		get_storage.set_parse_data('dev',dev_arr);
 
@@ -128,46 +128,55 @@ if(buy_ul){
 	});
 
 	order_btn.addEventListener('click', ()=> {
-		const orderList = document.querySelector('.order_list');
-		orderList.style.display = 'block';
-
 		let selectedItem = get_storage.get_parse_data('dev_selected'); //selectedItem 배열로 dev_selected 값 가져옴
-
-		let orderImg = selectedItem.map(el=>el.image_url);
-		console.log('dd',orderImg);
-		let orderId = selectedItem.map(el => el.id);
-		let orderName = selectedItem.map(el => el.name);
-		let orderKeyword = selectedItem.map(el => el.keyword); 
-		let orderDate = selectedItem.map(el => el.orderDate);
-		let orderNumber = selectedItem.map(el => el.orderNumber); 
-		let uniqueOrderNumber = [...new Set(orderNumber)];
-		let uniqueOrderDate = [...new Set(orderDate)];
-
-		document.getElementById('name_order').innerHTML = `${orderName}`;
-		document.getElementById('keyword_order').innerHTML = `${orderKeyword}`;
-		document.getElementById('date_order').innerHTML = `${uniqueOrderDate}`;
-		document.getElementById('ordernumber_order').innerHTML = `${uniqueOrderNumber}`; //modal에서 생성한 modalNumber 가져와야함
-
-		//order_list 이미지 li 생성
-		const orderImgWrap = document.querySelector('.order_img_wrap'); //li 넣을 ul
-
-		for(let i = 0; i<selectedItem.length; i++){
-			let create_li_order_img = document.createElement('li');
-			create_li_order_img.innerHTML = `
-										<div>
-											<img src="./lib/images/${orderImg[i]}" alt="${orderName[i]}" class="img_${orderId[i]}">
-										</div>
-									`
-			orderImgWrap.appendChild(create_li_order_img);//생성한 li를 ul에 넣어줌 
-		}
 		
-		const orderCloseBtn = document.querySelector('.order_list_btn');
+		if(selectedItem.length > 0){
+			const orderList = document.querySelector('.order_list');
+			orderList.style.display = 'block';
+	
+			let orderImg = selectedItem.map(el=>el.image_url);
+			console.log('dd',orderImg);
+			let orderId = selectedItem.map(el => el.id);
+			let orderName = selectedItem.map(el => el.name);
+			let orderKeyword = selectedItem.map(el => el.keyword); 
+			let orderDate = selectedItem.map(el => el.orderDate);
+			let orderNumber = selectedItem.map(el => el.orderNumber); 
+			let uniqueOrderNumber = [...new Set(orderNumber)];
+			let uniqueOrderDate = [...new Set(orderDate)];
+	
+			document.getElementById('name_order').innerHTML = `${orderName}`;
+			document.getElementById('keyword_order').innerHTML = `${orderKeyword}`;
+			document.getElementById('date_order').innerHTML = `${uniqueOrderDate}`;
+			document.getElementById('ordernumber_order').innerHTML = `${uniqueOrderNumber}`; //modal에서 생성한 modalNumber 가져와야함
+	
+			//order_list 이미지 li 생성
+			const orderImgWrap = document.querySelector('.order_img_wrap'); //li 넣을 ul
+	
+			for(let i = 0; i<selectedItem.length; i++){
+				let create_li_order_img = document.createElement('li');
+				create_li_order_img.innerHTML = `
+											<div>
+												<img src="./lib/images/${orderImg[i]}" alt="${orderName[i]}" class="img_${orderId[i]}">
+											</div>
+										`
+				orderImgWrap.appendChild(create_li_order_img);//생성한 li를 ul에 넣어줌 
+			}
+			const orderCloseBtn = document.querySelector('.order_list_btn');
 		orderCloseBtn.addEventListener('click',()=>{
 			orderList.style.display = 'none';
 			Array.from(orderImgWrap.children).forEach((el)=>{
 				el.remove();
 			});
 		})
+		} else {
+			const orderEmpty = document.querySelector('.order_empty');
+			const orderEmptyBtn = document.querySelector('.order_empty_btn');
+			
+			orderEmpty.style.display = 'block';
+			orderEmptyBtn.addEventListener('click',()=>{
+				orderEmpty.style.display = 'none';
+			})
+		}
 	})
 			
 		
@@ -179,8 +188,6 @@ if(buy_ul){
 		modalPop.style.display = 'block';
 		
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
-		//obj.bomkyu.orderNumber = modalNumber; //modalNumber를 obj의 orderNumber에 대입
-
 		let modalId = selected_dev_arr.map(el => el.id);
 		let modalName = selected_dev_arr.map(el => el.name);
 		let modalImg = selected_dev_arr.map(el=> el.image_url);

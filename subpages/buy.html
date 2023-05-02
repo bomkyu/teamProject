@@ -101,8 +101,10 @@
                 <ul class="buy_list hori row3 gap45 not_scale">
                     
                 </ul>
-                <p class="buy_btn_wrap"><span class="buy_btn">구매하기</span></p>
-                <p class="order_btn_wrap"><span class="order_btn">구매내역</span></p>
+                <div class="btn_wrap flex gap25">
+                    <p class="buy_btn_wrap"><span class="buy_btn">구매하기</span></p>
+                    <p class="order_btn_wrap"><span class="order_btn">구매내역</span></p>
+                </div>
                 
                 <!--- 영수증 작업 -->
                 <div class="modal pd30"> 
@@ -141,14 +143,14 @@
                 </div>
                 <!-- 구매내역 -->
                 <div class="order_list pd30">
-                    <h3 class="txt_c pb30">구매내역</h3>
+                    <h3 class="txt_c pb30">Order List</h3>
                     <div class="order_list_btn">
                         <img src="./lib/images/receipt_close_icon.png" alt="receipt_close">
                     </div>
                     <ul class="order_img_wrap flex space_around txt_c">
                     
                     </ul>
-                        <ul class="order_info">
+                        <ul class="order_info pt50">
                             <li>
                                 <span>주문번호</span>
                                 <span id="ordernumber_order"></span>
@@ -170,8 +172,20 @@
                                 <span>&#60;/DEVELOPER&#62;</span>
                             </li>
                         </ul>
-                  
-
+                        <div class="order_txt txt_c pt50 pb80">
+                            <p>구매내역을 확인해 보세요!</p>
+                        </div>
+                </div>
+                <!-- 구매내역 없는 경우 -->
+                <div class="order_empty flex f_center">
+                    <div class="order_empty_btn">
+                        <img src="./lib/images/receipt_close_icon.png" alt="receipt_close">
+                    </div>
+                    <div class="order_empty_inner txt_c">
+                        <p>아직 구매한 상품이 없습니다.</p>
+                        <p>원하는 개발자를 담아보세요!</p>
+                        <p class="empty_bg"><img src="./lib/images/shopping_remove_ic_icon.png" alt=""></p>
+                    </div>
                 </div>
             </div>
 

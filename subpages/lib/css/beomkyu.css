@@ -57,9 +57,9 @@
   .buy_list .introduce::-webkit-scrollbar-thumb:hover {
     
   }
-
-.buy_btn_wrap, .order_btn_wrap  { margin-top: 40px; text-align: center; }
-.buy_btn_wrap .buy_btn, .order_btn_wrap .order_btn { display: inline-block; max-width: 200px; width: 100%; padding: 15px 10px; background-color: #333; font-size: 20px; border-radius: 50px; cursor: pointer; transition: 0.3s; }
+.btn_wrap{justify-content: center;}
+.buy_btn_wrap, .order_btn_wrap  {margin-top: 60px; text-align: center; max-width: 200px;width: 100%;}
+.buy_btn_wrap .buy_btn, .order_btn_wrap .order_btn { display: inline-block;width: 100%; padding: 15px 10px; background-color: #333; font-size: 20px; border-radius: 50px; cursor: pointer; transition: 0.3s; }
 .buy_btn_wrap .buy_btn:hover, .order_btn_wrap .order_btn:hover  { background-color: #7B53A2; }
 
 
