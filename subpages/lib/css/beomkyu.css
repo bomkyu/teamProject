@@ -58,9 +58,9 @@
     
   }
 
-.buy_btn_wrap { margin-top: 40px; text-align: center; }
-.buy_btn_wrap .buy_btn { display: inline-block; max-width: 200px; width: 100%; padding: 15px 10px; background-color: #333; font-size: 20px; border-radius: 50px; cursor: pointer; transition: 0.3s; }
-.buy_btn_wrap .buy_btn:hover { background-color: #7B53A2; }
+.buy_btn_wrap, .order_btn_wrap  { margin-top: 40px; text-align: center; }
+.buy_btn_wrap .buy_btn, .order_btn_wrap .order_btn { display: inline-block; max-width: 200px; width: 100%; padding: 15px 10px; background-color: #333; font-size: 20px; border-radius: 50px; cursor: pointer; transition: 0.3s; }
+.buy_btn_wrap .buy_btn:hover, .order_btn_wrap .order_btn:hover  { background-color: #7B53A2; }
 
 
 @media all and (max-width:1280px){

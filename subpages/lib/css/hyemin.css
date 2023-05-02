@@ -143,9 +143,9 @@
 
 /*** buy 영수증 모달 작업 ***/
 .modal {display:none; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); width: 400px; background-color: #fff; border-radius: 10px;box-shadow:  0 0 10px 0 rgba(255, 255, 255, 0.5);}
-.modal * {color:#000}
-.modal > h3 {font-size:24px; font-weight: 600;}
-.modal_btn {position:absolute; top:6px; right:6px; width:30px;cursor: pointer;}
+.modal *, .order_list * {color:#000}
+.modal > h3, .order_list > h3 {font-size:24px; font-weight: 600;}
+.modal_btn, .order_list_btn {position:absolute; top:6px; right:6px; width:30px;cursor: pointer;}
 
 .modal_img_wrap > li > div { position: relative; width: 100px; height: 100px; border-radius:50%; overflow: hidden;}
 
@@ -165,6 +165,18 @@
   50%{background-color: #b8b7b7;}
   100%{background-color: #e6e3e3;}
 }
+
+/*** 구매 내역 모달 작업 ***/
+.order_list {display:none; position: absolute; top:50%; right: 0; transform: translate(-50%,-50%); width: 400px; height:500px; background-color: #fff; border-radius: 10px;box-shadow:  0 0 10px 0 rgba(255, 255, 255, 0.5);}
+.order_info {}
+.order_info > li {padding:10px 0}
+
+.order_img_wrap > li > div { position: relative; width: 100px; height: 100px; border-radius:50%; overflow: hidden;}
+.order_img_wrap > li > div > img {position: absolute;}
+.order_img_wrap .img_0 {top: 85px;left: 11px; transform: scale(1.8); background: #555;}
+.order_img_wrap .img_1 {top: 0;left: 0;transform: scale(1.2);}
+.order_img_wrap .img_2 {top: 8px; left: 13px; transform: scale(1.3);}
+
 
 
 
