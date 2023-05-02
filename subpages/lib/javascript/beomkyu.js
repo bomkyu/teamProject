@@ -84,20 +84,23 @@ if(buy_ul){
 
 		if(buy_list.length == statusLengths.length){
 			alert('모든 개발자가 선택되었습니다.');
-			return;
+			return true;
 		}
 
 		if(selected_dev_arr.length == 0 ){
 			alert('개발자를 선택해 주세요');
-			return;
+			return true;
 		}
-
-		modal(); // modal 함수안에 배열초기화 구문을 어디다 넣어야할지 고민해봐요
+		return false;
 	}
-	buy_btn.addEventListener('click', ()=> {
-		const buy_list = buy_ul.querySelectorAll('li');
 
-		exception_handler(buy_list); //예외처리
+
+	buy_btn.addEventListener('click', ()=> {
+	
+		const buy_list = buy_ul.querySelectorAll('li');
+		if (exception_handler(buy_list) !== true) {  //예외처리
+			modal();
+		}
 
 		//data-value인 data-status를 true로 바꿔줌(element)
 		selected_dev_arr.forEach(element => {
@@ -117,11 +120,16 @@ if(buy_ul){
 			get_storage.set_parse_data('dev_selected',new_selected_dev_arr);
 		}
 		get_storage.set_parse_data('dev',dev_arr);
-		
+
+		selected_dev_arr = []; //배열 초기화
+	
 	});
 
 	//영수증 content 생성하는 함수
-	function modal(){	
+	function modal(){
+		const modalPop = document.querySelector('.modal');
+		modalPop.style.display = 'block';
+		
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
 		let modalId = selected_dev_arr.map(el => el.id);
 		let modalName = selected_dev_arr.map(el => el.name);
@@ -142,23 +150,25 @@ if(buy_ul){
 		document.getElementById('keyword').innerHTML = `${modalKeyword}`;
 			
 		//이미지 li 생성하는 함수
-		function createModalImg(){
-			const modalImgWrap = document.querySelector('.modal_img_wrap');
-			
-			for(let i = 0; i<selected_dev_arr.length; i++){
-				let create_li_img = document.createElement('li');
-				create_li_img.innerHTML = `
-											<div>
-												<img src="./lib/images/${modalImg[i]}" alt="${modalName[i]}" class="img_${modalId[i]}">
-											</div>
-										`
-				modalImgWrap.appendChild(create_li_img); //생성한 li를 ul에 넣어줌
-			}	
-		}
+		const modalImgWrap = document.querySelector('.modal_img_wrap');
+
+		for(let i = 0; i<selected_dev_arr.length; i++){
+			let create_li_img = document.createElement('li');
+			create_li_img.innerHTML = `
+										<div>
+											<img src="./lib/images/${modalImg[i]}" alt="${modalName[i]}" class="img_${modalId[i]}">
+										</div>
+									`
+			modalImgWrap.appendChild(create_li_img);//생성한 li를 ul에 넣어줌 
+		}	
+		const modalBtn = document.querySelector('.modal_btn');
+		modalBtn.addEventListener('click',()=>{
+			modalPop.style.display = 'none';
+			Array.from(modalImgWrap.children).forEach((el)=>{
+				el.remove();
+			});
+		})
 		
-		createModalImg();
-		
-		selected_dev_arr = []; //배열 초기화
 	}
 }
 
