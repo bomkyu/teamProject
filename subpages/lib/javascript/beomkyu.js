@@ -135,7 +135,6 @@ if(buy_ul){
 			orderList.style.display = 'block';
 	
 			let orderImg = selectedItem.map(el=>el.image_url);
-			console.log('dd',orderImg.image_url);
 			let orderId = selectedItem.map(el => el.id);
 			let orderName = selectedItem.map(el => el.name);
 			let orderKeyword = selectedItem.map(el => el.keyword); 
