@@ -231,7 +231,7 @@ background:#b8b7b7}
   .typing {text-align: center;font-size: 22px;}
   .faq_text {padding-top: 0;padding-left: 0;text-align: center;font-size: 40px;}
   .faq_answer {top:290px; margin:0 20px;}
-  .modal{width:300px; position:relative;}
+  .modal, .order_list, .order_empty {width:300px; position:relative;}
 }
 
 
