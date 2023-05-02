@@ -138,6 +138,8 @@ function renderReview(){
                 reviewItem = reviewItem.filter(obj => obj.comment !== item.comment);
                 save();
             });
+
+            reviewItem = [];
         });
 };
 
