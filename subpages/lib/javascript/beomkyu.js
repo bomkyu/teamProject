@@ -90,17 +90,9 @@ if(buy_ul){
 		if(selected_dev_arr.length == 0 ){
 			alert('개발자를 선택해 주세요');
 			return;
-		} else {
-			const modalPop = document.querySelector('.modal');
-			const modalClose = document.querySelector('.modal_btn');
-			
-			modalPop.style.display = 'block';
-			modalClose.addEventListener('click', function(){
-				modalPop.style.display = 'none';
-			})
-
-		modal();
 		}
+
+		modal(); // modal 함수안에 배열초기화 구문을 어디다 넣어야할지 고민해봐요
 	}
 	buy_btn.addEventListener('click', ()=> {
 		const buy_list = buy_ul.querySelectorAll('li');
