@@ -1,11 +1,11 @@
 ![waving](https://capsule-render.vercel.app/api?type=waving&height=300&text=Team_develover&fontAlign=65&fontAlignY=40&color=gradient)
-<h3 align="right">🖥 Front-End 🖥</h3>
+<p align="right">🖥 Front-End 🖥</p>
 <p align="right">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=Html5&logoColor=white">
     <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS&logoColor=white">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white">
 </p>
-<h3 align="right">🖥 Team Collaboration Tool / Design Tool 🖥</h3>
+<p align="right">🖥 Team Collaboration Tool / Design Tool 🖥</p>
 <p align="right">
     <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white">
     <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white">
@@ -25,6 +25,13 @@
     <br>
     <br>
     <h1>👪 팀원소개 👪</h1>
-
-
+    <!-- <ul align="left">
+        <li></li>
+    </ul> -->
 </div>
+<br>
+<br>
+<br>
+<br>
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=footer&fontSize=90)
