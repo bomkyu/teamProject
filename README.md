@@ -24,7 +24,7 @@
     <br>
     <br>
     <br>
-    <h1>👪 팀원소개 👪</h1>
+    <h1>👪 Team 👪</h1>
     <table>
         <tr>
             <td style="border:none">
