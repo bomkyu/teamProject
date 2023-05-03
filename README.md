@@ -25,9 +25,19 @@
     <br>
     <br>
     <h1>👪 팀원소개 👪</h1>
-    <!-- <ul align="left">
-        <li></li>
-    </ul> -->
+    <table>
+        <tr>
+            <td style="border:none">
+                <img src="https://user-images.githubusercontent.com/128655202/235873002-b7de42d7-564f-44e2-89f1-3a89e5889f46.JPG">
+            </td>
+            <td style="border:none">
+                <img src="https://user-images.githubusercontent.com/128655202/235873830-96febbfa-446f-4d33-aba0-31041b3e255c.JPG">
+            </td>
+            <td style="border:none">
+                <img src="https://user-images.githubusercontent.com/128655202/235874107-d905be85-6e08-4fe7-80dc-96b1caf9eea5.JPG">
+            </td>
+        </tr>
+    </table>
 </div>
 <br>
 <br>
