@@ -130,7 +130,7 @@ if(buy_ul){
 	order_btn.addEventListener('click', ()=> {
 		let selectedItem = get_storage.get_parse_data('dev_selected'); //selectedItem 배열로 dev_selected 값 가져옴
 		
-		if(selectedItem.length > 0){
+		if(selectedItem != null){
 			const orderList = document.querySelector('.order_list');
 			orderList.style.display = 'block';
 	
