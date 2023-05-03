@@ -14,19 +14,17 @@
 </p>
 <br>
 <br>
-<div align="left">
+<div align="center">
     <h1>😀 Introduce 😀</h1>
-    <h3>
+    <p>
         그린컴퓨터아카데미에서 진행한 팀프로젝트이며<br>
        개발자를 구매한다는 컨셉의 반응형 웹사이트 입니다.
-    </h3>
+    </p>
     <br>
     <br>
     <br>
     <br>
-    <h1>팀원소개</h1>
-     <dev-widget data-username="bomkyu"></dev-widget>
-    <!-- Place script tag before the end of the body tag -->
-    <script src="https://unpkg.com/dev-widget@^1/dist/card.component.min.mjs" type="module"></script>
+    <h1>👪 팀원소개 👪</h1>
+
 
 </div>
