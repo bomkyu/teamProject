@@ -238,6 +238,15 @@ if(buy_ul){
 	}
 }
 
+//buy_btn 애니메이션 속성
+const bgLine = document.querySelectorAll('.bg_line');
+function addFinishedClass(el) {
+	el.classList.add('finished');
+	}
+bgLine.forEach((el)=>{
+	el.addEventListener('animationend', ()=>{addFinishedClass});
+})
+
     const targets = document.querySelectorAll('section');
 	const progress = document.querySelector(".sec_2");
 	const options = { root: null, threshold: 0.1, rootMargin: "-0px" };
