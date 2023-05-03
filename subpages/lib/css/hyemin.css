@@ -156,7 +156,7 @@
 
 .modal .modal_info > li {display:flex;justify-content: space-between;  padding:15px 0;}
 .modal .modal_info > li span:nth-child(1) {flex:30%; font-weight: 600; color:#8113EC; }
-.modal .modal_info > li span:nth-child(2) {flex:70%;text-align: right;}
+.modal .modal_info > li span:nth-child(2) {flex:70%; text-align: left;}
 
 .modal_txt > p {position: relative;}
 .modal_txt > p:nth-child(1)::before {position: absolute;content: "";width: 50px;height: 50px;top: 40px;left: 50%;transform: translate(-50%);border-radius: 50%;background: #b8b7b7 url(../images/ic_buy_chk.svg)center no-repeat; animation:pop 2s infinite;}
@@ -170,8 +170,8 @@
 .order_list {display:none; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); width: 400px; background-color: #fff; border-radius: 10px;box-shadow:  0 0 10px 0 rgba(255, 255, 255, 0.5);}
 .order_info {}
 .order_info > li {display:flex; justify-content: space-between; padding:10px 0}
-.order_info > li span:nth-child(1) {flex:30%; font-weight: 600; color:#8113EC; }
-.order_info > li span:nth-child(2) {flex:70%;text-align: right;}
+.order_info > li span:nth-child(1) {flex:30%; font-weight: 600; color:#8113EC;}
+.order_info > li span:nth-child(2) {flex:70%;  text-align: left;}
 
 .order_img_wrap > li > div { position: relative; width: 100px; height: 100px; border-radius:50%; overflow: hidden;}
 .order_img_wrap > li > div > img {position: absolute;}
