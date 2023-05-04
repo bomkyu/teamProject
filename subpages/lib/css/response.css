@@ -53,7 +53,7 @@
     .typing {text-align: center;font-size: 22px;}
     .faq_text {padding-top: 0;padding-left: 0;text-align: center;font-size: 40px;}
     .faq_answer {top:290px; margin:0 20px;}
-    .modal, .order_list, .order_empty {width:300px; position:relative;}
+    .modal, .order_list, .order_empty {width:300px;}
     .modal_img_wrap > li > div,.order_img_wrap > li > div {  width: 80px; height: 80px;}
     .modal_img_wrap .img_0 , .order_img_wrap .img_0 {top: 70px;}
 }

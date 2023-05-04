@@ -24,8 +24,8 @@
     <br>
     <br>
     <br>
-    <h1>👪 팀원소개 👪</h1>
-    <table>
+    <h1>👪 Team 👪</h1>
+    <table style="border: none;">
         <tr>
             <td style="border:none">
                 <img src="https://user-images.githubusercontent.com/128655202/235873002-b7de42d7-564f-44e2-89f1-3a89e5889f46.JPG">

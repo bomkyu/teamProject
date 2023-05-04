@@ -59,6 +59,13 @@ let reviewItem = JSON.parse(localStorage.getItem('reviewItem')) || [];
 
 const save = () => {
     localStorage.setItem('reviewItem', JSON.stringify(reviewItem));
+
+    let json_sel_child = document.querySelectorAll('.json_sel > .review_sel');
+    if(json_sel_child != null){
+        json_sel_child.forEach((el)=>{
+            el.remove();
+        })
+    }
 }
 
 
@@ -92,7 +99,6 @@ function Validation(){
 
         renderReview();
     }
-
 }
 
 
@@ -138,8 +144,6 @@ function renderReview(){
                 reviewItem = reviewItem.filter(obj => obj.comment !== item.comment);
                 save();
             });
-
-            reviewItem = [];
         });
 };
 
