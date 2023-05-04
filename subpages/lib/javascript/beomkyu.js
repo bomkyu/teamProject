@@ -96,12 +96,12 @@ if(buy_ul){
 	}
 
 	const body = document.querySelector('body');
-	function bodyScrollStop () {
+	/*function bodyScrollStop () {
 		body.style.overflow = 'hidden'
 	};
 	function bodyScrollPlay (){
 		body.style.overflow = 'auto'
-	};
+	};*/
 
 	buy_btn.addEventListener('click', ()=> {
 		const buy_list = buy_ul.querySelectorAll('li');
@@ -137,7 +137,7 @@ if(buy_ul){
 
 	order_btn.addEventListener('click', ()=> {
 		let selectedItem = get_storage.get_parse_data('dev_selected'); //selectedItem 배열로 dev_selected 값 가져옴
-		bodyScrollStop();
+		//bodyScrollStop();
 		if(selectedItem != null){
 			const orderList = document.querySelector('.order_list');
 			orderList.style.display = 'block';
@@ -195,7 +195,7 @@ if(buy_ul){
 	function modal(){
 		const modalPop = document.querySelector('.modal');
 		modalPop.style.display = 'block';
-		bodyScrollStop();
+		//bodyScrollStop();
 
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
 		let modalId = selected_dev_arr.map(el => el.id);
