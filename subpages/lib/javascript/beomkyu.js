@@ -95,9 +95,17 @@ if(buy_ul){
 		return false;
 	}
 
+	const body = document.querySelector('body');
+	function bodyScrollStop () {
+		body.style.overflow = 'hidden'
+	};
+	function bodyScrollPlay (){
+		body.style.overflow = 'auto'
+	};
 
 	buy_btn.addEventListener('click', ()=> {
 		const buy_list = buy_ul.querySelectorAll('li');
+		
 		if (exception_handler(buy_list) !== true) {  //예외처리
 			modal();
 		}
@@ -129,7 +137,7 @@ if(buy_ul){
 
 	order_btn.addEventListener('click', ()=> {
 		let selectedItem = get_storage.get_parse_data('dev_selected'); //selectedItem 배열로 dev_selected 값 가져옴
-		
+		bodyScrollStop();
 		if(selectedItem != null){
 			const orderList = document.querySelector('.order_list');
 			orderList.style.display = 'block';
@@ -163,6 +171,7 @@ if(buy_ul){
 			const orderCloseBtn = document.querySelector('.order_list_btn');
 		orderCloseBtn.addEventListener('click',()=>{
 			orderList.style.display = 'none';
+			bodyScrollPlay();
 			Array.from(orderImgWrap.children).forEach((el)=>{
 				el.remove();
 			});
@@ -174,6 +183,7 @@ if(buy_ul){
 			orderEmpty.style.display = 'block';
 			orderEmptyBtn.addEventListener('click',()=>{
 				orderEmpty.style.display = 'none';
+				bodyScrollPlay();
 			})
 		}
 	})
@@ -185,7 +195,8 @@ if(buy_ul){
 	function modal(){
 		const modalPop = document.querySelector('.modal');
 		modalPop.style.display = 'block';
-		
+		bodyScrollStop();
+
 		let modalNumber = Math.floor(Math.random()*89999999) + 10000000; //8자리 랜덤숫자
 		let modalId = selected_dev_arr.map(el => el.id);
 		let modalName = selected_dev_arr.map(el => el.name);
@@ -230,6 +241,7 @@ if(buy_ul){
 		const modalBtn = document.querySelector('.modal_btn');
 		modalBtn.addEventListener('click',()=>{
 			modalPop.style.display = 'none';
+			bodyScrollPlay();
 			Array.from(modalImgWrap.children).forEach((el)=>{
 				el.remove();
 			});
@@ -241,7 +253,7 @@ if(buy_ul){
 //buy_btn 애니메이션 속성
 const bgLine = document.querySelectorAll('.bg_line');
 function addFinishedClass(el) {
-	el.classList.add('finished');
+	el.classList.toggle('finished');
 	}
 bgLine.forEach((el)=>{
 	el.addEventListener('animationend', ()=>{addFinishedClass});
