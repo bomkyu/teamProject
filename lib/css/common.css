@@ -232,7 +232,7 @@ h4.con_tit { font-size: 32px; font-weight: 500; }
 .h_100vh { height: 100vh; }
 
 /* header 혜민작업 */
-header { position:fixed; z-index:9999; top:0; width:100%; background-color: rgba(0,0,0,0.6);transform: translateY(0); transition: 0.5s; }
+header { position:fixed; z-index:500; top:0; width:100%; background-color: rgba(0,0,0,0.6);transform: translateY(0); transition: 0.5s; }
 header > .inner { position:relative; }
 header.scroll li > a { padding: 0; }
 .main_logo {position:absolute;top:50%; transform: translateY(-50%); left:30px; width:63px; height:40px; background: url(../images/header_logo.png) center center no-repeat; background-size: cover;}
